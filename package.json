@@ -22,7 +22,7 @@
     "vue-tsc": "^1.2.0",
     "webext-bridge": "^5.0.5"
   },
-  "name": "calorie-cowboy",
+  "name": "vite-vue3-chrome-extension-v3",
   "private": true,
   "scripts": {
     "build": "vue-tsc && vite build",
