@@ -5,7 +5,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 ## Features
 
 - [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build a Chrome Extension with Vite
-- True HMR for extension pages and content scripts
+- HMR for extension pages and content scripts
 - Simple config - everything is in the extension manifest
 - Static asset imports with automatic web-accessible resources
 - Vue 3 - Composition API, [`<script setup>` syntax](https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md) and more!
