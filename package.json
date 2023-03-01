@@ -5,6 +5,7 @@
   "devDependencies": {
     "@crxjs/vite-plugin": "npm:@crxjs/vite-plugin@beta",
     "@iconify-json/mdi": "^1.1.47",
+    "@types/chrome": "^0.0.218",
     "@types/node": "^18.14.1",
     "@types/prettier": "^2.7.2",
     "@vitejs/plugin-vue": "^4.0.0",
