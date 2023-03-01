@@ -21,12 +21,7 @@ export default defineConfig({
     crx({ manifest }),
 
     AutoImport({
-      imports: [
-        'vue',
-        {
-          'webextension-polyfill': [['*', 'browser']],
-        },
-      ],
+      imports: ['vue', { 'webext-bridge': ['sendMessage', 'onMessage'] }],
       dts: 'src/auto-imports.d.ts',
     }),
 
