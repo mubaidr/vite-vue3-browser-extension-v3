@@ -19,7 +19,7 @@
       target="_blank"
     >
       <img
-        src="./assets/vue.svg"
+        src="../assets/vue.svg"
         class="logo vue"
         alt="Vue logo"
       />
