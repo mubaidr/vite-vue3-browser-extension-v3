@@ -5,7 +5,10 @@
     "esModuleInterop": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "paths": {
+      "~/*": ["./src/*"]
+    }
   },
   "include": ["vite.config.ts", "manifest.json"]
 }
