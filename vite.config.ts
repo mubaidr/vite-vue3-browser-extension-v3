@@ -1,6 +1,6 @@
 import { crx } from '@crxjs/vite-plugin'
 import vue from '@vitejs/plugin-vue'
-import { dirname, relative } from 'path'
+import { dirname, relative, join } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Icons from 'unplugin-icons/vite'
@@ -12,7 +12,7 @@ import manifest from './manifest.json'
 export default defineConfig({
   resolve: {
     alias: {
-      '~/': 'src/',
+      '~/': join(__dirname, 'src', '/'),
     },
   },
   plugins: [
