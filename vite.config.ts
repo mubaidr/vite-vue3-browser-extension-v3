@@ -12,7 +12,8 @@ import manifest from './manifest.json'
 export default defineConfig({
   resolve: {
     alias: {
-      '~/': join(__dirname, 'src', '/'),
+      '~': resolve(join(__dirname, 'src')),
+      src: resolve(join(__dirname, 'src')),
     },
   },
   plugins: [
