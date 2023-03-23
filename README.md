@@ -8,7 +8,8 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - HMR for extension pages and content scripts
 - Simple config - everything is in the extension manifest
 - Static asset imports with automatic web-accessible resources
-- Vue 3 - Composition API, [`<script setup>` syntax](https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md) and more!
+- Vue 3 - Composition API, `Script setup` and more!
+- Vue Router setup incuding `vite-plugin-pages` for automatic route registration
 - Effortless communications - powered by [`webext-bridge`](https://github.com/antfu/webext-bridge) and [VueUse](https://github.com/antfu/vueuse) storage
 - [TypeScript](https://www.typescriptlang.org/) - type safe
 - [Components auto importing](./src/components)
@@ -22,6 +23,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 
 ### Vite Plugins
 
+- [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - File system based route generator for Vite
 - [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use `browser` and Vue Composition API without importing
 - [`unplugin-vue-components`](https://github.com/antfu/vite-plugin-components) - components auto import
 - [`unplugin-icons`](https://github.com/antfu/unplugin-icons) - icons as components
