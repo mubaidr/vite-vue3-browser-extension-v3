@@ -1,3 +1,15 @@
 {
-  "recommendations": ["Vue.volar", "Vue.vscode-typescript-vue-plugin"]
+  "recommendations": [
+    "antfu.vite",
+    "bradlc.vscode-tailwindcss",
+    "csstools.postcss",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "mikestead.dotenv",
+    "mubaidr.vuejs-extension-pack",
+    "sdras.vue-vscode-snippets",
+    "Vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "Vue.vscode-typescript-vue-plugin"
+  ]
 }
