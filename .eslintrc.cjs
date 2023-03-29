@@ -18,6 +18,8 @@ module.exports = {
   plugins: ['vue'],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'off',
-    'vue/multi-word-component-names': 'off',
+    'vue/multi-word-component-names': 'off',    
+    'no-unref': 'off',
+    'no-undef': 'off',
   },
 }
