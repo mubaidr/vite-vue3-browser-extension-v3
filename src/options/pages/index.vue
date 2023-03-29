@@ -7,7 +7,7 @@
       target="_blank"
     >
       <img
-        src="/vite.svg"
+        src="~/src/assets/vite.svg"
         class="logo"
         alt="Vite logo"
       />

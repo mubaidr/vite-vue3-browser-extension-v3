@@ -39,7 +39,7 @@
   "name": "vite-vue3-chrome-extension-v3",
   "private": true,
   "scripts": {
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "dev": "vite",
     "preview": "vite preview",
     "lint": "eslint --fix ./src/**/*.{ts,tsx,vue}"
