@@ -14,7 +14,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - [Components auto importing](./src/components)
 - [Icons](./src/components) - Access to icons from any iconset directly
 - [TypeScript](https://www.typescriptlang.org/) - type safe
-- `Eslint` & `Prettier` configured using `eslint-config-standard`
+- `Eslint` & `Prettier` configured for `vue`, `javascript`, `typescript`
 
 ## Pre-packed
 

@@ -11,5 +11,5 @@
       "src/*": ["./src/*"]
     }
   },
-  "include": ["vite.config.ts", "manifest.json"]
+  "include": ["vite.config.ts", "manifest.json", ".eslintrc.cjs"]
 }
