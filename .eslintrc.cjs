@@ -11,9 +11,13 @@ module.exports = {
   ],
   overrides: [],
   parserOptions: {
+    project: './tsconfig.json',
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
   plugins: ['vue'],
-  rules: {},
+  rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'vue/multi-word-component-names': 'off',
+  },
 }
