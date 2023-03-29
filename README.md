@@ -6,20 +6,20 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 
 - [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build a Chrome Extension with Vite
 - HMR for extension pages and content scripts
-- Simple config - everything is in the extension manifest
-- Static asset imports with automatic web-accessible resources
 - Vue 3 - Composition API, `Script setup` and more!
 - Vue Router setup incuding `vite-plugin-pages` for automatic route registration
-- Effortless communications - powered by [`webext-bridge`](https://github.com/antfu/webext-bridge) and [VueUse](https://github.com/antfu/vueuse) storage
-- [TypeScript](https://www.typescriptlang.org/) - type safe
+- Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge) and [VueUse](https://github.com/antfu/vueuse) storage
 - [Components auto importing](./src/components)
 - [Icons](./src/components) - Access to icons from any iconset directly
+- [TypeScript](https://www.typescriptlang.org/) - type safe
+- `Eslint` & `Prettier` configured using `eslint-config-standard`
 
 ## Pre-packed
 
 ### WebExtension Libraries
 
-- [`webext-bridge`](https://github.com/antfu/webext-bridge) - effortlessly communication between contexts
+- [`webext-bridge`](https://github.com/zikaari/webext-bridge) - effortlessly communication between contexts
+- [`webextension-polyfill`](https://github.com/mozilla/webextension-polyfill) - A lightweight polyfill library for Promise-based WebExtension APIs in Chrome
 
 ### Vite Plugins
 
@@ -66,12 +66,11 @@ pnpm i
 - `src` - main source.
   - `content-script` - scripts and components to be injected as `content_script`
   - `background` - scripts for background.
+  - `popup` - popup pages
+  - `options` - options pages
   - `components` - auto-imported Vue components that are shared in popup and options page.
   - `assets` - assets used in Vue components
-  - `manifest.ts` - manifest for the extension.
-- `extension` - extension package root.
-  - `assets` - static assets (mainly for `manifest.json`).
-  - `dist` - built files, also serve stub entry for Vite on development.
+- `dist` - built files, also serve stub entry for Vite on development.
 
 ### Development
 
