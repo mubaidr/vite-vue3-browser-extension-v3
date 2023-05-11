@@ -30,8 +30,7 @@
     "vite": "^4.2.1",
     "vite-plugin-pages": "^0.29.0",
     "vue-tsc": "^1.2.0",
-    "webext-bridge": "^5.0.5",
-    "webextension-polyfill": "^0.10.0"
+    "webext-bridge": "^5.0.5"
   },
   "name": "vite-vue3-chrome-extension-v3",
   "private": true,
