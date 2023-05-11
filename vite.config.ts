@@ -24,11 +24,11 @@ export default defineConfig({
       dirs: [
         {
           dir: 'src/options/pages',
-          baseRoute: '',
+          baseRoute: 'options',
         },
         {
           dir: 'src/popup/pages',
-          baseRoute: '',
+          baseRoute: 'popup',
         },
       ],
     }),
