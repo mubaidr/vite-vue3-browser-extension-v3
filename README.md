@@ -9,6 +9,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build a Chrome Extension with Vite
 - HMR for extension pages and content scripts
 - Vue 3 - Composition API, `Script setup` and more!
+- Tailwind css for UI
 - Vue Router setup incuding `vite-plugin-pages` for automatic route registration
 - Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge) and [VueUse](https://github.com/antfu/vueuse) storage
 - [Components auto importing](./src/components)
