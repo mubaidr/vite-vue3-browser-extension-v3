@@ -15,12 +15,18 @@ export default defineConfig({
     alias: {
       '~': resolve(join(__dirname, 'src')),
       src: resolve(join(__dirname, 'src')),
+      // '@pages': '/src/pages',
     },
   },
   plugins: [
     vue(),
 
     Pages({
+      // extendRoute(route, parent) {
+      //   const name = route.name.toLowerCase()
+      //   route.path = `/${name}`
+      //   route.component = `@pages/${name}.vue`
+      // },
       dirs: [
         {
           dir: 'src/options/pages',

@@ -1,10 +1,4 @@
-<script setup lang="ts">
-import {useRouter} from 'vue-router';
-
-const router = useRouter()
-router.push({path: 'options'})
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <RouterView></RouterView>
