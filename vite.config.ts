@@ -15,19 +15,17 @@ export default defineConfig({
     alias: {
       '~': resolve(join(__dirname, 'src')),
       src: resolve(join(__dirname, 'src')),
-      // '@pages': '/src/pages',
     },
   },
   plugins: [
     vue(),
 
     Pages({
-      // extendRoute(route, parent) {
-      //   const name = route.name.toLowerCase()
-      //   route.path = `/${name}`
-      //   route.component = `@pages/${name}.vue`
-      // },
       dirs: [
+        {
+          dir: 'src/pages',
+          baseRoute: '',
+        },
         {
           dir: 'src/options/pages',
           baseRoute: 'options',
@@ -43,7 +41,12 @@ export default defineConfig({
     crx({ manifest }),
 
     AutoImport({
-      imports: ['vue', { 'webext-bridge': ['sendMessage', 'onMessage'] }],
+      imports: [
+        'vue',
+        'vue-router',
+        'vue/macros',
+        { 'webext-bridge': ['sendMessage', 'onMessage'] },
+      ],
       dts: 'src/auto-imports.d.ts',
     }),
 
@@ -78,7 +81,10 @@ export default defineConfig({
     },
   ],
   server: {
+    port: 8888,
+    strictPort: true,
     hmr: {
+      port: 8889,
       overlay: false,
     },
   },
