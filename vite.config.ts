@@ -23,6 +23,10 @@ export default defineConfig({
     Pages({
       dirs: [
         {
+          dir: 'src/pages',
+          baseRoute: '',
+        },
+        {
           dir: 'src/options/pages',
           baseRoute: 'options',
         },
@@ -37,7 +41,12 @@ export default defineConfig({
     crx({ manifest }),
 
     AutoImport({
-      imports: ['vue', { 'webext-bridge': ['sendMessage', 'onMessage'] }],
+      imports: [
+        'vue',
+        'vue-router',
+        'vue/macros',
+        { 'webext-bridge': ['sendMessage', 'onMessage'] },
+      ],
       dts: 'src/auto-imports.d.ts',
     }),
 
@@ -72,7 +81,10 @@ export default defineConfig({
     },
   ],
   server: {
+    port: 8888,
+    strictPort: true,
     hmr: {
+      port: 8889,
       overlay: false,
     },
   },

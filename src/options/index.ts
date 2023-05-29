@@ -6,8 +6,12 @@ import App from './app.vue'
 import './index.css'
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes,
+})
+
+router.beforeEach((to) => {
+  if (to.path === '/') return '/options'
 })
 
 createApp(App).use(router).mount('#app')
