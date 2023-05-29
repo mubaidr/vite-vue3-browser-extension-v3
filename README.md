@@ -22,7 +22,6 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 ### WebExtension Libraries
 
 - [`webext-bridge`](https://github.com/zikaari/webext-bridge) - effortlessly communication between contexts
-- [`webextension-polyfill`](https://github.com/mozilla/webextension-polyfill) - A lightweight polyfill library for Promise-based WebExtension APIs in Chrome
 
 ### Vite Plugins
 
@@ -69,8 +68,11 @@ pnpm i
 - `src` - main source.
   - `content-script` - scripts and components to be injected as `content_script`
   - `background` - scripts for background.
-  - `popup` - popup pages
-  - `options` - options pages
+  - `popup` - popup vuejs application root
+    - `pages` - popup pages
+  - `options` - options vuejs application root
+    - `pages` - options pages
+  - `pages` - application pages, common to all views (About, Contact, Authentication etc)
   - `components` - auto-imported Vue components that are shared in popup and options page.
   - `assets` - assets used in Vue components
 - `dist` - built files, also serve stub entry for Vite on development.
