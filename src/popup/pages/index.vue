@@ -1,4 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// chrome.identity.launchWebAuthFlow(
+//   {
+//     interactive: true,
+//     url:
+//       `https://github.com/login/oauth/authorize` +
+//       `?client_id=55e294602d71eb006dc505540cf0614d6b3c7f35` +
+//       `&redirect_uri=https://ekgmcbpgglflmgcfajnglpbcbdccnnje.chromiumapp.org/github_cb` +
+//       `&scope=user.email`,
+//   },
+//   (a) => {
+//     console.log(a)
+//   }
+// )
+</script>
 
 <template>
   <div class="text-center m-4">

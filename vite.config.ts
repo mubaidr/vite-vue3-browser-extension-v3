@@ -7,7 +7,7 @@ import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
-import manifest from './manifest.json'
+import manifest from './manifest.config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,6 +18,8 @@ export default defineConfig({
     },
   },
   plugins: [
+    crx({ manifest }),
+
     vue(),
 
     Pages({
@@ -36,9 +38,6 @@ export default defineConfig({
         },
       ],
     }),
-
-    // @ts-ignore
-    crx({ manifest }),
 
     AutoImport({
       imports: [
