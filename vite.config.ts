@@ -44,7 +44,6 @@ export default defineConfig({
         'vue',
         'vue-router',
         'vue/macros',
-        { 'webext-bridge': ['sendMessage', 'onMessage'] },
       ],
       dts: 'src/auto-imports.d.ts',
     }),
@@ -57,14 +56,17 @@ export default defineConfig({
       resolvers: [
         // auto import icons
         IconsResolver({
-          prefix: 'icon',
+          prefix: 'i',
           enabledCollections: ['mdi'],
         }),
       ],
     }),
 
     // https://github.com/antfu/unplugin-icons
-    Icons(),
+    Icons({
+      autoInstall: true,
+      compiler: 'vue3'
+    }),
 
     // rewrite assets to use relative path
     {

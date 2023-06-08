@@ -14,6 +14,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge) and [VueUse](https://github.com/antfu/vueuse) storage
 - [Components auto importing](./src/components)
 - [Icons](./src/components) - Access to icons from any iconset directly
+  - By default [Material Design Icons](https://materialdesignicons.com/cdn/1.6.50-dev/) set is enabled
 - [TypeScript](https://www.typescriptlang.org/) - type safe
 - `Eslint` & `Prettier` configured for `vue`, `javascript`, `typescript`
 

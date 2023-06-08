@@ -43,6 +43,9 @@ devDependencies:
   '@vitejs/plugin-vue':
     specifier: ^4.2.3
     version: 4.2.3(vite@4.3.9)(vue@3.3.4)
+  '@vue/compiler-sfc':
+    specifier: ^3.3.4
+    version: 3.3.4
   '@vueuse/core':
     specifier: ^10.1.2
     version: 10.1.2(vue@3.3.4)
@@ -81,7 +84,7 @@ devDependencies:
     version: 0.16.4(@vueuse/core@10.1.2)
   unplugin-icons:
     specifier: ^0.16.1
-    version: 0.16.1
+    version: 0.16.1(@vue/compiler-sfc@3.3.4)
   unplugin-vue-components:
     specifier: ^0.25.0
     version: 0.25.0(vue@3.3.4)
@@ -90,7 +93,7 @@ devDependencies:
     version: 4.3.9(@types/node@18.16.16)(sass@1.62.1)
   vite-plugin-pages:
     specifier: ^0.30.1
-    version: 0.30.1(vite@4.3.9)
+    version: 0.30.1(@vue/compiler-sfc@3.3.4)(vite@4.3.9)
   vue-tsc:
     specifier: ^1.6.5
     version: 1.6.5(typescript@5.0.4)
@@ -127,13 +130,6 @@ packages:
   /@babel/helper-validator-identifier@7.19.1:
     resolution: {integrity: sha512-awrNfaMtnHUr653GgGEs++LlAvW6w+DcPrOliSMXWCKo597CwL5Acf/wWdNkf/tfEQE3mjkeD1YOVZOUV/od1w==}
     engines: {node: '>=6.9.0'}
-
-  /@babel/parser@7.21.2:
-    resolution: {integrity: sha512-URpaIJQwEkEC2T9Kn+Ai6Xe/02iNaVCuT/PtoRz3GPVJVDpPd7mLo+VddTbhCRU9TXqW5mSrQfXZyi8kDKOVpQ==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.21.2
 
   /@babel/parser@7.21.9:
     resolution: {integrity: sha512-q5PNg/Bi1OpGgx5jYlvWZwAorZepEudDMCLtj967aeS7WMont7dUZI46M2XwcIQqvUlMxWfdLFu4S/qSxeUu5g==}
@@ -798,7 +794,7 @@ packages:
   /@vue/compiler-sfc@3.3.4:
     resolution: {integrity: sha512-6y/d8uw+5TkCuzBkgLS0v3lSM3hJDntFEiUORM11pQ/hKvkhSKZrXW6i69UyXlJQisJxuUEJKAWEqWbWsLeNKQ==}
     dependencies:
-      '@babel/parser': 7.21.2
+      '@babel/parser': 7.21.9
       '@vue/compiler-core': 3.3.4
       '@vue/compiler-dom': 3.3.4
       '@vue/compiler-ssr': 3.3.4
@@ -2840,7 +2836,7 @@ packages:
       - rollup
     dev: true
 
-  /unplugin-icons@0.16.1:
+  /unplugin-icons@0.16.1(@vue/compiler-sfc@3.3.4):
     resolution: {integrity: sha512-qTunFUkpAyDnwzwV7YV1ZgCWRYfLuURcCurhhXOWMy2ipY88qx1pADvral2hJu4Xymh0X0t3Zcll3BIru2AVLQ==}
     peerDependencies:
       '@svgr/core': '>=7.0.0'
@@ -2860,6 +2856,7 @@ packages:
       '@antfu/install-pkg': 0.1.1
       '@antfu/utils': 0.7.2
       '@iconify/utils': 2.1.5
+      '@vue/compiler-sfc': 3.3.4
       debug: 4.3.4
       kolorist: 1.7.0
       local-pkg: 0.4.3
@@ -2927,7 +2924,7 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
-  /vite-plugin-pages@0.30.1(vite@4.3.9):
+  /vite-plugin-pages@0.30.1(@vue/compiler-sfc@3.3.4)(vite@4.3.9):
     resolution: {integrity: sha512-PHneaWBKA4MaUn0/KTBG+dGT+5V5VhTnOnMCE+HJmixxEkFj7PrgSVGFJjWvgHUflrRE7p2O67iC5cIWLzPDyQ==}
     peerDependencies:
       '@vue/compiler-sfc': ^2.7.0 || ^3.0.0
@@ -2937,6 +2934,7 @@ packages:
         optional: true
     dependencies:
       '@types/debug': 4.1.7
+      '@vue/compiler-sfc': 3.3.4
       debug: 4.3.4
       deep-equal: 2.2.1
       extract-comments: 1.1.0

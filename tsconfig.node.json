@@ -9,7 +9,8 @@
     "paths": {
       "~/*": ["./src/*"],
       "src/*": ["./src/*"]
-    }
+    },
+    "types": ["unplugin-icons/types/vue"]
   },
   "include": [
     "vite.config.ts",
