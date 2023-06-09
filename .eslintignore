@@ -4,4 +4,5 @@ node_modules
 *.json
 *.html
 *.d.ts
+**/*.js
 # .eslintrc.cjs
