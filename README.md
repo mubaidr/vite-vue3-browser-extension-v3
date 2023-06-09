@@ -69,6 +69,7 @@ pnpm i
 
 - `src` - main source.
   - `content-script` - scripts and components to be injected as `content_script`
+    -  `iframe` content script iframe vue3 app which will be injected into page
   - `background` - scripts for background.
   - `popup` - popup vuejs application root
     - `pages` - popup pages
