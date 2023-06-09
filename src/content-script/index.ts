@@ -1,6 +1,12 @@
-// import '../assets/tailwind.js'
 import './index.scss'
 
-console.log('hello world from content script')
+const src = chrome.runtime.getURL('src/content-script/iframe/index.html')
 
-export {}
+const iframe = new DOMParser().parseFromString(
+  `<iframe class="crx-iframe" src="${src}"></iframe>`,
+  'text/html'
+).body.firstElementChild
+
+if (iframe) {
+  document.body?.append(iframe)
+}

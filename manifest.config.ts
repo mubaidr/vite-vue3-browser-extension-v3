@@ -17,7 +17,7 @@ export default defineManifest(async (env) => ({
   // semver is OK in "version_name"
   version_name: version,
   manifest_version: 3,
-  key: 'ekgmcbpgglflmgcfajnglpbcbdccnnje',
+  // key: 'ekgmcbpgglflmgcfajnglpbcbdccnnje',
   action: {
     default_popup: 'src/popup/index.html',
   },
@@ -39,6 +39,10 @@ export default defineManifest(async (env) => ({
     {
       matches: ['*://*/*'],
       resources: ['src/content-script/index.ts'],
+    },
+    {
+      matches: ['*://*/*'],
+      resources: ['src/content-script/iframe/index.html'],
     },
   ],
 }))

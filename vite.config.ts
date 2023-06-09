@@ -40,11 +40,7 @@ export default defineConfig({
     }),
 
     AutoImport({
-      imports: [
-        'vue',
-        'vue-router',
-        'vue/macros',
-      ],
+      imports: ['vue', 'vue-router', 'vue/macros'],
       dts: 'src/auto-imports.d.ts',
     }),
 
@@ -65,7 +61,7 @@ export default defineConfig({
     // https://github.com/antfu/unplugin-icons
     Icons({
       autoInstall: true,
-      compiler: 'vue3'
+      compiler: 'vue3',
     }),
 
     // rewrite assets to use relative path
@@ -81,6 +77,13 @@ export default defineConfig({
       },
     },
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        iframe: 'src/content-script/iframe/index.html',
+      },
+    },
+  },
   server: {
     port: 8888,
     strictPort: true,
