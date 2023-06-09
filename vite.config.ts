@@ -36,6 +36,10 @@ export default defineConfig({
           dir: 'src/popup/pages',
           baseRoute: 'popup',
         },
+        {
+          dir: 'src/content-script/iframe/pages',
+          baseRoute: 'iframe',
+        },
       ],
     }),
 
