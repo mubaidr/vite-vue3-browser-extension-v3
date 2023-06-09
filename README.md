@@ -6,9 +6,9 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 
 ## Features
 
-- [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build a Chrome Extension with Vite
-- HMR for extension pages and content scripts
 - Vue 3 - Composition API, `Script setup` and more!
+- Vue 3 app in Content Script too (template added)
+- HMR for extension pages and content scripts
 - Tailwind css for UI
 - Vue Router setup incuding `vite-plugin-pages` for automatic route registration
 - Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge) and [VueUse](https://github.com/antfu/vueuse) storage
@@ -17,6 +17,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
   - By default [Material Design Icons](https://materialdesignicons.com/cdn/1.6.50-dev/) set is enabled
 - [TypeScript](https://www.typescriptlang.org/) - type safe
 - `Eslint` & `Prettier` configured for `vue`, `javascript`, `typescript`
+- [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build a Chrome Extension with Vite
 
 ## Pre-packed
 
