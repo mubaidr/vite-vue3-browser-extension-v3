@@ -19,6 +19,8 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - `Eslint` & `Prettier` configured for `vue`, `javascript`, `typescript`
 - [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build a Chrome Extension with Vite
 
+*Please create an issue if you feel some feature is missing or could be improved.*
+
 ## Pre-packed
 
 ### WebExtension Libraries
