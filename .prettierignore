@@ -1,0 +1,5 @@
+auto-imports.d.ts
+components.d.ts
+pnpm-lock.yaml
+yarn.lock
+node_modules/
