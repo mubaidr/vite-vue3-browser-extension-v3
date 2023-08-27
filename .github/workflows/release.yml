@@ -33,7 +33,7 @@ jobs:
           node-version: 18
           cache: 'npm'
 
-      - run: npm ci
+      - run: npm i
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
