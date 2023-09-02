@@ -10,8 +10,12 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to) => {
-  if (to.path === '/') return '/popup'
+router.beforeEach((to, from, next) => {
+  if (to.path === '/') {
+    return next('/popup')
+  }
+
+  next()
 })
 
 createApp(App).use(router).mount('#app')

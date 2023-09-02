@@ -10,8 +10,12 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to) => {
-  if (to.path === '/') return '/iframe'
+router.beforeEach((to, from, next) => {
+  if (to.path === '/') {
+    return next('/iframe')
+  }
+
+  next()
 })
 
 console.log({ routes })
