@@ -67,6 +67,7 @@ export default defineConfig({
     Icons({
       autoInstall: true,
       compiler: 'vue3',
+      scale: 1.5,
     }),
 
     // rewrite assets to use relative path
