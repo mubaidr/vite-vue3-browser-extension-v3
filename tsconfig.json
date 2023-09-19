@@ -12,7 +12,8 @@
     "strict": true,
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "paths": {
+    "paths": {      
+      "@/*": ["./src/*"],
       "~/*": ["./src/*"],
       "src/*": ["./src/*"]
     },
