@@ -6,7 +6,8 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "paths": {
+    "paths": {      
+      "@/*": ["./src/*"],
       "~/*": ["./src/*"],
       "src/*": ["./src/*"]
     },
