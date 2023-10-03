@@ -1,15 +1,15 @@
-# vite-vue3-chrome-extension-v3
+# vite-vue3-browser-extension-v3
 
 [![build](https://github.com/mubaidr/vite-vue3-chrome-extension-v3/actions/workflows/build.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-chrome-extension-v3/actions/workflows/build.yml) [![release](https://github.com/mubaidr/vite-vue3-chrome-extension-v3/actions/workflows/release.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-chrome-extension-v3/actions/workflows/release.yml)
 
-A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template.
+A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite`.
 
 ## Features
 
 - Vue 3 - Composition API, `Script setup` and more!
 - Vue 3 app in Content Script too (template added)
 - HMR for extension pages and content scripts
-- Tailwind css for UI
+- [`Tailwind`](https://tailwindcss.com/) css And [`daisyUI`](https://daisyui.com/)
 - Vue Router setup incuding `vite-plugin-pages` for automatic route registration
 - Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge) and [VueUse](https://github.com/antfu/vueuse) storage
 - [Components auto importing](./src/components)
@@ -20,7 +20,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build a Chrome Extension with Vite
 - Github build and release actions
 
-*Please create an issue if you feel some feature is missing or could be improved.*
+_Please create an issue if you feel some feature is missing or could be improved._
 
 ## Pre-packed
 
@@ -43,6 +43,9 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 ### UI Frameworks
 
 - [tailwindcss](https://tailwindcss.com) - A utility-first CSS framework
+- [daisyUI](https://daisyui.com/) - The most popular component library for Tailwind CSS
+
+Tailwind css `forms` and `typography` plugins are enabled for default styling of form controls.
 
 ### Coding Style
 
@@ -72,7 +75,7 @@ pnpm i
 
 - `src` - main source.
   - `content-script` - scripts and components to be injected as `content_script`
-    -  `iframe` content script iframe vue3 app which will be injected into page
+    - `iframe` content script iframe vue3 app which will be injected into page
   - `background` - scripts for background.
   - `popup` - popup vuejs application root
     - `pages` - popup pages
