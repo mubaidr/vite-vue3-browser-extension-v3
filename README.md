@@ -11,12 +11,12 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - HMR for extension pages and content scripts
 - [`Tailwind`](https://tailwindcss.com/) css And [`daisyUI`](https://daisyui.com/)
 - Vue Router setup incuding `vite-plugin-pages` for automatic route registration
-- Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge) and [VueUse](https://github.com/antfu/vueuse) storage
+- Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge)
 - [Components auto importing](./src/components)
 - [Icons](./src/components) - Access to icons from any iconset directly
   - By default [Material Design Icons](https://materialdesignicons.com/cdn/1.6.50-dev/) set is enabled
 - [TypeScript](https://www.typescriptlang.org/) - type safe
-- `Eslint` & `Prettier` configured for `vue`, `javascript`, `typescript`
+- `Eslint` & `Prettier` configured for `vue`, `javascript`, `TypeScript`
 - [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build a Chrome Extension with Vite
 - Github build and release actions
 
