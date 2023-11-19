@@ -9,6 +9,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - Vue 3 - Composition API, `Script setup` and more!
 - Vue 3 app in Content Script too (template added)
 - HMR for extension pages and content scripts
+- Sample `onInstall` & `onUpdate` pages
 - [`Tailwind`](https://tailwindcss.com/) css And [`daisyUI`](https://daisyui.com/)
 - Vue Router setup incuding `vite-plugin-pages` for automatic route registration
 - Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge)
@@ -81,6 +82,9 @@ pnpm i
     - `pages` - popup pages
   - `options` - options vuejs application root
     - `pages` - options pages
+  - `install` - Extension install success page
+  - `update` - Extension update success page
+  - `offscreen` - Chrome extension offscreen pages, can be used for audio, screen recording
   - `pages` - application pages, common to all views (About, Contact, Authentication etc)
   - `components` - auto-imported Vue components that are shared in popup and options page.
   - `assets` - assets used in Vue components
