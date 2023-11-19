@@ -7,6 +7,13 @@ chrome.runtime.onInstalled.addListener(async (opt) => {
       url: chrome.runtime.getURL('./installed.html'),
     })
   }
+
+  if (opt.reason === 'update') {
+    chrome.tabs.create({
+      active: true,
+      url: chrome.runtime.getURL('./src/update/index.html'),
+    })
+  }
 })
 
 console.log('hello world from background')
