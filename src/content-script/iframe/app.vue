@@ -3,7 +3,7 @@
 <template>
   <header
     aria-label="Site Header"
-    class="bg-gray-50"
+    class="tw-bg-gray-50"
   >
     Content Script Iframe Header
   </header>
@@ -12,7 +12,7 @@
 
   <footer
     aria-label="Site Footer"
-    class="bg-gray-50"
+    class="tw-bg-gray-50"
   >
     Content Script Iframe Footer
   </footer>
