@@ -12,8 +12,9 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 - HMR for extension pages and content scripts
 - Sample `onInstall` & `onUpdate` pages
 - [`Tailwind`](https://tailwindcss.com/) css And [`daisyUI`](https://daisyui.com/)
-- Tailwindcss plugins for Typography,forms, prettier and daisy ui
+- Tailwindcss plugins for Typography, forms, prettier and daisy ui
 - Vue Router setup incuding `vite-plugin-pages` for automatic route registration
+- vscode recommended settings and extensions for chrome plugin development 
 - Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge)
 - [Components auto importing](./src/components)
 - [Icons](./src/components) - Access to icons from any iconset directly
