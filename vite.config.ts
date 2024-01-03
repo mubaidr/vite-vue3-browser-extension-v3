@@ -8,6 +8,7 @@ import Components from 'unplugin-vue-components/vite'
 import { URL, fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
+import VueDevTools from 'vite-plugin-vue-devtools'
 import manifest from './manifest.config'
 
 // https://vitejs.dev/config/
@@ -23,6 +24,8 @@ export default defineConfig({
     crx({ manifest }),
 
     vue(),
+
+    VueDevTools(),
 
     Pages({
       dirs: [

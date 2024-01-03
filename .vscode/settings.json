@@ -4,5 +4,6 @@
       "fileMatch": ["manifest.json"],
       "url": "https://json.schemastore.org/chrome-manifest.json"
     }
-  ]
+  ],
+  "typescript.preferences.autoImportFileExcludePatterns": ["vue-router"]
 }

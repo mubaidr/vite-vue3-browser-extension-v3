@@ -6,12 +6,12 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "paths": {      
+    "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./src/*"],
       "src/*": ["./src/*"]
     },
-    "types": ["unplugin-icons/types/vue", "chrome"]
+    "types": ["unplugin-icons/types/vue", "chrome-types"]
   },
   "include": [
     "vite.config.ts",

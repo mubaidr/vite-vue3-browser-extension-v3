@@ -12,12 +12,12 @@
     "strict": true,
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "paths": {      
+    "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./src/*"],
       "src/*": ["./src/*"]
     },
-    "types": ["unplugin-icons/types/vue", "chrome"]
+    "types": ["unplugin-icons/types/vue", "chrome-types"]
   },
   "include": [
     "vite.config.ts",
