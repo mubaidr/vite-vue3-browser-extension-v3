@@ -18,4 +18,10 @@ chrome.runtime.onInstalled.addListener(async (opt) => {
 
 console.log('hello world from background')
 
+self.onerror = function (message, source, lineno, colno, error) {
+  console.info(
+    `Error: ${message}\nSource: ${source}\nLine: ${lineno}\nColumn: ${colno}\nError object: ${error}`
+  )
+}
+
 export {}
