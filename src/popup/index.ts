@@ -24,3 +24,9 @@ router.beforeEach((to, from, next) => {
 })
 
 createApp(App).use(router).mount('#app')
+
+self.onerror = function (message, source, lineno, colno, error) {
+  console.info(
+    `Error: ${message}\nSource: ${source}\nLine: ${lineno}\nColumn: ${colno}\nError object: ${error}`
+  )
+}
