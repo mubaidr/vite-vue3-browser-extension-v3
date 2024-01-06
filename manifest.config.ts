@@ -35,15 +35,6 @@ export default defineManifest(async (env) => ({
   ],
   host_permissions: ['*://*/*'],
   options_page: 'src/options/index.html',
-  permissions: ['storage', 'activeTab', 'identity'],
-  web_accessible_resources: [
-    {
-      matches: ['*://*/*'],
-      resources: ['src/content-script/index.ts'],
-    },
-    {
-      matches: ['*://*/*'],
-      resources: ['src/content-script/iframe/index.html'],
-    },
-  ],
+  permissions: ['storage'],
+  web_accessible_resources: [],
 }))
