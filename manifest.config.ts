@@ -36,5 +36,11 @@ export default defineManifest(async (env) => ({
   host_permissions: ['*://*/*'],
   options_page: 'src/options/index.html',
   permissions: ['storage'],
-  web_accessible_resources: [],
+  web_accessible_resources: [
+    {
+      matches: ['*://*/*'],
+      resources: ['src/content-script/iframe/index.html'],
+      use_dynamic_url: true,
+    },
+  ],
 }))

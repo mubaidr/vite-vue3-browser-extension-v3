@@ -7,9 +7,11 @@ import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import { URL, fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
-import Pages from 'vite-plugin-pages'
-import VueDevTools from 'vite-plugin-vue-devtools'
+import VueRouter from 'unplugin-vue-router/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
+// import VueDevTools from 'vite-plugin-vue-devtools'
 import manifest from './manifest.config'
+import { defineViteConfig as define } from './define.config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,33 +25,26 @@ export default defineConfig({
   plugins: [
     crx({ manifest }),
 
-    vue(),
-
-    VueDevTools(),
-
-    Pages({
-      dirs: [
-        {
-          dir: 'src/pages',
-          baseRoute: '',
-        },
-        {
-          dir: 'src/options/pages',
-          baseRoute: 'options',
-        },
-        {
-          dir: 'src/popup/pages',
-          baseRoute: 'popup',
-        },
-        {
-          dir: 'src/content-script/iframe/pages',
-          baseRoute: 'iframe',
-        },
+    VueRouter({
+      root: '.',
+      // Add your own custom pages here. Just add it to the array. Example: 'src/welcome/pages'
+      routesFolder: [
+        'src/pages',
+        'src/popup/pages',
+        'src/options/pages',
+        'src/content-script/iframe/pages',
+        'src/setup/pages',
       ],
+      dts: 'src/typed-router.d.ts',
+      extensions: ['.vue'],
     }),
 
+    vue(),
+
+    // VueDevTools(),
+
     AutoImport({
-      imports: ['vue', 'vue-router', 'vue/macros', '@vueuse/core'],
+      imports: ['vue', VueRouterAutoImports, 'vue/macros', '@vueuse/core'],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/composables/'],
     }),
@@ -88,6 +83,7 @@ export default defineConfig({
       },
     },
   ],
+  define,
   build: {
     rollupOptions: {
       input: {

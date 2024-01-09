@@ -1,37 +1,50 @@
 <script setup lang="ts">
-// chrome.identity.launchWebAuthFlow(
-//   {
-//     interactive: true,
-//     url:
-//       `https://github.com/login/oauth/authorize` +
-//       `?client_id=55e294602d71eb006dc505540cf0614d6b3c7f35` +
-//       `&redirect_uri=https://ekgmcbpgglflmgcfajnglpbcbdccnnje.chromiumapp.org/github_cb` +
-//       `&scope=user.email`,
-//   },
-//   (a) => {
-//     console.log(a)
-//   }
-// )
+import { useAppStore } from '@/stores/app.store'
+
+const version = __VERSION__
+const displayName = __DISPLAY_NAME__
+
+const store = useAppStore()
+
+const name = computed(() => store.name)
+const count = computed(() => store.count)
 </script>
 
 <template>
   <div class="text-center m-4">
     <h1 class="text-3xl font-bold underline pb-6">Hello world from Popup!</h1>
 
+    <p>Vesion: {{ version }}</p>
+    <p>Display name: {{ displayName }}</p>
+
+    <p>Name: {{ name }}</p>
+    <p>Count: {{ count }}</p>
+
+    <div>
+      <button class="btn" @click="store.increment">Increment</button>
+      <button class="btn" @click="store.decrement">Decrement</button>
+    </div>
+
     <RouterLink to="/about">About</RouterLink>
   </div>
 </template>
 
 <style scoped>
+.btn {
+  @apply px-4 py-2 rounded-md bg-blue-500 text-white;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }

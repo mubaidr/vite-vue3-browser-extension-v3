@@ -16,6 +16,7 @@
   "include": [
     "vite.config.ts",
     "manifest.config.ts",
+    "define.config.ts",
     "manifest.json",
     ".eslintrc.cjs"
   ]

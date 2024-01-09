@@ -4,14 +4,14 @@ chrome.runtime.onInstalled.addListener(async (opt) => {
 
     chrome.tabs.create({
       active: true,
-      url: chrome.runtime.getURL('./installed.html'),
+      url: chrome.runtime.getURL('./src/setup/index.html?type=install'),
     })
   }
 
   if (opt.reason === 'update') {
     chrome.tabs.create({
       active: true,
-      url: chrome.runtime.getURL('./src/update/index.html'),
+      url: chrome.runtime.getURL('./src/setup/index.html?type=update'),
     })
   }
 })
