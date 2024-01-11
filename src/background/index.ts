@@ -1,5 +1,5 @@
 chrome.runtime.onInstalled.addListener(async (opt) => {
-  // Checl if reason is install or update. Eg: opt.reason === 'install' // If extension is installed.
+  // Check if reason is install or update. Eg: opt.reason === 'install' // If extension is installed.
   // opt.reason === 'update' // If extension is updated.
   if (opt.reason === 'install') {
     await chrome.storage.local.clear()
