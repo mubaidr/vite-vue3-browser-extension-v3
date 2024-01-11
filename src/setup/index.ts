@@ -24,11 +24,11 @@ const router = createRouter({
 })
 
 router.beforeEach((to, _from, next) => {
-  if (to.path === '/') {
+  if (to.path === '/setup') {
     if (setupType === 'install') {
-      return next('/setup/install')
+      return next('/setup/Install')
     } else if (setupType === 'update') {
-      return next('/setup/update')
+      return next('/setup/Update')
     }
   }
 

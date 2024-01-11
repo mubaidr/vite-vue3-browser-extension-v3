@@ -12,6 +12,7 @@ import { defineConfig, type Plugin } from 'vite'
 import { defineViteConfig as define } from './define.config'
 import manifest from './manifest.config'
 import packageJson from './package.json'
+import VueDevTools from 'vite-plugin-vue-devtools'
 
 const transformHtmlPlugin = (data) =>
   <Plugin>{
@@ -52,7 +53,7 @@ export default defineConfig({
 
     vue(),
 
-    // VueDevTools(),
+    VueDevTools(),
 
     AutoImport({
       imports: ['vue', VueRouterAutoImports, 'vue/macros', '@vueuse/core'],
