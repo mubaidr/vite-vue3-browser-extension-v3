@@ -60,7 +60,7 @@ const count = computed(() => store.count)
 
     <RouterLink
       class="underline"
-      to="/about"
+      to="/common/about"
     >
       About
     </RouterLink>

@@ -8,20 +8,21 @@ import Components from 'unplugin-vue-components/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import { URL, fileURLToPath } from 'url'
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import { defineViteConfig as define } from './define.config'
 import manifest from './manifest.config'
 import packageJson from './package.json'
 
-const transformHtmlPlugin = (data) => ({
-  name: 'transform-html',
-  transformIndexHtml: {
-    enforce: 'pre',
-    transform(html) {
-      return html.replace(/<%=\s*(\w+)\s*%>/gi, (match, p1) => data[p1] || '')
+const transformHtmlPlugin = (data) =>
+  <Plugin>{
+    name: 'transform-html',
+    transformIndexHtml: {
+      order: 'pre',
+      handler(html) {
+        return html.replace(/<%=\s*(\w+)\s*%>/gi, (match, p1) => data[p1] || '')
+      },
     },
-  },
-})
+  }
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -83,7 +84,7 @@ export default defineConfig({
     // rewrite assets to use relative path
     {
       name: 'assets-rewrite',
-      enforce: 'post',
+      order: 'post',
       apply: 'build',
       transformIndexHtml(html, { path }) {
         return html.replace(

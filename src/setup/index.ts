@@ -13,6 +13,14 @@ const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   // You don't need to define routes here when using the auto import feature from `unplugin-vue-router`
   // Add routes to `vite.config.ts` instead.
+  extendRoutes: (routes) => {
+    routes.push({
+      path: '/',
+      redirect: '/setup',
+    })
+
+    return routes
+  },
 })
 
 router.beforeEach((to, _from, next) => {
@@ -22,8 +30,6 @@ router.beforeEach((to, _from, next) => {
     } else if (setupType === 'update') {
       return next('/setup/update')
     }
-
-    return next('/setup')
   }
 
   next()
@@ -34,6 +40,8 @@ const app = createApp(App)
 app.provide('setupType', { setupType } as ISetup)
 
 app.use(router).mount('#app')
+
+console.log(router.getRoutes())
 
 self.onerror = function (message, source, lineno, colno, error) {
   console.info(

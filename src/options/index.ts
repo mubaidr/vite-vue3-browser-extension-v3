@@ -7,17 +7,19 @@ import './index.scss'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-})
+  extendRoutes: (routes) => {
+    routes.push({
+      path: '/',
+      redirect: '/options',
+    })
 
-router.beforeEach((to, from, next) => {
-  if (to.path === '/') {
-    return next('/options')
-  }
-
-  next()
+    return routes
+  },
 })
 
 createApp(App).use(router).use(createPinia()).mount('#app')
+
+console.log(router.getRoutes())
 
 self.onerror = function (message, source, lineno, colno, error) {
   console.info(
