@@ -18,7 +18,7 @@ const router = createRouter({
 
 createApp(App).use(router).mount('#app')
 
-console.log(router.getRoutes())
+// console.log(router.getRoutes())
 
 self.onerror = function (message, source, lineno, colno, error) {
   console.info(

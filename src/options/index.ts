@@ -19,7 +19,7 @@ const router = createRouter({
 
 createApp(App).use(router).use(createPinia()).mount('#app')
 
-console.log(router.getRoutes())
+// console.log(router.getRoutes())
 
 self.onerror = function (message, source, lineno, colno, error) {
   console.info(
