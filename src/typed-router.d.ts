@@ -39,12 +39,13 @@ import type {
 
 declare module 'vue-router/auto/routes' {
   export interface RouteNamedMap {
-    '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
-    '/about': RouteRecordInfo<'/about', '/about', Record<never, never>, Record<never, never>>,
-    '/iframe': RouteRecordInfo<'/iframe', '/iframe', Record<never, never>, Record<never, never>>,
-    '/install': RouteRecordInfo<'/install', '/install', Record<never, never>, Record<never, never>>,
-    '/options': RouteRecordInfo<'/options', '/options', Record<never, never>, Record<never, never>>,
-    '/update': RouteRecordInfo<'/update', '/update', Record<never, never>, Record<never, never>>,
+    '/common/about': RouteRecordInfo<'/common/about', '/common/about', Record<never, never>, Record<never, never>>,
+    '/iframe/': RouteRecordInfo<'/iframe/', '/iframe', Record<never, never>, Record<never, never>>,
+    '/options/': RouteRecordInfo<'/options/', '/options', Record<never, never>, Record<never, never>>,
+    '/popup/': RouteRecordInfo<'/popup/', '/popup', Record<never, never>, Record<never, never>>,
+    '/setup/': RouteRecordInfo<'/setup/', '/setup', Record<never, never>, Record<never, never>>,
+    '/setup/install': RouteRecordInfo<'/setup/install', '/setup/install', Record<never, never>, Record<never, never>>,
+    '/setup/update': RouteRecordInfo<'/setup/update', '/setup/update', Record<never, never>, Record<never, never>>,
   }
 }
 

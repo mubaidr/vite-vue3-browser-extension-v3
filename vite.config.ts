@@ -39,11 +39,11 @@ export default defineConfig({
       root: '.',
       // Add your own custom pages here. Just add it to the array. Example: 'src/welcome/pages'
       routesFolder: [
-        'src/pages',
-        'src/popup/pages',
-        'src/options/pages',
-        'src/content-script/iframe/pages',
-        'src/setup/pages',
+        { src: 'src/pages', path: 'common/' },
+        { src: 'src/content-script/iframe/pages', path: 'iframe/' },
+        { src: 'src/options/pages', path: 'options/' },
+        { src: 'src/popup/pages', path: 'popup/' },
+        { src: 'src/setup/pages', path: 'setup/' },
       ],
       dts: 'src/typed-router.d.ts',
       extensions: ['.vue'],
@@ -102,6 +102,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         iframe: 'src/content-script/iframe/index.html',
+        setup: 'src/setup/index.html',
       },
     },
   },
