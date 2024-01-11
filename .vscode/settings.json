@@ -5,5 +5,6 @@
       "url": "https://json.schemastore.org/chrome-manifest.json"
     }
   ],
-  "typescript.preferences.autoImportFileExcludePatterns": ["vue-router"]
+  "typescript.preferences.autoImportFileExcludePatterns": ["vue-router"],
+  "markdown.validate.ignoredLinks": ["./src/setup/pages/index.ts"]
 }

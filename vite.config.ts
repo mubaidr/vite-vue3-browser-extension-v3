@@ -1,18 +1,17 @@
-import { defineViteConfig as define } from './define.config'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
 import { crx } from '@crxjs/vite-plugin'
+import vue from '@vitejs/plugin-vue'
 import { dirname, relative } from 'path'
+import AutoImport from 'unplugin-auto-import/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import Icons from 'unplugin-icons/vite'
+import Components from 'unplugin-vue-components/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
+import VueRouter from 'unplugin-vue-router/vite'
 import { URL, fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import Icons from 'unplugin-icons/vite'
-import packageJson from './package.json'
+import { defineViteConfig as define } from './define.config'
 import manifest from './manifest.config'
-import VueRouter from 'unplugin-vue-router/vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import VueDevTools from 'vite-plugin-vue-devtools'
-import IconsResolver from 'unplugin-icons/resolver'
-import Components from 'unplugin-vue-components/vite'
+import packageJson from './package.json'
 
 const transformHtmlPlugin = (data) => ({
   name: 'transform-html',
@@ -52,7 +51,7 @@ export default defineConfig({
 
     vue(),
 
-    VueDevTools(),
+    // VueDevTools(),
 
     AutoImport({
       imports: ['vue', VueRouterAutoImports, 'vue/macros', '@vueuse/core'],

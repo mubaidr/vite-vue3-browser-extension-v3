@@ -103,25 +103,7 @@ pnpm i
 
 In [src/background/index.ts](./src/background/index.ts) you can find an example of chrome.runtime.onInstalled.addListener.
 
-We add `?type` to the url to tell if it's update or install event.
-
-Then in [src/setup/pages/index.ts](./src/setup/pages/index.ts) we check for the `type` and show the appropriate page.
-
-```ts
-const setupType = new URLSearchParams(window.location.search).get('type')
-
-router.beforeEach((to, _from, next) => {
-  if (to.path === '/') {
-    if (setupType === 'install') {
-      return next('/install')
-    } else if (setupType === 'update') {
-      return next('/update')
-    }
-  }
-
-  next()
-})
-```
+We add `?type` to the url to tell if it's update or install event. Then in [src/setup/pages/index.ts](./src/setup/pages/index.ts) we check for the `type` and show the appropriate page.
 
 ### Development
 
@@ -140,6 +122,11 @@ pnpm build
 ```
 
 And then pack files under `dist`, you can upload `dist.crx` or `dist.xpi` to appropriate extension store.
+
+## Contributors
+
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
 
 ## Credits
 
