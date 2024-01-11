@@ -11,7 +11,18 @@ import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 // import VueDevTools from 'vite-plugin-vue-devtools'
 import manifest from './manifest.config'
+import packageJson from './package.json'
 import { defineViteConfig as define } from './define.config'
+
+const transformHtmlPlugin = (data) => ({
+  name: 'transform-html',
+  transformIndexHtml: {
+    enforce: 'pre',
+    transform(html) {
+      return html.replace(/<%=\s*(\w+)\s*%>/gi, (match, p1) => data[p1] || '')
+    },
+  },
+})
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -82,6 +93,10 @@ export default defineConfig({
         )
       },
     },
+
+    transformHtmlPlugin({
+      HTML_TITLE: packageJson.displayName || packageJson.name,
+    }),
   ],
   define,
   build: {

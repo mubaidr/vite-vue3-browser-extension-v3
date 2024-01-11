@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
 import '../../assets/base.scss'
-import App from './app.vue'
+import App from './App.vue'
 import './index.scss'
 
 const router = createRouter({
