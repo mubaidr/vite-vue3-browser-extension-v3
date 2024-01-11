@@ -45,6 +45,10 @@ _Please create an issue if you feel some feature is missing or could be improved
 - [Pinia](https://pinia.vuejs.org/) - Intuitive, type safe, light and flexible Store for Vue
 - [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
 
+### Plugins
+
+- [Marked](https://github.com/markedjs/marked) - A markdown parser and compiler. Used for CHANGELOG.md to show in Update page
+
 ### UI Frameworks
 
 - [tailwindcss](https://tailwindcss.com) - A utility-first CSS framework
