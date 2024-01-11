@@ -21,8 +21,18 @@ const count = computed(() => store.count)
     <p>Count: {{ count }}</p>
 
     <div>
-      <button class="btn" @click="store.increment">Increment</button>
-      <button class="btn" @click="store.decrement">Decrement</button>
+      <button
+        class="btn btn-primary"
+        @click="store.increment"
+      >
+        Increment
+      </button>
+      <button
+        class="btn btn-primary"
+        @click="store.decrement"
+      >
+        Decrement
+      </button>
     </div>
 
     <RouterLink to="/about">About</RouterLink>

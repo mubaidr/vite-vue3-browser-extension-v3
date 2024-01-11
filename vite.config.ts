@@ -9,7 +9,7 @@ import { URL, fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
-// import VueDevTools from 'vite-plugin-vue-devtools'
+import VueDevTools from 'vite-plugin-vue-devtools'
 import manifest from './manifest.config'
 import { defineViteConfig as define } from './define.config'
 
@@ -41,7 +41,7 @@ export default defineConfig({
 
     vue(),
 
-    // VueDevTools(),
+    VueDevTools(),
 
     AutoImport({
       imports: ['vue', VueRouterAutoImports, 'vue/macros', '@vueuse/core'],

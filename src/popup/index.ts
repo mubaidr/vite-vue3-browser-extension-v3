@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
 import { createPinia } from 'pinia'
-import '../assets/base.scss'
-import App from './app.vue'
+import '@/assets/base.scss'
+import App from './App.vue'
 import './index.scss'
 
 const router = createRouter({

@@ -1,16 +1,35 @@
 <script setup lang="ts">
-
-const displayName = __DISPLAY_NAME__;
-const version = __VERSION__;
-
+const displayName = __DISPLAY_NAME__
+const version = __VERSION__
 </script>
 
 <template>
-    <div class="w-full h-full flex flex-col gap-y-4 justify-center items-center">
-        <h1 class="text-4xl font-bold">🎉 Updated! 🎉</h1>
-        <p class="text-lg">{{ displayName }} has been updated to the latest version. 🎉</p>
-        <p class="text-lg">Version: {{ version }}</p>
+  <div class="grid update-grid">
+    <div
+      class="flex flex-col gap-y-4"
+      style="grid-area: title"
+    >
+      <h1 class="text-4xl font-bold text-center">🎉 Updated! 🎉</h1>
+      <p class="text-lg">
+        {{ displayName }} has been updated to the latest version. 🎉
+      </p>
+      <p class="text-lg">Version: {{ version }}</p>
+
+      <h1 class="text-2xl font-bold">What's new?</h1>
     </div>
+
+    <Changelog />
+  </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.update-grid {
+  grid-template-areas:
+    '. . .'
+    '. title .'
+    '. . .'
+    '. content .';
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+</style>
