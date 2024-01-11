@@ -16,14 +16,6 @@ const router = createRouter({
   },
 })
 
-router.beforeEach((to, from, next) => {
-  if (to.path === '/') {
-    return next('/iframe')
-  }
-
-  next()
-})
-
 createApp(App).use(router).mount('#app')
 
 console.log(router.getRoutes())
