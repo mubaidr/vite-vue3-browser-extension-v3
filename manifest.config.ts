@@ -1,5 +1,4 @@
 import { defineManifest } from '@crxjs/vite-plugin'
-// @ts-ignore
 import packageJson from './package.json'
 
 const { version, name, description, displayName } = packageJson
