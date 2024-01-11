@@ -1,18 +1,12 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
-import routes from '~pages'
+import { createRouter, createWebHashHistory } from 'vue-router/auto'
 import '../assets/base.scss'
-import App from './app.vue'
+import App from './App.vue'
 import './index.scss'
-
-routes.push({
-  path: '/',
-  redirect: '/options',
-})
+import { createPinia } from 'pinia'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  routes,
 })
 
 router.beforeEach((to, from, next) => {
@@ -23,7 +17,7 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(createPinia()).mount('#app')
 
 self.onerror = function (message, source, lineno, colno, error) {
   console.info(

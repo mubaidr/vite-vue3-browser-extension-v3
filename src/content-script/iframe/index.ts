@@ -1,18 +1,11 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
-import routes from '~pages'
+import { createRouter, createWebHashHistory } from 'vue-router/auto'
 import '../../assets/base.scss'
-import App from './app.vue'
+import App from './App.vue'
 import './index.scss'
-
-routes.push({
-  path: '/',
-  redirect: '/iframe',
-})
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  routes,
 })
 
 router.beforeEach((to, from, next) => {
@@ -23,6 +16,6 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
-console.log({ routes })
+console.log(router.getRoutes())
 
 createApp(App).use(router).mount('#app')

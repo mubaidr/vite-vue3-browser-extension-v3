@@ -1,5 +1,4 @@
 import { defineManifest } from '@crxjs/vite-plugin'
-// @ts-ignore
 import packageJson from './package.json'
 
 const { version, name, description, displayName } = packageJson
@@ -36,5 +35,11 @@ export default defineManifest(async (env) => ({
   host_permissions: ['*://*/*'],
   options_page: 'src/options/index.html',
   permissions: ['storage'],
-  web_accessible_resources: [],
+  web_accessible_resources: [
+    {
+      matches: ['*://*/*'],
+      resources: ['src/content-script/iframe/index.html'],
+      use_dynamic_url: true,
+    },
+  ],
 }))

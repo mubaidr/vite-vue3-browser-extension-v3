@@ -1,15 +1,28 @@
+import { defineViteConfig as define } from './define.config'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 import { crx } from '@crxjs/vite-plugin'
-import vue from '@vitejs/plugin-vue'
 import { dirname, relative } from 'path'
-import AutoImport from 'unplugin-auto-import/vite'
-import IconsResolver from 'unplugin-icons/resolver'
-import Icons from 'unplugin-icons/vite'
-import Components from 'unplugin-vue-components/vite'
 import { URL, fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
-import Pages from 'vite-plugin-pages'
-import VueDevTools from 'vite-plugin-vue-devtools'
+import vue from '@vitejs/plugin-vue'
+import Icons from 'unplugin-icons/vite'
+import packageJson from './package.json'
 import manifest from './manifest.config'
+import VueRouter from 'unplugin-vue-router/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import VueDevTools from 'vite-plugin-vue-devtools'
+import IconsResolver from 'unplugin-icons/resolver'
+import Components from 'unplugin-vue-components/vite'
+
+const transformHtmlPlugin = (data) => ({
+  name: 'transform-html',
+  transformIndexHtml: {
+    enforce: 'pre',
+    transform(html) {
+      return html.replace(/<%=\s*(\w+)\s*%>/gi, (match, p1) => data[p1] || '')
+    },
+  },
+})
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,33 +36,26 @@ export default defineConfig({
   plugins: [
     crx({ manifest }),
 
+    VueRouter({
+      root: '.',
+      // Add your own custom pages here. Just add it to the array. Example: 'src/welcome/pages'
+      routesFolder: [
+        'src/pages',
+        'src/popup/pages',
+        'src/options/pages',
+        'src/content-script/iframe/pages',
+        'src/setup/pages',
+      ],
+      dts: 'src/typed-router.d.ts',
+      extensions: ['.vue'],
+    }),
+
     vue(),
 
     VueDevTools(),
 
-    Pages({
-      dirs: [
-        {
-          dir: 'src/pages',
-          baseRoute: '',
-        },
-        {
-          dir: 'src/options/pages',
-          baseRoute: 'options',
-        },
-        {
-          dir: 'src/popup/pages',
-          baseRoute: 'popup',
-        },
-        {
-          dir: 'src/content-script/iframe/pages',
-          baseRoute: 'iframe',
-        },
-      ],
-    }),
-
     AutoImport({
-      imports: ['vue', 'vue-router', 'vue/macros', '@vueuse/core'],
+      imports: ['vue', VueRouterAutoImports, 'vue/macros', '@vueuse/core'],
       dts: 'src/auto-imports.d.ts',
       dirs: ['src/composables/'],
     }),
@@ -87,7 +93,12 @@ export default defineConfig({
         )
       },
     },
+
+    transformHtmlPlugin({
+      HTML_TITLE: packageJson.displayName || packageJson.name,
+    }),
   ],
+  define,
   build: {
     rollupOptions: {
       input: {
