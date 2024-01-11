@@ -1,9 +1,9 @@
+import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
 import '../assets/base.scss'
 import App from './App.vue'
 import './index.scss'
-import { createPinia } from 'pinia'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
