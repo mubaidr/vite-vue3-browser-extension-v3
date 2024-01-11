@@ -28,10 +28,6 @@ _Please create an issue if you feel some feature is missing or could be improved
 
 ## Pre-packed
 
-### WebExtension Libraries
-
-- [`webext-bridge`](https://github.com/zikaari/webext-bridge) - effortlessly communication between contexts
-
 ### Vite Plugins
 
 - [`unplugin-vue-router`](https://github.com/posva/unplugin-vue-router) - File system based route generator for Vite
@@ -55,6 +51,10 @@ _Please create an issue if you feel some feature is missing or could be improved
 - [daisyUI](https://daisyui.com/) - The most popular component library for Tailwind CSS
 
 Tailwind css `forms` and `typography` plugins are enabled for default styling of form controls.
+
+### WebExtension Libraries
+
+- [`webext-bridge`](https://github.com/zikaari/webext-bridge) - effortlessly communication between contexts
 
 ### Coding Style
 
@@ -81,7 +81,7 @@ pnpm i
 
 ## Usage
 
-### Folders
+### Project Structure
 
 - `src` - main source.
   - `content-script` - scripts and components to be injected as `content_script`
