@@ -148,6 +148,13 @@ And then pack files under `dist`, you can upload `dist.crx` or `dist.xpi` to app
             <br />
             <sub><b>Jihoon Yi</b></sub>
         </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/justorez">
+            <img src="https://avatars.githubusercontent.com/u/17308328?v=4" width="100;" alt="justorez"/>
+            <br />
+            <sub><b>Null</b></sub>
+        </a>
     </td></tr>
 </table>
 <!-- readme: collaborators,contributors -end -->
