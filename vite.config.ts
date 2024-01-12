@@ -9,6 +9,7 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import { URL, fileURLToPath } from 'url'
 import { defineConfig, type Plugin } from 'vite'
+// import VueDevTools from 'vite-plugin-vue-devtools'
 import { defineViteConfig as define } from './define.config'
 import manifest from './manifest.config'
 import packageJson from './package.json'
@@ -112,7 +113,7 @@ export default defineConfig({
     strictPort: true,
     hmr: {
       port: 8889,
-      overlay: false,
+      overlay: true,
     },
   },
   optimizeDeps: {

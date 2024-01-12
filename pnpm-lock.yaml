@@ -59,8 +59,8 @@ devDependencies:
     specifier: ^10.4.16
     version: 10.4.16(postcss@8.4.33)
   chrome-types:
-    specifier: ^0.1.248
-    version: 0.1.248
+    specifier: ^0.1.249
+    version: 0.1.249
   daisyui:
     specifier: ^4.6.0
     version: 4.6.0(postcss@8.4.33)
@@ -1716,8 +1716,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /chrome-types@0.1.248:
-    resolution: {integrity: sha512-1yIRIBf+cgmbA+mf2RRnvRY9VR1KfA0XXBLnn7+PiewE2QQylpXD/7+Nte4cFtoOGeDJnxkQ1FbvN8CUSmEIHg==}
+  /chrome-types@0.1.249:
+    resolution: {integrity: sha512-rTf3f9dLref2I8SN0D8lGt1LqXEMaX4KckhcznzmMryvxP8d8XrvB9pF7e7gWJwnB64N9TlX6F4nza7sn1ZWRw==}
     dev: true
 
   /color-convert@1.9.3:

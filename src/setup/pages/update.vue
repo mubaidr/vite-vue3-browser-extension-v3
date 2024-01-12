@@ -4,7 +4,7 @@ const version = __VERSION__
 </script>
 
 <template>
-  <div class="grid update-grid">
+  <div>
     <div
       class="flex flex-col gap-y-4"
       style="grid-area: title"

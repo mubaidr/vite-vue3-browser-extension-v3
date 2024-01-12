@@ -2,6 +2,7 @@ import '@/assets/base.scss'
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
 import App from './app.vue'
+import './index.scss'
 
 export interface ISetup {
   setupType: 'install' | 'update'
@@ -24,7 +25,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, _from, next) => {
-  if (to.path === '/') {
+  if (to.path === '/' || to.path === '/setup') {
     if (setupType === 'install') {
       return next('/setup/install')
     } else if (setupType === 'update') {

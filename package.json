@@ -20,7 +20,7 @@
     "@vue/compiler-sfc": "^3.4.10",
     "@vueuse/core": "^10.7.1",
     "autoprefixer": "^10.4.16",
-    "chrome-types": "^0.1.248",
+    "chrome-types": "^0.1.249",
     "daisyui": "^4.6.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
