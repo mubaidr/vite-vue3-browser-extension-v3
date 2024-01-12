@@ -4,6 +4,8 @@
 
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite`.
 
+**Please check: [vite-chrome-extension](https://github.com/mubaidr/vite-chrome-extension) for a more simpler template**
+
 ## Features
 
 - Vue 3 - Composition API, `Script setup` and more!
