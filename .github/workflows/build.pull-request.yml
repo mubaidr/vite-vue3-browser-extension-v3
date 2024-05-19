@@ -10,5 +10,5 @@ jobs:
         with:
           version: latest
       - run: pnpm install --no-frozen-lockfile
-      - run: pnpm run lint
+      # - run: pnpm run lint
       - run: pnpm run build

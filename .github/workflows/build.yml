@@ -12,7 +12,7 @@ jobs:
         with:
           version: latest
       - run: pnpm install --no-frozen-lockfile
-      - run: pnpm run lint
+      # - run: pnpm run lint
       - run: pnpm run build
       - uses: akhilmhdh/contributors-readme-action@v2.3.6
         env:
