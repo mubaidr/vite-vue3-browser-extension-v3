@@ -3,21 +3,22 @@
     "allowSyntheticDefaultImports": true,
     "composite": true,
     "esModuleInterop": true,
+    "incremental": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
+    "moduleResolution": "Bundler",
     "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./src/*"],
       "src/*": ["./src/*"]
     },
-    "types": ["unplugin-icons/types/vue", "chrome-types"]
+    "resolveJsonModule": true,
+    "types": ["unplugin-icons/types/vue", "webextension-polyfill", "chrome"]
   },
   "include": [
+    "package.json",
     "vite.config.ts",
+    "vite.firefox.config.ts",
     "manifest.config.ts",
-    "define.config.ts",
-    "manifest.json",
-    ".eslintrc.cjs"
+    "manifest.firefox.config.ts"
   ]
 }

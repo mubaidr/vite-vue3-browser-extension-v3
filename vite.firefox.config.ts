@@ -8,7 +8,7 @@ import Components from 'unplugin-vue-components/vite'
 import { URL, fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
-import manifest from './manifest.config'
+import manifest from './manifest.firefox.config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -26,7 +26,7 @@ export default defineConfig({
 
     crx({
       manifest,
-      browser: 'chrome',
+      browser: 'firefox',
     }),
 
     vue(),
@@ -97,7 +97,7 @@ export default defineConfig({
     },
     minify: 'terser',
     terserOptions: {},
-    outDir: 'dist/chrome',
+    outDir: 'dist/firefox',
   },
   server: {
     port: 8888,

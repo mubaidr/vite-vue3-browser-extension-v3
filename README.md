@@ -10,7 +10,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 
 - Vue 3 - Composition API, `Script setup` and more!
 - Vue 3 app in Content Script too (template added)
-- Vue devtools support
+- Vue devtools support with Firefox support
 - HMR for extension pages and content scripts
 - Sample `onInstall` & `onUpdate` pages
 - [`Tailwind`](https://tailwindcss.com/) css And [`daisyUI`](https://daisyui.com/)
