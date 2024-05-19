@@ -99,7 +99,9 @@ pnpm i
   - `pages` - application pages, common to all views (About, Contact, Authentication etc)
   - `components` - auto-imported Vue components that are shared in popup and options page.
   - `assets` - assets used in Vue components
-- `dist` - built files, also serve stub entry for Vite on development.
+- `dist` - built files
+  - `chrome` - Chrome extension
+  - `firefox` - Firefox extension
 
 ### Extra info
 
@@ -123,7 +125,7 @@ To build the extension, run
 pnpm build
 ```
 
-And then pack files under `dist`, you can upload `dist.crx` or `dist.xpi` to appropriate extension store.
+And then pack files under `dist/chrome` or `dist/firefox`, you can upload to appropriate extension store.
 
 ## Contributors
 
