@@ -1,19 +1,18 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
+import routes from '~pages'
 import '../../assets/base.scss'
 import App from './app.vue'
 import './index.scss'
 
+routes.push({
+  path: '/',
+  redirect: '/iframe',
+})
+
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  extendRoutes: (routes) => {
-    routes.push({
-      path: '/',
-      redirect: '/iframe',
-    })
-
-    return routes
-  },
+  routes,
 })
 
 createApp(App).use(router).mount('#app')

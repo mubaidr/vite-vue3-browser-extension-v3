@@ -1,20 +1,19 @@
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
+import routes from '~pages'
 import '../assets/base.scss'
 import App from './app.vue'
 import './index.scss'
 
+routes.push({
+  path: '/',
+  redirect: '/options',
+})
+
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  extendRoutes: (routes) => {
-    routes.push({
-      path: '/',
-      redirect: '/options',
-    })
-
-    return routes
-  },
+  routes,
 })
 
 createApp(App).use(router).use(createPinia()).mount('#app')

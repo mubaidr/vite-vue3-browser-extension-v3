@@ -1,6 +1,7 @@
 import '@/assets/base.scss'
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
+import routes from '~pages'
 import App from './app.vue'
 import './index.scss'
 
@@ -10,18 +11,14 @@ export interface ISetup {
 
 const setupType = new URLSearchParams(window.location.search).get('type')
 
+routes.push({
+  path: '/',
+  redirect: '/setup',
+})
+
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
-  // You don't need to define routes here when using the auto import feature from `unplugin-vue-router`
-  // Add routes to `vite.config.ts` instead.
-  extendRoutes: (routes) => {
-    routes.push({
-      path: '/',
-      redirect: '/setup',
-    })
-
-    return routes
-  },
+  routes,
 })
 
 router.beforeEach((to, _from, next) => {
