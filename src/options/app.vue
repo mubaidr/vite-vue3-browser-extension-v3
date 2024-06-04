@@ -11,7 +11,7 @@ const count = computed(() => store.count);
     Options Header
   </header>
 
-  <RouterView></RouterView>
+  <RouterView />
 
   <p>Count: {{ count }}</p>
 

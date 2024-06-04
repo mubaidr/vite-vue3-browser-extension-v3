@@ -1,24 +1,24 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
     "incremental": true,
-    "isolatedModules": true,
+    "target": "ES6",
     "jsx": "preserve",
     "lib": ["ES6", "DOM"],
+    "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "noEmit": true,
     "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./src/*"],
       "src/*": ["./src/*"]
     },
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ES6",
     "types": ["unplugin-icons/types/vue", "webextension-polyfill", "chrome"],
-    "useDefineForClassFields": true
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
   },
   "include": [
     "package.json",

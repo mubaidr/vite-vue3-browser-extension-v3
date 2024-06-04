@@ -2,8 +2,8 @@ import '@/assets/base.scss'
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
-import routes from '~pages'
 import App from './app.vue'
+import routes from '~pages'
 import './index.scss'
 
 routes.push({

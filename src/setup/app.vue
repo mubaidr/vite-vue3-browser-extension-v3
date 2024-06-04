@@ -2,7 +2,7 @@
 import { RouterView } from 'vue-router'
 import { inject, watchEffect } from 'vue'
 
-import { ISetup } from './index'
+import type { ISetup } from './index'
 
 const setup = inject<ISetup>('setupType')
 

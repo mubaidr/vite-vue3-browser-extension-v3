@@ -8,7 +8,7 @@
     Content Script Iframe Header
   </header>
 
-  <RouterView></RouterView>
+  <RouterView />
 
   <footer
     aria-label="Site Footer"

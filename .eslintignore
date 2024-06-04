@@ -1,8 +1,0 @@
-dist
-node_modules
-*.md
-*.json
-*.html
-*.d.ts
-**/*.js
-# .eslintrc.cjs
