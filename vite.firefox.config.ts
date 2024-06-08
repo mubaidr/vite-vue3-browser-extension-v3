@@ -50,7 +50,7 @@ export default defineConfig({
 
     AutoImport({
       imports: ['vue', 'vue-router', 'vue/macros', '@vueuse/core'],
-      dts: 'src/auto-imports.d.ts',
+      dts: 'src/types/auto-imports.d.ts',
       dirs: ['src/composables/', 'src/stores/', 'src/utils/'],
     }),
 
@@ -58,7 +58,7 @@ export default defineConfig({
     Components({
       dirs: ['src/components'],
       // generate `components.d.ts` for ts support with Volar
-      dts: 'src/components.d.ts',
+      dts: 'src/types/components.d.ts',
       resolvers: [
         // auto import icons
         IconsResolver({
