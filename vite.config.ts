@@ -51,7 +51,7 @@ export default defineConfig({
     AutoImport({
       imports: ['vue', 'vue-router', 'vue/macros', '@vueuse/core'],
       dts: 'src/auto-imports.d.ts',
-      dirs: ['src/composables/'],
+      dirs: ['src/composables/', 'src/stores/', 'src/utils/'],
     }),
 
     // https://github.com/antfu/unplugin-vue-components
