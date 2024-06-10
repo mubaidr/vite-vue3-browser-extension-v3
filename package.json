@@ -26,7 +26,7 @@
     "marked": "^12.0.2",
     "pinia": "^2.1.7",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.2",
+    "vue-router": "^4.3.3",
     "webextension-polyfill": "^0.12.0"
   },
   "devDependencies": {
@@ -36,7 +36,9 @@
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
     "@types/chrome": "^0.0.268",
+    "@types/eslint": "~8.56.10",
     "@types/node": "^20.14.2",
+    "@types/webextension-polyfill": "~0.10.7",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/compiler-sfc": "^3.4.27",
     "@vueuse/core": "^10.10.0",

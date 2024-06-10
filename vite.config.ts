@@ -8,6 +8,7 @@ import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
+import { defineViteConfig as define } from './define.config'
 import manifest from './manifest.config'
 
 // https://vitejs.dev/config/
@@ -112,4 +113,5 @@ export default defineConfig({
     exclude: ['vue-demi'],
   },
   assetsInclude: ['src/assets/*/**'],
+  define,
 })

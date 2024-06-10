@@ -9,6 +9,7 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
 import manifest from './manifest.firefox.config'
+import { defineViteConfig as define } from './define.config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -112,4 +113,5 @@ export default defineConfig({
     exclude: ['vue-demi'],
   },
   assetsInclude: ['src/assets/*/**'],
+  define,
 })
