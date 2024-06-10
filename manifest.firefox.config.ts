@@ -24,7 +24,7 @@ export default defineManifest(async (env) => ({
   //   },
   // },
   action: {
-    // default_popup: 'src/popup/index.html',
+    default_popup: 'src/popup/index.html',
   },
   background: {
     scripts: ['src/background/index.ts'],

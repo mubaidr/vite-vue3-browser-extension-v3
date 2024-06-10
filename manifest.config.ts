@@ -19,7 +19,7 @@ export default defineManifest(async (env) => ({
   manifest_version: 3,
   // key: '',
   action: {
-    // default_popup: 'src/popup/index.html',
+    default_popup: 'src/popup/index.html',
   },
   background: {
     service_worker: 'src/background/index.ts',

@@ -2,8 +2,8 @@ import '@/assets/base.scss'
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
-import App from './app.vue'
 import routes from '~pages'
+import App from './app.vue'
 import './index.scss'
 
 routes.push({
@@ -18,7 +18,7 @@ const router = createRouter({
 
 createApp(App).use(router).use(createPinia()).mount('#app')
 
-// console.log(router.getRoutes())
+console.log(router.getRoutes())
 
 self.onerror = function (message, source, lineno, colno, error) {
   console.info(
