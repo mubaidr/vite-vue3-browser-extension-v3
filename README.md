@@ -154,6 +154,13 @@ And then pack files under `dist/chrome` or `dist/firefox`, you can upload to app
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/poncianodiego">
+            <img src="https://avatars.githubusercontent.com/u/20716004?v=4" width="100;" alt="poncianodiego"/>
+            <br />
+            <sub><b>Diego Ponciano</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/justorez">
             <img src="https://avatars.githubusercontent.com/u/17308328?v=4" width="100;" alt="justorez"/>
             <br />
