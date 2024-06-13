@@ -98,6 +98,7 @@ export default defineConfig({
       input: {
         iframe: 'src/content-script/iframe/index.html',
         popup: 'src/popup/index.html',
+        setup: 'src/setup/index.html',
       },
     },
     minify: 'terser',
