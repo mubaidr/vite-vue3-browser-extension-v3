@@ -19,6 +19,7 @@ const jsn = (value: string) => JSON.stringify(value)
 
 export const defineViteConfig = {
   __VERSION__: jsn(packageJson.version),
+  __NAME__: jsn(packageJson.name),
   __DISPLAY_NAME__: jsn(packageJson.displayName),
   __CHANGELOG__: jsn(changelog),
   __GIT_COMMIT__: jsn(gitCommit),
