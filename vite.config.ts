@@ -47,6 +47,10 @@ export default defineConfig({
           baseRoute: 'popup',
         },
         {
+          dir: 'src/options/pages',
+          baseRoute: 'options',
+        },
+        {
           dir: 'src/content-script/iframe/pages',
           baseRoute: 'iframe',
         },
@@ -99,6 +103,7 @@ export default defineConfig({
         iframe: 'src/content-script/iframe/index.html',
         popup: 'src/popup/index.html',
         setup: 'src/setup/index.html',
+        options: 'src/options/index.html',
       },
     },
     minify: 'terser',
