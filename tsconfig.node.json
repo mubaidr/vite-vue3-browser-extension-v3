@@ -10,7 +10,11 @@
       "src/*": ["./src/*"]
     },
     "resolveJsonModule": true,
-    "types": ["unplugin-icons/types/vue", "webextension-polyfill", "chrome"],
+    "types": [
+      "unplugin-icons/types/vue",
+      "webextension-polyfill",
+      "chrome-types"
+    ],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   },
