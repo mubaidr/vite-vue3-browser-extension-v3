@@ -35,7 +35,6 @@
     "@iconify-json/mdi": "^1.1.66",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
-    "@types/chrome": "^0.0.268",
     "@types/eslint": "~8.56.10",
     "@types/node": "^20.14.2",
     "@types/webextension-polyfill": "~0.10.7",
