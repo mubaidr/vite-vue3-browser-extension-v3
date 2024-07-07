@@ -36,7 +36,7 @@ export default defineConfig({
       dirs: [
         {
           dir: 'src/pages',
-          baseRoute: '',
+          baseRoute: 'common',
         },
         {
           dir: 'src/setup/pages',
