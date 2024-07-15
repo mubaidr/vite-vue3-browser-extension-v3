@@ -147,42 +147,45 @@ And then pack files under `dist/chrome` or `dist/firefox`, you can upload to app
 
 <!-- readme: collaborators,contributors -start -->
 <table>
-<tr>
-    <td align="center">
-        <a href="https://github.com/mubaidr">
-            <img src="https://avatars.githubusercontent.com/u/2222702?v=4" width="100;" alt="mubaidr"/>
-            <br />
-            <sub><b>Muhammad Ubaid Raza</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/ultimateshadsform">
-            <img src="https://avatars.githubusercontent.com/u/151234273?v=4" width="100;" alt="ultimateshadsform"/>
-            <br />
-            <sub><b>Alexander</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/baramofme">
-            <img src="https://avatars.githubusercontent.com/u/44565599?v=4" width="100;" alt="baramofme"/>
-            <br />
-            <sub><b>Jihoon Yi</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/poncianodiego">
-            <img src="https://avatars.githubusercontent.com/u/20716004?v=4" width="100;" alt="poncianodiego"/>
-            <br />
-            <sub><b>Diego Ponciano</b></sub>
-        </a>
-    </td>
-    <td align="center">
-        <a href="https://github.com/justorez">
-            <img src="https://avatars.githubusercontent.com/u/17308328?v=4" width="100;" alt="justorez"/>
-            <br />
-            <sub><b>Null</b></sub>
-        </a>
-    </td></tr>
+	<tbody>
+		<tr>
+            <td align="center">
+                <a href="https://github.com/mubaidr">
+                    <img src="https://avatars.githubusercontent.com/u/2222702?v=4" width="100;" alt="mubaidr"/>
+                    <br />
+                    <sub><b>Muhammad Ubaid Raza</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/ultimateshadsform">
+                    <img src="https://avatars.githubusercontent.com/u/151234273?v=4" width="100;" alt="ultimateshadsform"/>
+                    <br />
+                    <sub><b>Alexander</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/baramofme">
+                    <img src="https://avatars.githubusercontent.com/u/44565599?v=4" width="100;" alt="baramofme"/>
+                    <br />
+                    <sub><b>Jihoon Yi</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/poncianodiego">
+                    <img src="https://avatars.githubusercontent.com/u/20716004?v=4" width="100;" alt="poncianodiego"/>
+                    <br />
+                    <sub><b>Diego Ponciano</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/justorez">
+                    <img src="https://avatars.githubusercontent.com/u/17308328?v=4" width="100;" alt="justorez"/>
+                    <br />
+                    <sub><b>Null</b></sub>
+                </a>
+            </td>
+		</tr>
+	<tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
 
