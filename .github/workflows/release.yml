@@ -27,13 +27,16 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20
-          # cache: 'npm'
+          node-version: 22
 
-      - run: npm i
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - run: pnpm install --no-frozen-lockfile
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
@@ -41,7 +44,7 @@ jobs:
         id: get-version
         run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
 
-      - run: npm run build
+      - run: pnpm build
       - run: zip -r ${{ env.version }}.zip dist
 
       - name: GH Release
