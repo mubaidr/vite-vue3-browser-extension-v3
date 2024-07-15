@@ -1,4 +1,5 @@
-import { defineManifest } from '@crxjs/vite-plugin'
+import { type ManifestV3Export } from '@crxjs/vite-plugin'
+import { env } from 'process'
 import packageJson from './package.json' assert { type: 'json' }
 
 const { version, name, description, displayName } = packageJson
@@ -9,7 +10,7 @@ const [major, minor, patch, label = '0'] = version
   // split into version parts
   .split(/[.-]/)
 
-export default defineManifest(async (env) => ({
+export default {
   name: env.mode === 'staging' ? `[INTERNAL] ${name}` : displayName || name,
   description,
   // up to four numbers separated by dots
@@ -52,4 +53,4 @@ export default defineManifest(async (env) => ({
     32: 'src/assets/logo.png',
     128: 'src/assets/logo.png',
   },
-}))
+} as ManifestV3Export

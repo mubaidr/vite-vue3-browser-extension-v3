@@ -1,8 +1,8 @@
 import '@/assets/base.scss'
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
-import routes from '~pages'
 import App from './app.vue'
+import routes from '~pages'
 import './index.scss'
 
 export interface ISetup {

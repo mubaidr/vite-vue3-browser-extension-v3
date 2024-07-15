@@ -4,7 +4,7 @@
 
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite`.
 
-**Please check: [vite-chrome-extension](https://github.com/mubaidr/vite-chrome-extension) for a more simpler template**
+_For a basic template, check out: : [vite-chrome-extension](https://github.com/mubaidr/vite-chrome-extension) for a more simpler template_
 
 ## Features
 
@@ -36,7 +36,6 @@ _Please create an issue if you feel some feature is missing or could be improved
 - [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use `browser` and Vue Composition API without importing
 - [`unplugin-vue-components`](https://github.com/antfu/vite-plugin-components) - components auto import
 - [`unplugin-icons`](https://github.com/antfu/unplugin-icons) - icons as components
-  - [Material Design Icons](https://icon-sets.iconify.design/mdi/) - Material Design Icons
 
 ### Vue Plugins
 
@@ -102,6 +101,23 @@ pnpm i
 - `dist` - built files
   - `chrome` - Chrome extension
   - `firefox` - Firefox extension
+
+### Browser Related Configurations
+
+- `manifest.config.ts` - Base extension manifest with common configuration
+- `manifest.chrome.config.ts` - Chrome specific manifest
+- `manifest.firefox.config.ts` - Firefox spefic manifest
+- `vite.config.ts` - Base vite configuration
+- `vite.chrome.config.ts` - Chrome specific vite configuration
+- `vite.firefox.config.ts` - Firefox specific vite configuration
+
+### Scripts
+
+- `pnpm dev` - Start development server
+- `pnpm build` - Build extension
+- `pnpm lint` - Lint files
+
+_You can also use pnpm dev:chrome, pnpm dev:firefox, pnpm build:chrome, pnpm build:firefox, pnpm lint:fix_
 
 ### Extra info
 
