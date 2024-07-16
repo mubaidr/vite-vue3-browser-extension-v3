@@ -1,5 +1,5 @@
-import { type ManifestV3Export } from '@crxjs/vite-plugin'
-import { env } from 'process'
+import { env } from 'node:process'
+import type { ManifestV3Export } from '@crxjs/vite-plugin'
 import packageJson from './package.json' assert { type: 'json' }
 
 const { version, name, description, displayName } = packageJson

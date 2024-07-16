@@ -9,13 +9,19 @@ const version = __VERSION__
       class="flex flex-col gap-y-4"
       style="grid-area: title"
     >
-      <h1 class="text-4xl font-bold text-center">🎉 Updated! 🎉</h1>
+      <h1 class="text-4xl font-bold text-center">
+        🎉 Updated! 🎉
+      </h1>
       <p class="text-lg">
         {{ displayName }} has been updated to the latest version. 🎉
       </p>
-      <p class="text-lg">Version: {{ version }}</p>
+      <p class="text-lg">
+        Version: {{ version }}
+      </p>
 
-      <h1 class="text-2xl font-bold">What's new?</h1>
+      <h1 class="text-2xl font-bold">
+        What's new?
+      </h1>
     </div>
 
     <Changelog />
