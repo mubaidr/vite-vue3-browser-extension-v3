@@ -4,7 +4,7 @@
 
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite`.
 
-_For a basic template, check out: : [vite-chrome-extension](https://github.com/mubaidr/vite-chrome-extension) for a more simpler template_
+_For a basic template, check out: : [vite-chrome-extension](https://github.com/mubaidr/vite-chrome-extension)_
 
 ## Features
 
