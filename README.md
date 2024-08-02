@@ -1,6 +1,6 @@
 # vite-vue3-browser-extension-v3
 
-[![build](https://github.com/mubaidr/vite-vue3-chrome-extension-v3/actions/workflows/build.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-chrome-extension-v3/actions/workflows/build.yml) [![release](https://github.com/mubaidr/vite-vue3-chrome-extension-v3/actions/workflows/release.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-chrome-extension-v3/actions/workflows/release.yml)
+[![build](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml) [![release](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/release.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/release.yml)
 
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite`.
 
@@ -16,14 +16,14 @@ _For a basic template, check out: : [vite-chrome-extension](https://github.com/m
 - [`Tailwind`](https://tailwindcss.com/) css And [`daisyUI`](https://daisyui.com/)
 - Tailwindcss plugins for Typography, forms, prettier and daisy ui
 - Vue Router setup incuding `unplugin-vue-router` for automatic route registration
-- vscode recommended settings and extensions for chrome plugin development
+- vscode recommended settings and extensions for extension/ plugin development
 - Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge)
 - [Components auto importing](./src/components)
 - [Icons](./src/components) - Access to icons from any iconset directly
   - By default [Material Design Icons](https://materialdesignicons.com/cdn/1.6.50-dev/) set is enabled
 - [TypeScript](https://www.typescriptlang.org/) - type safe
 - `Eslint` & `Prettier` configured for `vue`, `javascript`, `TypeScript`
-- [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build a Chrome Extension with Vite
+- [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build Chrome, Firefox and Other Extensions with Vite
 - Github build and release actions
 
 _Please create an issue if you feel some feature is missing or could be improved._
@@ -66,7 +66,7 @@ Tailwind css `forms` and `typography` plugins are enabled for default styling of
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/mubaidr/vite-vue3-chrome-extension-v3/generate).
+[Create a repo from this template on GitHub](https://github.com/mubaidr/vite-vue3-browser-extension-v3/generate).
 
 ### Clone to local
 
@@ -75,7 +75,7 @@ If you prefer to do it manually with the cleaner git history
 > If you don't have pnpm installed, run: npm install -g pnpm
 
 ```bash
-pnpx degit mubaidr/vite-vue3-chrome-extension-v3 my-webext
+pnpx degit mubaidr/vite-vue3-browser-extension-v3 my-webext
 cd my-webext
 pnpm i
 ```
@@ -92,23 +92,23 @@ pnpm i
     - `pages` - popup pages
   - `options` - options vuejs application root
     - `pages` - options pages
-  - `setup` - Page for Install and Update chrome extension events
+  - `setup` - Page for Install and Update extension events
     - `pages` - pages for install and update events
-  - `offscreen` - Chrome extension offscreen pages, can be used for audio, screen recording
+  - `offscreen` - extension offscreen pages, can be used for audio, screen recording etc
   - `pages` - application pages, common to all views (About, Contact, Authentication etc)
   - `components` - auto-imported Vue components that are shared in popup and options page.
   - `assets` - assets used in Vue components
 - `dist` - built files
-  - `chrome` - Chrome extension
+  - `chrome` - Chrome extension, can be publishd to Opera, Edge and toher chromium based browsers store etc
   - `firefox` - Firefox extension
 
 ### Browser Related Configurations
 
 - `manifest.config.ts` - Base extension manifest with common configuration
-- `manifest.chrome.config.ts` - Chrome specific manifest
+- `manifest.chrome.config.ts` - Chrome/ chromium based browsers specific manifest
 - `manifest.firefox.config.ts` - Firefox spefic manifest
 - `vite.config.ts` - Base vite configuration
-- `vite.chrome.config.ts` - Chrome specific vite configuration
+- `vite.chrome.config.ts` - Chrome/ chromium based browsers specific vite configuration
 - `vite.firefox.config.ts` - Firefox specific vite configuration
 
 ### Scripts
