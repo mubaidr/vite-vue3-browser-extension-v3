@@ -4,7 +4,20 @@
 
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite`.
 
-_For a basic template, check out: : [vite-chrome-extension](https://github.com/mubaidr/vite-chrome-extension)_
+---
+
+## We'd Love Your Feedback!
+
+We're developing a new and improved browser extension template with exciting features like authentication, payment processing, and more. Your feedback is crucial to us!
+
+[Please take a moment to fill out our feedback form](https://forms.gle/2nzS2AQkVGmqHTLV6)  and let us know if you would be interested in purchasing template, along with any features you would like to see.
+
+Thank you for your time and support!
+
+---
+
+**Note:** Your responses will help shape the future of this project and ensure we meet your needs better.
+
 
 ## Features
 
