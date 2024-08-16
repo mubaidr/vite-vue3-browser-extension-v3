@@ -1,16 +1,20 @@
 {
   "recommendations": [
+    "afzalsayed96.icones",
+    "antfu.goto-alias",
+    "antfu.iconify",
     "antfu.vite",
     "bradlc.vscode-tailwindcss",
+    "csstools.postcss",
+    "dbaeumer.vscode-eslint",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
+    "github.vscode-github-actions",
     "mikestead.dotenv",
+    "mrmlnc.vscode-scss",
+    "mrniamster.daisyui-snippets",
     "mubaidr.vuejs-extension-pack",
     "sdras.vue-vscode-snippets",
-    "Vue.volar",
-    "mrniamster.daisyui-snippets",
-    "oxc.oxc-vscode",
-    "mrmlnc.vscode-scss",
-    "csstools.postcss"
+    "usernamehw.errorlens"
   ]
 }
