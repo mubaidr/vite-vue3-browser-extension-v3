@@ -28,14 +28,14 @@ export default {
   },
   content_scripts: [
     {
-      all_frames: false,
+      all_frames: true,
       js: ['src/content-script/index.ts'],
       matches: ['*://*/*'],
       run_at: 'document_end',
     },
   ],
-  offline_enabled: false,
-  host_permissions: [],
+  offline_enabled: true,
+  // host_permissions: [],
   permissions: ['storage', 'tabs', 'background'],
   web_accessible_resources: [
     {

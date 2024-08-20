@@ -3,14 +3,15 @@
     "incremental": true,
     "target": "ES6",
     "jsx": "preserve",
-    "lib": ["ES6", "DOM"],
+    "lib": ["ES6", "DOM", "WebWorker"],
     "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
       "@/*": ["./src/*"],
       "~/*": ["./src/*"],
-      "src/*": ["./src/*"]
+      "src/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"]
     },
     "resolveJsonModule": true,
     "types": [
