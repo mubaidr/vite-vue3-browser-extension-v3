@@ -1,5 +1,6 @@
 import antfu from '@antfu/eslint-config'
 import globals from 'globals'
+import { globals as AutoImportGlobals } from './src/types/.eslintrc-auto-import.json' with { type: 'json' }
 
 export default antfu(
   {
@@ -10,9 +11,11 @@ export default antfu(
   {
     languageOptions: {
       globals: {
+        ...globals.node,
         ...globals.browser,
         ...globals.worker,
         ...globals.webextensions,
+        ...AutoImportGlobals,
       },
     },
   },
