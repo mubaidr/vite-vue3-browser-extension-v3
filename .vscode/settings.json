@@ -6,5 +6,6 @@
     }
   ],
   "typescript.preferences.autoImportFileExcludePatterns": ["vue-router"],
-  "markdown.validate.ignoredLinks": ["./src/setup/pages/index.ts"]
+  "markdown.validate.ignoredLinks": ["./src/setup/pages/index.ts"],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }

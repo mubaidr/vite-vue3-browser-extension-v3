@@ -1,6 +1,6 @@
 import antfu from '@antfu/eslint-config'
 import globals from 'globals'
-import { globals as AutoImportGlobals } from './src/types/.eslintrc-auto-import.json' with { type: 'json' }
+import AutoImportGlobals from './src/types/.eslintrc-auto-import.json' with { type: 'json' }
 
 export default antfu(
   {
@@ -15,7 +15,7 @@ export default antfu(
         ...globals.browser,
         ...globals.worker,
         ...globals.webextensions,
-        ...AutoImportGlobals,
+        ...AutoImportGlobals.globals,
       },
     },
   },
@@ -31,6 +31,7 @@ export default antfu(
       'tests',
       'cypress',
       'src/types/**/*',
+      'eslint.config.mjs',
     ],
   },
   {
