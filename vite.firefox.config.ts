@@ -7,11 +7,14 @@ ViteConfig.plugins?.push(
   crx({
     manifest,
     browser: 'firefox',
+    contentScripts: {
+      injectCss: true,
+    },
   })
 )
 
 if (!ViteConfig.build) {
-  ViteConfig.build={}
+  ViteConfig.build = {}
 }
 
 ViteConfig.build.outDir = 'dist/firefox'

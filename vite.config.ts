@@ -7,6 +7,7 @@ import Icons from 'unplugin-icons/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
+import vueDevTools from 'vite-plugin-vue-devtools'
 import { defineViteConfig as define } from './define.config'
 
 // https://vitejs.dev/config/
@@ -16,10 +17,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '~': fileURLToPath(new URL('./src', import.meta.url)),
       src: fileURLToPath(new URL('./src', import.meta.url)),
+      '@assets': fileURLToPath(new URL('src/assets', import.meta.url)),
     },
   },
   plugins: [
     vue(),
+    vueDevTools(),
     Pages({
       dirs: [
         {
@@ -46,9 +49,20 @@ export default defineConfig({
     }),
 
     AutoImport({
-      imports: ['vue', 'vue-router', '@vueuse/core'],
+      imports: [
+        'vue',
+        'vue-router',
+        '@vueuse/core',
+        {
+          'webextension-polyfill': [['*', 'browser']],
+        },
+      ],
       dts: 'src/types/auto-imports.d.ts',
       dirs: ['src/composables/', 'src/stores/', 'src/utils/'],
+      eslintrc: {
+        enabled: true,
+        filepath: 'src/types/.eslintrc-auto-import.json',
+      },
     }),
 
     // https://github.com/antfu/unplugin-vue-components
@@ -91,21 +105,9 @@ export default defineConfig({
         options: 'src/options/index.html',
       },
     },
-    minify: 'terser',
-    manifest: false,
-    terserOptions: {
-      compress: true,
-      mangle: true,
-      sourceMap: false,
-    },
-  },
-  server: {
-    hmr: {
-      overlay: false,
-    },
   },
   optimizeDeps: {
-    include: ['vue', '@vueuse/core'],
+    include: ['vue', '@vueuse/core', 'webextension-polyfill'],
     exclude: ['vue-demi'],
   },
   assetsInclude: ['src/assets/*/**'],
