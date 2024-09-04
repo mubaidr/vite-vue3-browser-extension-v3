@@ -10,7 +10,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 
 We're developing a new and improved browser extension template with exciting features like authentication, payment processing, and more. Your feedback is crucial to us!
 
-## [Please take a moment to fill out our feedback form](https://forms.gle/2nzS2AQkVGmqHTLV6)  and let us know if you would be interested in purchasing template, along with any features you would like to see.
+## [Please take a moment to fill out our 3 question feedback form](https://forms.gle/2nzS2AQkVGmqHTLV6)  and let us know if you would be interested in purchasing template, along with any features you would like to see.
 
 Thank you for your time and support!
 
