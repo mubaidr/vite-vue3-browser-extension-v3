@@ -89,10 +89,8 @@ export default defineConfig({
       enforce: 'post',
       apply: 'build',
       transformIndexHtml(html, { path }) {
-        return html.replace(
-          /"\/assets\//g,
-          `"${relative(dirname(path), '/assets')}/`
-        )
+        const assetsPath = relative(dirname(path), '/assets').replace(/\\/g, '/');
+        return html.replace(/"\/assets\//g, `"${assetsPath}/`);
       },
     },
   ],
