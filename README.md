@@ -191,6 +191,13 @@ And then pack files under `dist/chrome` or `dist/firefox`, you can upload to app
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/IgorFZ">
+                    <img src="https://avatars.githubusercontent.com/u/85708187?v=4" width="100;" alt="IgorFZ"/>
+                    <br />
+                    <sub><b>igorfz</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/justorez">
                     <img src="https://avatars.githubusercontent.com/u/17308328?v=4" width="100;" alt="justorez"/>
                     <br />
