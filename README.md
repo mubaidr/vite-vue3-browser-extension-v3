@@ -8,16 +8,14 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 
 # We'd Love Your Feedback!
 
-We're developing a new and improved browser extension template with exciting features like authentication, payment processing, and more. Your feedback is crucial to us!
-
 ## [Please take a moment to fill out our 3 question feedback form](https://forms.gle/2nzS2AQkVGmqHTLV6)  and let us know if you would be interested in purchasing template, along with any features you would like to see.
 
+We're developing a new and improved browser extension template with exciting features like authentication, payment processing, and more. Your feedback is crucial to us!
 Thank you for your time and support!
-
----
 
 **Note:** Your responses will help shape the future of this project and ensure we meet your needs better.
 
+---
 
 ## Features
 
@@ -208,7 +206,3 @@ And then pack files under `dist/chrome` or `dist/firefox`, you can upload to app
 	<tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
-
-## Credits
-
-This template is heavenly inspired by: https://github.com/antfu/vitesse-webext
