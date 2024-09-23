@@ -1,9 +1,3 @@
-# vite-vue3-browser-extension-v3
-
-[![build](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml) [![release](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/release.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/release.yml)
-
-A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite`.
-
 ---
 
 # We'd Love Your Feedback!
@@ -16,6 +10,13 @@ Thank you for your time and support!
 **Note:** Your responses will help shape the future of this project and ensure we meet your needs better.
 
 ---
+
+# vite-vue3-browser-extension-v3
+
+[![build](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml) [![release](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/release.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/release.yml)
+
+A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite`.
+
 
 ## Features
 
