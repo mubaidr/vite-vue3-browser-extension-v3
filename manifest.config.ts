@@ -34,6 +34,12 @@ export default {
       run_at: 'document_end',
     },
   ],
+  // Full options page
+  options_page: 'src/options/index.html',
+  // Embedded options page
+  // options_ui: {
+  //   page: 'src/options/index.html',
+  // },
   offline_enabled: true,
   // host_permissions: [],
   permissions: ['storage', 'tabs', 'background'],
