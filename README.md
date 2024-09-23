@@ -1,7 +1,3 @@
----
-
-# We'd Love Your Feedback!
-
 ## [Please take a moment to fill out our 3 question feedback form](https://forms.gle/2nzS2AQkVGmqHTLV6)  and let us know if you would be interested in purchasing template, along with any features you would like to see.
 
 We're developing a new and improved browser extension template with exciting features like authentication, payment processing, and more. Your feedback is crucial to us!
