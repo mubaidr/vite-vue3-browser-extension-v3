@@ -193,15 +193,6 @@ And then pack files under `dist/chrome` or `dist/firefox`, you can upload to app
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/hi2code">
-                    <img src="https://avatars.githubusercontent.com/u/51270649?v=4" width="100;" alt="hi2code"/>
-                    <br />
-                    <sub><b>hi2code</b></sub>
-                </a>
-            </td>
-		</tr>
-		<tr>
-            <td align="center">
                 <a href="https://github.com/justorez">
                     <img src="https://avatars.githubusercontent.com/u/17308328?v=4" width="100;" alt="justorez"/>
                     <br />
