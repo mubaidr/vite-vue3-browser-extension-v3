@@ -24,4 +24,7 @@ export const defineViteConfig = {
   __CHANGELOG__: jsn(changelog),
   __GIT_COMMIT__: jsn(gitCommit),
   __GITHUB_URL__: jsn(packageJson.repository.url),
+
+  // Set the HTML title for all pages from package.json so you can use %HTML_TITLE% in your HTML files.
+  'import.meta.env.HTML_TITLE': jsn(packageJson.displayName),
 }

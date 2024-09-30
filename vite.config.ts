@@ -12,12 +12,26 @@ import { defineViteConfig as define } from './define.config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    port: 5173,
+    strictPort: true,
+    hmr: {
+      port: 5173,
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '~': fileURLToPath(new URL('./src', import.meta.url)),
       src: fileURLToPath(new URL('./src', import.meta.url)),
       '@assets': fileURLToPath(new URL('src/assets', import.meta.url)),
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern',
+      },
     },
   },
   plugins: [
@@ -82,15 +96,17 @@ export default defineConfig({
       compiler: 'vue3',
       scale: 1.5,
     }),
-
     // rewrite assets to use relative path
     {
       name: 'assets-rewrite',
       enforce: 'post',
       apply: 'build',
       transformIndexHtml(html, { path }) {
-        const assetsPath = relative(dirname(path), '/assets').replace(/\\/g, '/');
-        return html.replace(/"\/assets\//g, `"${assetsPath}/`);
+        const assetsPath = relative(dirname(path), '/assets').replace(
+          /\\/g,
+          '/'
+        )
+        return html.replace(/"\/assets\//g, `"${assetsPath}/`)
       },
     },
   ],
