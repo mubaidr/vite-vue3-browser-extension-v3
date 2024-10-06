@@ -1,5 +1,5 @@
 import { dirname, relative } from 'node:path'
-import { URL, fileURLToPath } from 'node:url'
+import { fileURLToPath, URL } from 'node:url'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import IconsResolver from 'unplugin-icons/resolver'

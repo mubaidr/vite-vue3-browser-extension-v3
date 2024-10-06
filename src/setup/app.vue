@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, defineAsyncComponent, ref } from 'vue'
 import { useUrlSearchParams } from '@vueuse/core'
+import { computed, defineAsyncComponent, onMounted, ref } from 'vue'
 
 const params = useUrlSearchParams('history')
 const setupType = ref<'install' | 'update'>('install')

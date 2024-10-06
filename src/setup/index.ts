@@ -1,9 +1,9 @@
-import '@/assets/base.scss'
 import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
 import App from './app.vue'
-import './index.scss'
 import routes from '~pages'
+import '@/assets/base.scss'
+import './index.scss'
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
