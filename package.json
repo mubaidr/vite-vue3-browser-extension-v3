@@ -32,7 +32,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^3.7.3",
     "@crxjs/vite-plugin": "^2.0.0-beta.25",
-    "@iconify-json/mdi": "^1.2.0",
+    "@iconify-json/mdi": "^1.2.1",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
     "@types/eslint": "^9.6.1",
