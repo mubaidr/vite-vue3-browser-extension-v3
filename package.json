@@ -1,10 +1,66 @@
 {
-  "name": "vite-vue3-chrome-extension-v3",
-  "displayName": "Vite Vue 3 Chrome Extension",
-  "type": "module",
-  "version": "0.0.1",
-  "private": true,
+  "dependencies": {
+    "marked": "^14.1.3",
+    "pinia": "^2.2.4",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "webextension-polyfill": "^0.12.0"
+  },
   "description": "A Vue 3 + Vite project for building Chrome extensions",
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.8.0",
+    "@crxjs/vite-plugin": "^2.0.0-beta.26",
+    "@iconify-json/mdi": "^1.2.1",
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.7.8",
+    "@types/webextension-polyfill": "^0.12.1",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/compiler-sfc": "^3.5.12",
+    "@vueuse/core": "^11.1.0",
+    "autoprefixer": "^10.4.20",
+    "chrome-types": "^0.1.311",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "daisyui": "^4.12.13",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "sass": "^1.80.3",
+    "tailwindcss": "^3.4.14",
+    "terser": "^5.36.0",
+    "typescript": "^5.6.3",
+    "unplugin-auto-import": "^0.18.3",
+    "unplugin-icons": "^0.19.3",
+    "unplugin-vue-components": "^0.27.4",
+    "unplugin-vue-router": "^0.10.8",
+    "vite": "^5.4.9",
+    "vite-plugin-pages": "^0.32.3",
+    "vite-plugin-vue-devtools": "^7.5.3",
+    "vue-tsc": "^2.1.6",
+    "web-ext": "^8.3.0",
+    "webext-bridge": "^6.0.1"
+  },
+  "displayName": "Vite Vue 3 Chrome Extension",
+  "name": "vite-vue3-chrome-extension-v3",
+  "overrides": {
+    "@crxjs/vite-plugin": "$@crxjs/vite-plugin"
+  },
+  "pnpm": {
+    "overrides": {},
+    "peerDependencyRules": {
+      "allowAny": [],
+      "allowedDeprecatedVersions": {
+        "sourcemap-codec": "1.4.8"
+      },
+      "allowedVersions": {},
+      "ignoreMissing": []
+    }
+  },
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/mubaidr/vite-vue3-chrome-extension-v3"
@@ -22,62 +78,6 @@
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit"
   },
-  "dependencies": {
-    "marked": "^14.1.2",
-    "pinia": "^2.2.4",
-    "vue": "^3.5.12",
-    "vue-router": "^4.4.5",
-    "webextension-polyfill": "^0.12.0"
-  },
-  "devDependencies": {
-    "@antfu/eslint-config": "^3.7.3",
-    "@crxjs/vite-plugin": "^2.0.0-beta.25",
-    "@iconify-json/mdi": "^1.2.0",
-    "@tailwindcss/forms": "^0.5.9",
-    "@tailwindcss/typography": "^0.5.15",
-    "@types/eslint": "^9.6.1",
-    "@types/node": "^22.7.4",
-    "@types/webextension-polyfill": "^0.12.1",
-    "@vitejs/plugin-vue": "^5.1.4",
-    "@vue/compiler-sfc": "^3.5.11",
-    "@vueuse/core": "^11.1.0",
-    "autoprefixer": "^10.4.20",
-    "chrome-types": "^0.1.307",
-    "concurrently": "^9.0.1",
-    "cross-env": "^7.0.3",
-    "daisyui": "^4.12.12",
-    "eslint": "^9.12.0",
-    "globals": "^15.10.0",
-    "postcss": "^8.4.47",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "sass": "^1.79.4",
-    "tailwindcss": "^3.4.13",
-    "terser": "^5.34.1",
-    "typescript": "^5.6.2",
-    "unplugin-auto-import": "^0.18.3",
-    "unplugin-icons": "^0.19.3",
-    "unplugin-vue-components": "^0.27.4",
-    "unplugin-vue-router": "^0.10.8",
-    "vite": "^5.4.8",
-    "vite-plugin-pages": "^0.32.3",
-    "vite-plugin-vue-devtools": "^7.4.6",
-    "vue-tsc": "^2.1.6",
-    "web-ext": "^8.3.0",
-    "webext-bridge": "^6.0.1"
-  },
-  "pnpm": {
-    "overrides": {},
-    "peerDependencyRules": {
-      "allowAny": [],
-      "allowedDeprecatedVersions": {
-        "sourcemap-codec": "1.4.8"
-      },
-      "allowedVersions": {},
-      "ignoreMissing": []
-    }
-  },
-  "overrides": {
-    "@crxjs/vite-plugin": "$@crxjs/vite-plugin"
-  }
+  "type": "module",
+  "version": "0.0.1"
 }
