@@ -20,7 +20,7 @@
     "@vue/compiler-sfc": "^3.5.12",
     "@vueuse/core": "^11.1.0",
     "autoprefixer": "^10.4.20",
-    "chrome-types": "^0.1.311",
+    "chrome-types": "^0.1.312",
     "concurrently": "^9.0.1",
     "cross-env": "^7.0.3",
     "daisyui": "^4.12.13",
