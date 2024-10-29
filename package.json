@@ -9,7 +9,7 @@
   "description": "A Vue 3 + Vite project for building Chrome extensions",
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",
-    "@crxjs/vite-plugin": "^2.0.0-beta.26",
+    "@crxjs/vite-plugin": "^2.0.0-beta.28",
     "@iconify-json/mdi": "^1.2.1",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
