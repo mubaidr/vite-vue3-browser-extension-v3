@@ -40,7 +40,7 @@
     "vite": "^5.4.10",
     "vite-plugin-pages": "^0.32.3",
     "vite-plugin-vue-devtools": "^7.5.3",
-    "vue-tsc": "^2.1.6",
+    "vue-tsc": "^2.1.10",
     "web-ext": "^8.3.0",
     "webext-bridge": "^6.0.1"
   },
