@@ -23,7 +23,7 @@
     "chrome-types": "^0.1.312",
     "concurrently": "^9.0.1",
     "cross-env": "^7.0.3",
-    "daisyui": "^4.12.13",
+    "daisyui": "^4.12.14",
     "eslint": "^9.13.0",
     "globals": "^15.11.0",
     "postcss": "^8.4.47",
