@@ -165,13 +165,6 @@ And then pack files under `dist/chrome` or `dist/firefox`, you can upload to app
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/ultimateshadsform">
-                    <img src="https://avatars.githubusercontent.com/u/151234273?v=4" width="100;" alt="ultimateshadsform"/>
-                    <br />
-                    <sub><b>Alexander</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/baramofme">
                     <img src="https://avatars.githubusercontent.com/u/44565599?v=4" width="100;" alt="baramofme"/>
                     <br />
@@ -199,8 +192,6 @@ And then pack files under `dist/chrome` or `dist/firefox`, you can upload to app
                     <sub><b>hi2code</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/justorez">
                     <img src="https://avatars.githubusercontent.com/u/17308328?v=4" width="100;" alt="justorez"/>
