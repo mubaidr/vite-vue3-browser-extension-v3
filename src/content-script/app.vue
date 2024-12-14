@@ -5,7 +5,7 @@
     aria-label="Site Header"
     class="bg-gray-50"
   >
-    Content Script Iframe Header
+    Content Script Header
   </header>
 
   <RouterView />
@@ -14,7 +14,7 @@
     aria-label="Site Footer"
     class="bg-gray-50"
   >
-    Content Script Iframe Footer
+    Content Script Footer
   </footer>
 </template>
 
