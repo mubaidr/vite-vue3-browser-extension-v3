@@ -3,7 +3,7 @@ import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router/auto'
 import App from './app.vue'
 import routes from '~pages'
-import '@/assets/base.scss'
+// import '@/assets/base.scss'
 import './index.scss'
 
 routes.push({

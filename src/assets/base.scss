@@ -1,5 +1,5 @@
 // required for vue-devtools
-@use '/node_modules/vite-plugin-vue-devtools/src//overlay/devtools-overlay.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@use '/node_modules/vite-plugin-vue-devtools/src/overlay/devtools-overlay.css';
+@use 'tailwindcss/base';
+@use 'tailwindcss/components';
+@use 'tailwindcss/utilities';

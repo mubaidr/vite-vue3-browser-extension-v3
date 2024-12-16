@@ -31,6 +31,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         api: 'modern',
+        additionalData: `@use "/src/assets/base.scss";`,
       },
     },
   },
