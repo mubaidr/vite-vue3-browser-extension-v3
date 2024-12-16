@@ -18,7 +18,7 @@ if (iframe) {
     const style = document.createElement('style')
 
     // Dynamically import the SCSS/CSS
-    import('src/content-script/index.scss?inline').then((module) => {
+    import('src/content-script/iframe/index.scss?inline').then((module) => {
       style.textContent = module.default
       iframeDocument.head.appendChild(style)
     })
@@ -27,7 +27,7 @@ if (iframe) {
     if (import.meta.hot) {
       import.meta.hot.accept(() => {
         // On hot-reload, dynamically inject the updated styles into the iframe
-        import('src/content-script/index.scss?inline').then((module) => {
+        import('src/content-script/iframe/index.scss?inline').then((module) => {
           style.textContent = module.default
           iframeDocument.head.appendChild(style)
         })
