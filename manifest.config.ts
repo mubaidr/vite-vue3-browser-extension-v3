@@ -28,7 +28,7 @@ export default {
   },
   content_scripts: [
     {
-      all_frames: false,
+      all_frames: true,
       js: ['src/content-script/index.ts'],
       matches: ['*://*/*'],
       run_at: 'document_end',
@@ -47,6 +47,10 @@ export default {
     {
       matches: ['*://*/*'],
       resources: ['src/content-script/index.ts'],
+    },
+    {
+      matches: ['*://*/*'],
+      resources: ['src/content-script/iframe/index.html'],
     },
   ],
   icons: {

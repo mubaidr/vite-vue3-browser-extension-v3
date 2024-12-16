@@ -20,11 +20,9 @@ const version = __VERSION__
 
     <p>Icons</p>
     <div>
-      Icons like fa:
       <i-fa-solid-dice-five />
-      and heroicons:
       <i-heroicons-outline:menu-alt-2 />
-      works out of the box.
+      <i-heroicons-outline-menu-alt-2 />
     </div>
 
     <Changelog />
