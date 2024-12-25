@@ -40,6 +40,10 @@ export default {
   // options_ui: {
   //   page: 'src/options/index.html',
   // },
+  side_panel: {
+    default_path: 'src/vside-panel/index.html',
+  },
+  devtools_page: 'src/devtools/index.html',
   offline_enabled: true,
   // host_permissions: [],
   permissions: ['storage', 'tabs', 'background'],

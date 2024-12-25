@@ -1,4 +1,4 @@
-import { dirname, relative } from 'node:path'
+import { dirname, relative, resolve } from 'node:path'
 import { fileURLToPath, URL } from 'node:url'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -8,16 +8,25 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import Pages from 'vite-plugin-pages'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import TurboConsole from 'unplugin-turbo-console/vite'
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { defineViteConfig as define } from './define.config'
+
+// eslint-disable-next-line node/prefer-global/process
+const PORT = Number(process.env.PORT || '') || 3303
 
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: 5173,
-    strictPort: true,
+    port: PORT,
     hmr: {
-      port: 5173,
+      host: 'localhost',
+      clientPort: PORT,
+      overlay: true,
+      protocol: 'ws',
+      port: PORT,
     },
+    origin: `http://localhost:${PORT}`,
   },
   resolve: {
     alias: {
@@ -36,6 +45,14 @@ export default defineConfig({
     },
   },
   plugins: [
+    VueI18nPlugin({
+      include: resolve(
+        dirname(fileURLToPath(import.meta.url)),
+        './src/locales/**'
+      ),
+      globalSFCScope: true,
+      compositionOnly: true,
+    }),
     vue(),
     vueDevTools(),
     Pages({
@@ -68,6 +85,12 @@ export default defineConfig({
         'vue',
         'vue-router',
         '@vueuse/core',
+        {
+          'vue-router/auto': ['definePage'],
+        },
+        {
+          'vue-i18n': ['useI18n', 't'],
+        },
         {
           'webextension-polyfill': [['*', 'browser']],
         },
@@ -110,14 +133,14 @@ export default defineConfig({
         return html.replace(/"\/assets\//g, `"${assetsPath}/`)
       },
     },
+    TurboConsole(),
   ],
   build: {
     rollupOptions: {
       input: {
-        iframe: 'src/content-script/iframe/index.html',
-        popup: 'src/popup/index.html',
         setup: 'src/setup/index.html',
-        options: 'src/options/index.html',
+        iframe: 'src/content-script/iframe/index.html',
+        devtoolsPanel: 'src/devtools-panel/index.html',
       },
     },
   },
