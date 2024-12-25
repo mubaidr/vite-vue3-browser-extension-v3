@@ -1,42 +1,89 @@
-## Please take a moment to fill out our 3 question [Feedback Form](https://forms.gle/2nzS2AQkVGmqHTLV6) and let us know if you would be interested in purchasing template, along with any features you would like to see.
-
-We're developing a new and improved browser extension template with exciting features like authentication, payment processing, and more. Your feedback is crucial to us!
-Thank you for your time and support!
-
-**Note:** Your responses will help shape the future of this project and ensure we meet your needs better.
-
----
 
 # vite-vue3-browser-extension-v3
 
 [![build](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml) [![release](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/release.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/release.yml)
 
-A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite`.
+A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite` and alot more preconfigured.
 
+## Please take a moment to fill out a 3 question [Feedback Form](https://forms.gle/2nzS2AQkVGmqHTLV6) and let us know if you would be interested in purchasing a feature rich template, along with any features (auth, payment integration and more) you would like to see.
+
+**Note:** Your responses will help shape the future of this project and ensure we meet your needs better.
+
+---
 
 ## Features
 
-- Vue 3 - Composition API, `Script setup` and more!
-- Vue 3 app in Content Script too (template added)
-- Vue devtools support
-- HMR for extension pages and content scripts, with Firefox support
-- Sample `onInstall` & `onUpdate` pages
-- [`Tailwind`](https://tailwindcss.com/) css And [`daisyUI`](https://daisyui.com/)
-- Tailwindcss plugins for Typography, forms, prettier and daisy ui
-- Vue Router setup incuding `unplugin-vue-router` for automatic route registration
-- vscode recommended settings and extensions for extension/ plugin development
-- Effortless communications - powered by [`webext-bridge`](https://github.com/zikaari/webext-bridge)
-- [Components auto importing](./src/components)
-- [Icons](./src/components) - Access to icons from any iconset directly
-  - By default [Material Design Icons](https://materialdesignicons.com/cdn/1.6.50-dev/) set is enabled
-- [TypeScript](https://www.typescriptlang.org/) - type safe
-- `Eslint` & `Prettier` configured for `vue`, `javascript`, `TypeScript`
-- [CRXJS Vite Plugin](https://crxjs.dev/vite-plugin) Build Chrome, Firefox and Other Extensions with Vite
-- Github build and release actions
+- Boiler plate Pages for
+  - Background
+  - Action Popup
+  - Options
+  - Content Script
+  - Devtools panel
+  - Browser Side Panel
+  - Setup pages for Install and Update events
+  - Offscreen pages for audio, screen recording etc
+  - Sample pages for Contact, About, Pricing etc
+- Dynamic/ Directory based routing. Just add a file in `src/pages` or relevant ui directory and it will be automatically registered as a route
+- State & UI Components
+  - Header
+  - Footer
+  - Locale Switch (i18n)
+  - Theme Switch (dark/light)
+  - Loading Spinner
+  - Error Boundary
+  - Empty State
+  - Notifications using `notivue`
+- Store for options preconfigured etc
+- Composables for
+  - i18n
+  - Theme
+  - Notifications
+  - Loading
+  - Error handling
+  - `useBrowserStorage` for extension settings and user options management
+- Preconfigured Pinia Store (optional perisitent and non-persistent)
+  - System wide
+  - Easily extendable
+  - Type safe
 
 _Please create an issue if you feel some feature is missing or could be improved._
 
-## Pre-packed
+## Directory Structure
+
+```bash
+.
+├── dist                     # Built extension files
+│   ├── chrome              # Chrome-specific build
+│   └── firefox             # Firefox-specific build
+├── public                  # Static assets
+│   └── icons              # Extension icons
+├── scripts                 # Build/dev scripts
+├── src                     # Source code
+│   ├── assets             # Global assets (images, styles)
+│   ├── background         # Extension background script
+│   ├── components         # Shared Vue components
+│   ├── composables        # Vue composables/hooks
+│   ├── content-script     # Content scripts injected into pages
+│   ├── devtools          # Chrome devtools panel
+│   ├── locales           # i18n translation files
+│   ├── offscreen         # Offscreen pages (audio, recording)
+│   ├── stores            # Pinia stores
+│   ├── types             # TypeScript type definitions
+│   ├── ui                # UI pages
+│   │   ├── action-popup  # Browser toolbar popup
+│   │   ├── common        # Shared pages
+│   │   ├── devtools-panel # Devtools panel UI
+│   │   ├── options-page  # Extension options
+│   │   ├── setup        # Install/update pages
+│   │   └── side-panel   # Browser side panel
+│   └── utils            # Shared utilities
+├── manifest.config.ts    # Base manifest configuration
+├── vite.config.ts       # Base Vite configuration
+├── tailwind.config.cjs  # Tailwind CSS configuration
+└── package.json         # Project dependencies and scripts
+```
+
+## Development tools
 
 ### Vite Plugins
 
@@ -44,11 +91,15 @@ _Please create an issue if you feel some feature is missing or could be improved
 - [`unplugin-auto-import`](https://github.com/antfu/unplugin-auto-import) - Directly use `browser` and Vue Composition API without importing
 - [`unplugin-vue-components`](https://github.com/antfu/vite-plugin-components) - components auto import
 - [`unplugin-icons`](https://github.com/antfu/unplugin-icons) - icons as components
+- [`unplugin-turbo-console`](https://github.com/unplugin/unplugin-turbo-console) - Improve the Developer Experience of console
+- [`@intlify/unplugin-vue-i18n`](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n) - unplugin for Vue I18n
 
 ### Vue Plugins
 
 - [Pinia](https://pinia.vuejs.org/) - Intuitive, type safe, light and flexible Store for Vue
 - [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
+- [Notivue](
+- [Vue-i18n](https://kazupon.github.io/vue-i18n/) - Internationalization plugin for Vue.js
 
 ### Plugins
 
@@ -59,14 +110,18 @@ _Please create an issue if you feel some feature is missing or could be improved
 - [tailwindcss](https://tailwindcss.com) - A utility-first CSS framework
 - [daisyUI](https://daisyui.com/) - The most popular component library for Tailwind CSS
 
-Tailwind css `forms` and `typography` plugins are enabled for default styling of form controls.
+_Tailwind css `forms` and `typography` plugins are enabled for default styling of form controls._
 
 ### WebExtension Libraries
 
 - [`webext-bridge`](https://github.com/zikaari/webext-bridge) - effortlessly communication between contexts
+- [`webextension-polyfill`](https://github.com/mozilla/webextension-polyfill) - A lightweight polyfill library for Promise-based WebExtension APIs in Chrome
 
 ### Coding Style
 
+- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript at Any Scale
+- [ESLint](https://eslint.org/) - Linting utility for JavaScript and JSX
+- [Prettier](https://prettier.io/) - Code formatter
 - Use Composition API with [`<script setup>` SFC syntax](https://github.com/vuejs/rfcs/pull/227)
 - Use Composition API with [`setup` SFC syntax](https://pinia.vuejs.org/cookbook/composables.html#Setup-Stores) in Pinia stores
 
@@ -88,28 +143,6 @@ cd my-webext
 pnpm i
 ```
 
-## Usage
-
-### Project Structure
-
-- `src` - main source.
-  - `content-script` - scripts and components to be injected as `content_script`
-    - `iframe` content script iframe vue3 app which will be injected into page
-  - `background` - scripts for background.
-  - `popup` - popup vuejs application root
-    - `pages` - popup pages
-  - `options` - options vuejs application root
-    - `pages` - options pages
-  - `setup` - Page for Install and Update extension events
-    - `pages` - pages for install and update events
-  - `offscreen` - extension offscreen pages, can be used for audio, screen recording etc
-  - `pages` - application pages, common to all views (About, Contact, Authentication etc)
-  - `components` - auto-imported Vue components that are shared in popup and options page.
-  - `assets` - assets used in Vue components
-- `dist` - built files
-  - `chrome` - Chrome extension, can be publishd to Opera, Edge and toher chromium based browsers store etc
-  - `firefox` - Firefox extension
-
 ### Browser Related Configurations
 
 - `manifest.config.ts` - Base extension manifest with common configuration
@@ -127,29 +160,17 @@ pnpm i
 
 _You can also use pnpm dev:chrome, pnpm dev:firefox, pnpm build:chrome, pnpm build:firefox, pnpm lint:fix_
 
-### Extra info
+_Then load extension in browser with the `dist/` folder_
 
-In [src/background/index.ts](./src/background/index.ts) you can find an example of chrome.runtime.onInstalled.addListener.
+**Note**: Pack files under `dist/chrome` or `dist/firefox`, you can upload to appropriate extension store.
 
-We add `?type` to the url to tell if it's update or install event. Then in [src/setup/pages/index.ts](./src/setup/pages/index.ts) we check for the `type` and show the appropriate page.
+## Support
 
-### Development
+If you like this project, you can support me by donating [mubaidr](https://www.patreon.com/c/mubaidr) and starring ⭐ this repository.
 
-```bash
-pnpm dev
-```
+## Hire me
 
-Then **load extension in browser with the `dist/` folder**.
-
-### Build
-
-To build the extension, run
-
-```bash
-pnpm build
-```
-
-And then pack files under `dist/chrome` or `dist/firefox`, you can upload to appropriate extension store.
+I am a full stack developer. I am open to work. If you are looking for a developer or have a project you want to start, please visit my profile and website here: [mubaidr](https://mubaidr.js.org).
 
 ## Contributors
 

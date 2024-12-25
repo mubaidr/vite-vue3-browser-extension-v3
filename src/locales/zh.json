@@ -1,0 +1,19 @@
+{
+  "menu": {
+    "about": "关于",
+    "contact": "联系",
+    "home": "首页"
+  },
+  "notifications": {
+    "error": "发生错误。",
+    "success": "成功！",
+    "warning": "警告！"
+  },
+  "settings": {
+    "cancelButton": "取消",
+    "saveButton": "保存",
+    "title": "设置"
+  },
+  "updated": "已更新",
+  "welcomeMessage": "欢迎使用我们的Chrome扩展程序！"
+}

@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "incremental": true,
     "composite": true,
     "module": "ESNext",
@@ -13,8 +15,8 @@
     "resolveJsonModule": true,
     "types": [
       "unplugin-icons/types/vue",
-      "webextension-polyfill",
-      "chrome-types"
+      "chrome-types",
+      "@intlify/unplugin-vue-i18n/messages"
     ],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true

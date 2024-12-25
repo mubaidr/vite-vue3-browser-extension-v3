@@ -15,6 +15,7 @@
     "mrniamster.daisyui-snippets",
     "mubaidr.vuejs-extension-pack",
     "sdras.vue-vscode-snippets",
-    "usernamehw.errorlens"
+    "usernamehw.errorlens",
+    "vue.volar"
   ]
 }

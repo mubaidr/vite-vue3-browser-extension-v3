@@ -1,0 +1,19 @@
+{
+  "menu": {
+    "about": "About",
+    "contact": "Contact",
+    "home": "Home"
+  },
+  "notifications": {
+    "error": "Error occurred.",
+    "success": "Success!",
+    "warning": "Warning!"
+  },
+  "settings": {
+    "cancelButton": "Cancel",
+    "saveButton": "Save",
+    "title": "Settings"
+  },
+  "updated": "Updated",
+  "welcomeMessage": "Welcome to our Chrome extension!"
+}

@@ -1,37 +1,22 @@
-const iframe = document.createElement('iframe')
-iframe.src = chrome.runtime.getURL('src/content-script/iframe/index.html')
+import "./index.scss"
 
-// iframe.style.cssText = `width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 999999; border: none;`
+const src = chrome.runtime.getURL("src/ui/content-script-iframe/index.html")
 
-document.body?.append(iframe)
+const iframe = new DOMParser().parseFromString(
+  `<iframe class="crx-iframe" src="${src}"></iframe>`,
+  "text/html",
+).body.firstElementChild
 
 if (iframe) {
-  iframe.onload = () => {
-    const iframeDocument =
-      iframe.contentDocument || iframe.contentWindow?.document
-
-    if (!iframeDocument) {
-      return
-    }
-
-    // Create a style element to inject CSS
-    const style = document.createElement('style')
-
-    // Dynamically import the SCSS/CSS
-    import('src/content-script/iframe/index.scss?inline').then((module) => {
-      style.textContent = module.default
-      iframeDocument.head.appendChild(style)
-    })
-
-    // Enable hot-reloading if in development mode
-    if (import.meta.hot) {
-      import.meta.hot.accept(() => {
-        // On hot-reload, dynamically inject the updated styles into the iframe
-        import('src/content-script/iframe/index.scss?inline').then((module) => {
-          style.textContent = module.default
-          iframeDocument.head.appendChild(style)
-        })
-      })
-    }
-  }
+  document.body?.append(iframe)
 }
+
+self.onerror = function (message, source, lineno, colno, error) {
+  console.info("Error: " + message)
+  console.info("Source: " + source)
+  console.info("Line: " + lineno)
+  console.info("Column: " + colno)
+  console.info("Error object: " + error)
+}
+
+console.info("hello world from content-script")

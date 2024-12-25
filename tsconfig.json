@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
     "incremental": true,
     "target": "ES6",
     "jsx": "preserve",
-    "lib": ["ES6", "DOM", "WebWorker"],
+    "lib": ["ES6", "DOM"],
     "useDefineForClassFields": true,
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -16,7 +17,6 @@
     "resolveJsonModule": true,
     "types": [
       "unplugin-icons/types/vue",
-      "webextension-polyfill",
       "chrome-types",
       "@intlify/unplugin-vue-i18n/messages"
     ],

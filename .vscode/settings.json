@@ -6,6 +6,8 @@
     }
   ],
   "typescript.preferences.autoImportFileExcludePatterns": ["vue-router"],
-  "markdown.validate.ignoredLinks": ["./src/setup/pages/index.ts"],
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+  "i18n-ally.localesPaths": [
+    "src/locales"
+  ],
+  "i18n-ally.keystyle": "nested"
 }

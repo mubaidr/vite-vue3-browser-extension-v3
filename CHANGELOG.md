@@ -1,6 +1,6 @@
-# Update #Whatever Version Here
+# Change Log
 
-# Example update
+## Example update
 
 - Update README.md
 - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget ultricies aliquam, nunc nisl ultricies nunc, vitae ultricies.
@@ -16,5 +16,3 @@
 | left foo     |     right foo |  center foo  |
 | left bar     |     right bar |  center bar  |
 | left baz     |     right baz |  center baz  |
-
-### Yes

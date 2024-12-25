@@ -3,3 +3,39 @@
 @use 'tailwindcss/base';
 @use 'tailwindcss/components';
 @use 'tailwindcss/utilities';
+
+body {
+  @apply min-w-96 !overflow-y-scroll;
+}
+
+label {
+  @apply label font-semibold;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]) {
+  @apply input input-bordered input-primary;
+}
+
+textarea {
+  @apply input input-bordered input-primary;
+}
+
+input[type="radio"] {
+  @apply radio radio-primary;
+}
+
+input[type="file"] {
+  @apply file-input file-input-bordered file-input-primary;
+}
+
+input[type="range"] {
+  @apply range range-primary;
+}
+
+select {
+  @apply select select-bordered select-primary;
+}
+
+.prose {
+  @apply max-w-full;
+}
