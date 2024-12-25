@@ -11,6 +11,18 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 
 ---
 
+## Screenshots
+
+<p align="center">
+    <img src="./screenshots/Screenshot_20241225_225109.png" width="auto" height="180" alt="Options" style="margin: 0 10px;" />
+    <img src="./screenshots/Screenshot_20241225_224440.png" width="auto" height="180" alt="Options" style="margin: 0 10px;" />
+    <img src="./screenshots/Screenshot_20241225_224236.png" width="auto" height="180" alt="Options (Dark Mode)" style="margin: 0 10px;" />
+</p>
+
+<p align="center">
+    <img src="./screenshots/Screenshot_20241225_224300.png" width="auto" height="180" alt="Update Screen" />
+</p>
+
 ## Features
 
 - Boiler plate Pages for
