@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "marked": "^15.0.4",
+    "notivue": "^2.4.5",
     "pinia": "^2.3.0",
     "vue": "^3.5.13",
+    "vue-i18n": "^10.0.2",
     "vue-router": "^4.5.0",
     "webextension-polyfill": "^0.12.0"
   },
@@ -13,6 +15,7 @@
     "@iconify-json/fa-solid": "^1.2.1",
     "@iconify-json/heroicons-outline": "^1.2.1",
     "@iconify-json/mdi": "^1.2.2",
+    "@intlify/unplugin-vue-i18n": "^6.0.2",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
     "@types/eslint": "^9.6.1",
@@ -37,6 +40,7 @@
     "typescript": "^5.7.2",
     "unplugin-auto-import": "^0.19.0",
     "unplugin-icons": "^0.22.0",
+    "unplugin-turbo-console": "^1.11.1",
     "unplugin-vue-components": "^0.28.0",
     "unplugin-vue-router": "^0.10.9",
     "vite": "^6.0.3",

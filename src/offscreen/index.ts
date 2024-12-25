@@ -1,9 +1,9 @@
 // redirect logs to background script
-window.console.log = (...data) => {
+window.console.info = (...data) => {
   chrome.runtime.sendMessage({
-    type: 'CONSOLE_LOG',
+    type: "CONSOLE_LOG",
     data,
   })
 }
 
-console.log('console log from offscreen document')
+console.info("console log from offscreen document")

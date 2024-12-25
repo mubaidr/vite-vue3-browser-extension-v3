@@ -17,7 +17,8 @@
     "types": [
       "unplugin-icons/types/vue",
       "webextension-polyfill",
-      "chrome-types"
+      "chrome-types",
+      "@intlify/unplugin-vue-i18n/messages"
     ],
     "strict": true,
     "noEmit": true,

@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Notification, Notivue } from 'notivue'
+</script>
 
 <template>
   <header
@@ -16,6 +18,10 @@
   >
     Content Script Iframe Footer
   </footer>
+
+  <Notivue v-slot="item">
+    <Notification :item="item" />
+  </Notivue>
 </template>
 
 <style scoped></style>

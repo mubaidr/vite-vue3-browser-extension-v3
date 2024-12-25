@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Notification, Notivue } from 'notivue'
 import { useAppStore } from '@/stores/app.store'
 
 const store = useAppStore()
@@ -24,6 +25,10 @@ const count = computed(() => store.count)
   >
     Options Footer
   </footer>
+
+  <Notivue v-slot="item">
+    <Notification :item="item" />
+  </Notivue>
 </template>
 
 <style scoped></style>

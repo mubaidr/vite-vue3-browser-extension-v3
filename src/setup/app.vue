@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Notification, Notivue } from 'notivue'
 import { useUrlSearchParams } from '@vueuse/core'
 import { computed, defineAsyncComponent, onMounted, ref } from 'vue'
 
@@ -44,6 +45,10 @@ const ComponentToRender = computed(() => {
       <component :is="ComponentToRender" />
     </div>
   </div>
+
+  <Notivue v-slot="item">
+    <Notification :item="item" />
+  </Notivue>
 </template>
 
 <style lang="scss"></style>
