@@ -46,7 +46,15 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         api: "modern",
-        additionalData: `@use "/src/assets/base.scss";`,
+        // additionalData: `@use "/src/assets/base.scss";`,
+        additionalData: (content, filePath) => {
+          // do not include base.scss (tailwind etc) in content-script iframe as it will be affect main page styles
+          if (filePath.includes("content-script/index.scss")) {
+            return content
+          }
+
+          return `@use "/src/assets/base.scss";\n${content}`
+        },
       },
     },
   },

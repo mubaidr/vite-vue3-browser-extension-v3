@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from "vue-router/auto"
+import { createRouter, createWebHashHistory } from "vue-router"
 import { handleHotUpdate, routes } from "vue-router/auto-routes"
 
 routes.push({

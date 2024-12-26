@@ -1,4 +1,3 @@
- 
 import { crx } from "@crxjs/vite-plugin"
 import { defineConfig } from "vite"
 import zipPack from "vite-plugin-zip-pack"
@@ -17,12 +16,12 @@ function printDevMessage() {
   setTimeout(() => {
     console.info("\n")
     console.info(
-      `${chalk.greenBright(`✅ Successfully built for ${browser}.`)}`
+      `${chalk.greenBright(`✅ Successfully built for ${browser}.`)}`,
     )
     console.info(
       chalk.greenBright(
-        `🚀 To load this extension in Chrome, go to chrome://extensions/, enable "Developer mode", click "Load unpacked", and select the ${browserOutDir} directory.`
-      )
+        `🚀 To load this extension in Chrome, go to chrome://extensions/, enable "Developer mode", click "Load unpacked", and select the ${browserOutDir} directory.`,
+      ),
     )
     console.info("\n")
   }, 50)
@@ -32,15 +31,15 @@ function printProdMessage() {
   setTimeout(() => {
     console.info("\n")
     console.info(
-      `${chalk.greenBright(`✅ Successfully built for ${browser}.`)}`
+      `${chalk.greenBright(`✅ Successfully built for ${browser}.`)}`,
     )
     console.info(
-      `${chalk.greenBright(`📦 Zip File for ${browser} is located at ${outDir}/${outFileName}. You can upload this to respective store. `)}`
+      `${chalk.greenBright(`📦 Zip File for ${browser} is located at ${outDir}/${outFileName}. You can upload this to respective store. `)}`,
     )
     console.info(
       chalk.greenBright(
-        ` 🚀 To load this extension in Chrome, go to chrome://extensions/, enable "Developer mode", click "Load unpacked", and select the ${browserOutDir} directory.`
-      )
+        ` 🚀 To load this extension in Chrome, go to chrome://extensions/, enable "Developer mode", click "Load unpacked", and select the ${browserOutDir} directory.`,
+      ),
     )
     console.info("\n")
   }, 50)
@@ -66,7 +65,7 @@ ViteConfig.plugins.unshift(
     contentScripts: {
       injectCss: true,
     },
-  })
+  }),
 )
 
 if (IS_DEV) {
@@ -93,7 +92,7 @@ if (IS_DEV) {
       outFileName,
       filter: (fileName, filePath, isDirectory) =>
         !(isDirectory && filePath.includes(".vite")),
-    })
+    }),
   )
 
   ViteConfig.plugins.push({

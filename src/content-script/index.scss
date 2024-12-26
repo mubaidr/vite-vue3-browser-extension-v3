@@ -1,3 +1,4 @@
+// This file is used to style the iframe that is injected into the page
 .crx-iframe {
   border: none;
   border-radius: 8px;
@@ -6,7 +7,7 @@
     0 -1px 0px rgba(0, 0, 0, 0.02);
   background-color: #fff;
   margin: 2em;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   width: 420px;

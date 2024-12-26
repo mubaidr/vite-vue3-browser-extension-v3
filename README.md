@@ -84,6 +84,7 @@ _Please create an issue if you feel some feature is missing or could be improved
 │   ├── ui                # UI pages
 │   │   ├── action-popup  # Browser toolbar popup
 │   │   ├── common        # Shared pages
+│   │   ├── content-script-iframe        # Content script app injected into pages by content script
 │   │   ├── devtools-panel # Devtools panel UI
 │   │   ├── options-page  # Extension options
 │   │   ├── setup        # Install/update pages
