@@ -5,6 +5,7 @@ import AutoImport from "unplugin-auto-import/vite"
 import IconsResolver from "unplugin-icons/resolver"
 import Icons from "unplugin-icons/vite"
 import Components from "unplugin-vue-components/vite"
+import { createHtmlPlugin } from "vite-plugin-html"
 import VueRouter from "unplugin-vue-router/vite"
 import { defineConfig } from "vite"
 // @ts-expect-error commonjs module
@@ -151,6 +152,12 @@ export default defineConfig({
         return html.replace(/"\/assets\//g, `"${assetsPath}/`)
       },
     },
+
+    createHtmlPlugin({
+      inject: {
+        data: define, // Inject all key-value pairs from defineViteConfig
+      },
+    }),
   ],
 
   build: {
