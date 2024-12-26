@@ -19,7 +19,11 @@ appRouter.addRoute({
 //   next()
 // })
 
-createApp(App).use(i18n).use(notivue).use(pinia).use(appRouter).mount("#app")
+const app = createApp(App).use(i18n).use(notivue).use(pinia).use(appRouter)
+
+app.mount("#app")
+
+export default app
 
 self.onerror = function (message, source, lineno, colno, error) {
   console.info("Error: " + message)
