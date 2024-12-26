@@ -21,6 +21,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
 
 <p align="center">
     <img src="./screenshots/Screenshot_20241225_224300.png" width="auto" height="180" alt="Update Screen" />
+    <img src="./screenshots/Screenshot_20241227_000344.png" width="auto" height="180" alt="Update Screen" />
 </p>
 
 ## Features
