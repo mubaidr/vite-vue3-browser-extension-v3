@@ -32,7 +32,7 @@
     "chalk": "^5.4.1",
     "chrome-types": "^0.1.327",
     "commander": "^12.1.0",
-    "concurrently": "^9.1.0",
+    "concurrently": "^9.1.1",
     "cross-env": "^7.0.3",
     "daisyui": "^4.12.23",
     "dotenv": "^16.4.7",

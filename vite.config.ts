@@ -161,6 +161,10 @@ export default defineConfig({
   ],
 
   build: {
+    manifest: false,
+    outDir: "dist",
+    sourcemap: false,
+    write: true,
     rollupOptions: {
       // ui or pages that are not specified in manifest file need to be specified here
       input: {

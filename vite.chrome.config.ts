@@ -54,9 +54,9 @@ if (!ViteConfig.plugins) {
 }
 
 ViteConfig.build.outDir = browserOutDir
-ViteConfig.base = IS_DEV
-  ? `http://localhost:${ViteConfig.server?.port}/`
-  : `/dist/${browser}`
+// ViteConfig.base = IS_DEV
+//   ? `http://localhost:${ViteConfig.server?.port}/`
+//   : `/dist/${browser}`
 
 ViteConfig.plugins.unshift(
   crx({
