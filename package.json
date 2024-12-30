@@ -18,7 +18,7 @@
     "@iconify-json/mdi": "^1.2.2",
     "@iconify-json/ph": "^1.2.2",
     "@iconify-json/svg-spinners": "^1.2.2",
-    "@intlify/unplugin-vue-i18n": "^6.0.2",
+    "@intlify/unplugin-vue-i18n": "^6.0.3",
     "@tailwindcss/forms": "^0.5.9",
     "@tailwindcss/typography": "^0.5.15",
     "@types/eslint": "^9.6.1",
