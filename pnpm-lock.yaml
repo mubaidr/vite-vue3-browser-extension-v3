@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       marked:
-        specifier: ^15.0.4
-        version: 15.0.4
+        specifier: ^15.0.6
+        version: 15.0.6
       notivue:
         specifier: ^2.4.5
         version: 2.4.5(@nuxt/kit@3.13.0(rollup@4.29.1))(@nuxt/schema@3.13.0(rollup@4.29.1))(defu@6.1.4)
@@ -3070,8 +3070,8 @@ packages:
     resolution: {integrity: sha512-bJzx6nMoP6PDLPBFmg7+xRKeFZvFboMrGlxmNj9ClvX53KrmvM5bXFXEWjbz4cz1AFn+jWJ9z/DJSz7hrs0w3w==}
     engines: {node: '>=6'}
 
-  marked@15.0.4:
-    resolution: {integrity: sha512-TCHvDqmb3ZJ4PWG7VEGVgtefA5/euFmsIhxtD0XsBxI39gUSKL81mIRFdt0AiNQozUahd4ke98ZdirExd/vSEw==}
+  marked@15.0.6:
+    resolution: {integrity: sha512-Y07CUOE+HQXbVDCGl3LXggqJDbXDP2pArc2C1N1RRMN0ONiShoSsIInMd5Gsxupe7fKLpgimTV+HOJ9r7bA+pg==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -7774,7 +7774,7 @@ snapshots:
     dependencies:
       p-defer: 1.0.0
 
-  marked@15.0.4: {}
+  marked@15.0.6: {}
 
   marky@1.2.5: {}
 

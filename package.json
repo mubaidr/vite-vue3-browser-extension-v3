@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "marked": "^15.0.4",
+    "marked": "^15.0.6",
     "notivue": "^2.4.5",
     "pinia": "^2.3.0",
     "vue": "^3.5.13",
