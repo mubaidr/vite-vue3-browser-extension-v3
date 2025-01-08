@@ -30,7 +30,7 @@ export function useBrowserLocalStorage<T>(key: string, defaultValue: T) {
 
   // Watch for changes in the storage and update chrome.storage.sync
   watch(data, (newValue) => {
-    chrome.storage.sync.set({ [key]: newValue })
+    chrome.storage.local.set({ [key]: newValue })
   })
 
   return data
