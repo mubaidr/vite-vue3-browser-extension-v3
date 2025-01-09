@@ -17,6 +17,8 @@ import { dirname, relative, resolve } from "node:path"
 import "dotenv/config"
 
 const PORT = Number(process.env.PORT || "") || 3303
+const shouldMinify = process.env.MINIFY === "true"
+console.log("MINIFY", shouldMinify)
 
 function getImmediateDirectories(dirPath: string): string[] {
   try {
@@ -173,6 +175,7 @@ export default defineConfig({
         devtoolsPanel: "src/ui/devtools-panel/index.html",
       },
     },
+    minify: shouldMinify,
   },
 
   server: {
