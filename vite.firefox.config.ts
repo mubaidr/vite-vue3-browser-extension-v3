@@ -1,4 +1,3 @@
- 
 import { crx } from "@crxjs/vite-plugin"
 import { defineConfig } from "vite"
 import zipPack from "vite-plugin-zip-pack"
@@ -17,12 +16,12 @@ function printDevMessage() {
   setTimeout(() => {
     console.info("\n")
     console.info(
-      `${chalk.greenBright(`✅ Successfully built for ${browser}.`)}`
+      `${chalk.greenBright(`✅ Successfully built for ${browser}.`)}`,
     )
     console.info(
       chalk.greenBright(
-        `🚀 To load this extension in Firefox, go to about:debugging, click "This Firefox", then click "Load Temporary Add-on" and select the extension's manifest file in ${browserOutDir}.`
-      )
+        `🚀 To load this extension in Firefox, go to about:debugging, click "This Firefox", then click "Load Temporary Add-on" and select the extension's manifest file in ${browserOutDir}.`,
+      ),
     )
     console.info("\n")
   }, 50)
@@ -32,15 +31,15 @@ function printProdMessage() {
   setTimeout(() => {
     console.info("\n")
     console.info(
-      `${chalk.greenBright(`✅ Successfully built for ${browser}.`)}`
+      `${chalk.greenBright(`✅ Successfully built for ${browser}.`)}`,
     )
     console.info(
-      `${chalk.greenBright(`📦 Zip File for ${browser} is located at ${outDir}/${outFileName}. You can upload this to respective store. `)}`
+      `${chalk.greenBright(`📦 Zip File for ${browser} is located at ${outDir}/${outFileName}. You can upload this to respective store. `)}`,
     )
     console.info(
       chalk.greenBright(
-        `🚀 To load this extension in Firefox, go to about:debugging, click "This Firefox", then click "Load Temporary Add-on" and select the extension's manifest file in ${browserOutDir}.`
-      )
+        `🚀 To load this extension in Firefox, go to about:debugging, click "This Firefox", then click "Load Temporary Add-on" and select the extension's manifest file in ${browserOutDir}.`,
+      ),
     )
     console.info("\n")
   }, 50)
@@ -56,6 +55,11 @@ if (!ViteConfig.plugins) {
 
 ViteConfig.build.outDir = browserOutDir
 
+if (IS_DEV) {
+  ViteConfig.build.minify = false
+  ViteConfig.build.sourcemap = true
+}
+
 ViteConfig.plugins.unshift(
   crx({
     manifest,
@@ -63,7 +67,7 @@ ViteConfig.plugins.unshift(
     contentScripts: {
       injectCss: true,
     },
-  })
+  }),
 )
 
 if (IS_DEV) {
@@ -90,7 +94,7 @@ if (IS_DEV) {
       outFileName,
       filter: (fileName, filePath, isDirectory) =>
         !(isDirectory && filePath.includes(".vite")),
-    })
+    }),
   )
 
   ViteConfig.plugins.push({
