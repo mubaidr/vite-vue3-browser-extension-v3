@@ -99,7 +99,6 @@
     "launch:all": "tsx scripts/launch.ts --all",
     "lint": "eslint . --fix --cache",
     "lint:manifest": "web-ext lint --pretty",
-    "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit"
   },
   "type": "module",

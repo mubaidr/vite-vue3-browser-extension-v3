@@ -5,7 +5,7 @@
 
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite` and alot more preconfigured.
 
-## Please take a moment to fill out a 3 question [Feedback Form](https://forms.gle/2nzS2AQkVGmqHTLV6) and let us know if you would be interested in purchasing a feature rich template, along with any features (auth, payment integration and more) you would like to see.
+## Please take a moment to fill out a 3 question [Feedback Form](https://forms.gle/2nzS2AQkVGmqHTLV6) and let us know if you would be interested in purchasing a feature rich template, along with any features (auth, payment integration and more) you would like to see
 
 **Note:** Your responses will help shape the future of this project and ensure we meet your needs better.
 
@@ -74,8 +74,11 @@ _Please create an issue if you feel some feature is missing or could be improved
 ├── src                     # Source code
 │   ├── assets             # Global assets (images, styles)
 │   ├── background         # Extension background script
-│   ├── components         # Shared Vue components
+│   ├── components         # Shared Vue components. Some prebuilt components are available like `Header`, `Footer`, `LocaleSwitch`, `ThemeSwitch`, `LoadingSpinner`, `ErrorBoundary`, `EmptyState` etc
 │   ├── composables        # Vue composables/hooks
+│   │   ├── useBrowserStorage  # Browser storage for both `sync` and `local`
+│   │   ├── useLocale  # Manage locale in your extension
+│   │   ├── useTheme  # Manage theme in your extension
 │   ├── content-script     # Content scripts injected into pages
 │   ├── devtools          # Chrome devtools panel
 │   ├── locales           # i18n translation files
@@ -92,7 +95,9 @@ _Please create an issue if you feel some feature is missing or could be improved
 │   │   └── side-panel   # Browser side panel
 │   └── utils            # Shared utilities
 ├── manifest.config.ts    # Base manifest configuration
+├── vite.chrome.config.ts       # Chrome specific Vite configuration overrides
 ├── vite.config.ts       # Base Vite configuration
+├── vite.firefox.config.ts       # Firefox specific Vite configuration overrides
 ├── tailwind.config.cjs  # Tailwind CSS configuration
 └── package.json         # Project dependencies and scripts
 ```
@@ -112,7 +117,7 @@ _Please create an issue if you feel some feature is missing or could be improved
 
 - [Pinia](https://pinia.vuejs.org/) - Intuitive, type safe, light and flexible Store for Vue
 - [VueUse](https://github.com/antfu/vueuse) - collection of useful composition APIs
-- [Notivue](
+- [Notivue](https://github.com/smastrom/notivue) - Powerful toast notification system for Vue and Nuxt.
 - [Vue-i18n](https://kazupon.github.io/vue-i18n/) - Internationalization plugin for Vue.js
 
 ### Plugins
@@ -190,8 +195,8 @@ I am a full stack developer. I am open to work. If you are looking for a develop
 
 <!-- readme: collaborators,contributors -start -->
 <table>
-	<tbody>
-		<tr>
+ <tbody>
+  <tr>
             <td align="center">
                 <a href="https://github.com/mubaidr">
                     <img src="https://avatars.githubusercontent.com/u/2222702?v=4" width="100;" alt="mubaidr"/>
@@ -234,8 +239,8 @@ I am a full stack developer. I am open to work. If you are looking for a develop
                     <sub><b>hi2code</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
+  </tr>
+  <tr>
             <td align="center">
                 <a href="https://github.com/justorez">
                     <img src="https://avatars.githubusercontent.com/u/17308328?v=4" width="100;" alt="justorez"/>
@@ -243,7 +248,7 @@ I am a full stack developer. I am open to work. If you are looking for a develop
                     <sub><b>Null</b></sub>
                 </a>
             </td>
-		</tr>
-	<tbody>
+  </tr>
+ <tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
