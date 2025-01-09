@@ -5,12 +5,6 @@
 
 A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite` and alot more preconfigured.
 
-## Please take a moment to fill out a 3 question [Feedback Form](https://forms.gle/2nzS2AQkVGmqHTLV6) and let us know if you would be interested in purchasing a feature rich template, along with any features (auth, payment integration and more) you would like to see
-
-**Note:** Your responses will help shape the future of this project and ensure we meet your needs better.
-
----
-
 ## Screenshots
 
 <p align="center">
