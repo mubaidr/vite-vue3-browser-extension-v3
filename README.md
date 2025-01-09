@@ -195,8 +195,8 @@ I am a full stack developer. I am open to work. If you are looking for a develop
 
 <!-- readme: collaborators,contributors -start -->
 <table>
- <tbody>
-  <tr>
+	<tbody>
+		<tr>
             <td align="center">
                 <a href="https://github.com/mubaidr">
                     <img src="https://avatars.githubusercontent.com/u/2222702?v=4" width="100;" alt="mubaidr"/>
@@ -239,8 +239,8 @@ I am a full stack developer. I am open to work. If you are looking for a develop
                     <sub><b>hi2code</b></sub>
                 </a>
             </td>
-  </tr>
-  <tr>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/justorez">
                     <img src="https://avatars.githubusercontent.com/u/17308328?v=4" width="100;" alt="justorez"/>
@@ -248,7 +248,7 @@ I am a full stack developer. I am open to work. If you are looking for a develop
                     <sub><b>Null</b></sub>
                 </a>
             </td>
-  </tr>
- <tbody>
+		</tr>
+	<tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
