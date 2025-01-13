@@ -34,8 +34,8 @@ importers:
         specifier: ^2.0.0-beta.28
         version: 2.0.0-beta.28
       '@eslint/compat':
-        specifier: ^1.2.4
-        version: 1.2.4(eslint@9.17.0(jiti@1.21.6))
+        specifier: ^1.2.5
+        version: 1.2.5(eslint@9.17.0(jiti@1.21.6))
       '@eslint/js':
         specifier: ^9.17.0
         version: 9.17.0
@@ -722,8 +722,8 @@ packages:
     resolution: {integrity: sha512-CCZCDJuduB9OUkFkY2IgppNZMi2lBQgD2qzwXkEia16cge2pijY/aXi96CJMquDMn3nJdlPV1A5KrJEXwfLNzQ==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
-  '@eslint/compat@1.2.4':
-    resolution: {integrity: sha512-S8ZdQj/N69YAtuqFt7653jwcvuUj131+6qGLUyDqfDg1OIoBQ66OCuXC473YQfO2AaxITTutiRQiDwoo7ZLYyg==}
+  '@eslint/compat@1.2.5':
+    resolution: {integrity: sha512-5iuG/StT+7OfvhoBHPlmxkPA9om6aDUFgmD4+mWKAGsYt4vCe8rypneG03AuseyRHBmcCLXQtIH5S26tIoggLg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^9.10.0
@@ -5008,7 +5008,7 @@ snapshots:
 
   '@eslint-community/regexpp@4.12.1': {}
 
-  '@eslint/compat@1.2.4(eslint@9.17.0(jiti@1.21.6))':
+  '@eslint/compat@1.2.5(eslint@9.17.0(jiti@1.21.6))':
     optionalDependencies:
       eslint: 9.17.0(jiti@1.21.6)
 
@@ -7408,7 +7408,7 @@ snapshots:
   globby@14.0.2:
     dependencies:
       '@sindresorhus/merge-streams': 2.3.0
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       ignore: 5.3.2
       path-type: 5.0.0
       slash: 5.1.0
