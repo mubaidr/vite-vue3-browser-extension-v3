@@ -91,8 +91,8 @@ importers:
         specifier: ^5.4.1
         version: 5.4.1
       chrome-types:
-        specifier: ^0.1.329
-        version: 0.1.329
+        specifier: ^0.1.331
+        version: 0.1.331
       commander:
         specifier: ^13.0.0
         version: 13.0.0
@@ -1930,8 +1930,8 @@ packages:
     engines: {node: '>=12.13.0'}
     hasBin: true
 
-  chrome-types@0.1.329:
-    resolution: {integrity: sha512-QcUZ1UyYMeeoWG5wE7AbmfHcYPvAYkKYBcal/h2CHcNg8koup7/EzPLpHPBhWfxYLU4jFgwDCTTKZaHstbtXrw==}
+  chrome-types@0.1.331:
+    resolution: {integrity: sha512-6zQTuJoWxI60+GGy7O7t9Zos4Pt7yRZOuwvdRR35tgkHdKRsgVRKeZqyt2blbp6pIOpkJ7HA5aoj9QpTyDIu6Q==}
 
   citty@0.1.6:
     resolution: {integrity: sha512-tskPPKEs8D2KPafUypv2gxwJP8h/OaJmC82QQGGDQcHvXX43xF2VDACcJVmZ0EuSxkpO9Kc4MlrA3q0+FG58AQ==}
@@ -6530,7 +6530,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  chrome-types@0.1.329: {}
+  chrome-types@0.1.331: {}
 
   citty@0.1.6:
     dependencies:
@@ -7408,7 +7408,7 @@ snapshots:
   globby@14.0.2:
     dependencies:
       '@sindresorhus/merge-streams': 2.3.0
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       ignore: 5.3.2
       path-type: 5.0.0
       slash: 5.1.0
