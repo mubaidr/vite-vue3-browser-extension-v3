@@ -1,7 +1,7 @@
 export const useOptionsStore = defineStore("options", () => {
   const { isDark, toggleDark } = useTheme()
 
-  const profile = useBrowserSyncStorage<{
+  const { data: profile } = useBrowserSyncStorage<{
     name: string
     age: number
   }>("profile", {
@@ -9,7 +9,7 @@ export const useOptionsStore = defineStore("options", () => {
     age: 24,
   })
 
-  const others = useBrowserLocalStorage<{
+  const { data: others } = useBrowserLocalStorage<{
     awesome: boolean
     counter: number
   }>("options", {

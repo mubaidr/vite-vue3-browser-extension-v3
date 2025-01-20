@@ -2,7 +2,7 @@ import type { BasicColorSchema } from "@vueuse/core"
 import { useBrowserLocalStorage } from "./useBrowserStorage"
 
 export function useTheme() {
-  const colorSchema = useBrowserLocalStorage<BasicColorSchema>("mode", "auto")
+  const { data: colorSchema } = useBrowserLocalStorage<BasicColorSchema>("mode", "auto")
 
   const isDark = useDark({
     initialValue: colorSchema,
