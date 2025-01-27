@@ -14,7 +14,7 @@
     "@eslint/compat": "^1.2.4",
     "@eslint/js": "^9.17.0",
     "@iconify-json/carbon": "^1.2.5",
-    "@iconify-json/lucide": "^1.2.22",
+    "@iconify-json/lucide": "^1.2.25",
     "@iconify-json/mdi": "^1.2.2",
     "@iconify-json/ph": "^1.2.2",
     "@iconify-json/svg-spinners": "^1.2.2",
