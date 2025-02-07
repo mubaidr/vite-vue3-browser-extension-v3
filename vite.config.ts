@@ -15,6 +15,7 @@ import TurboConsole from "unplugin-turbo-console/vite"
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite"
 import { dirname, relative, resolve } from "node:path"
 import "dotenv/config"
+import tailwindcss from "@tailwindcss/vite"
 
 const PORT = Number(process.env.PORT || "") || 3303
 
@@ -61,6 +62,23 @@ export default defineConfig({
   },
 
   plugins: [
+    function ensureOutputDir() {
+      return {
+        name: "ensure-output-dir",
+        buildStart() {
+          const outDir = ["dist/chrome", "dist/firefox"]
+
+          outDir.forEach((dir) => {
+            if (!fs.existsSync(dir)) {
+              fs.mkdirSync(dir, { recursive: true })
+            }
+          })
+        },
+      }
+    },
+
+    tailwindcss(),
+
     VueI18nPlugin({
       include: resolve(
         dirname(fileURLToPath(import.meta.url)),
