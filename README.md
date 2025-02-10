@@ -3,7 +3,7 @@
 
 [![build](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml)
 
-A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite` and alot more preconfigured.
+A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.chrome.com/docs/extensions/reference/), [FireFox](https://addons.mozilla.org/en-US/developers/), etc.) starter template based on `manifest 3`, `vue3` and `vite` and a lot more pre-configured.
 
 ## Screenshots
 
@@ -40,7 +40,7 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
   - Error Boundary
   - Empty State
   - Notifications using `notivue`
-- Store for options preconfigured etc
+- Store for options pre-configured etc
 - Composables for
   - i18n
   - Theme
@@ -48,7 +48,8 @@ A [Vite](https://vitejs.dev/) powered WebExtension ([Chrome](https://developer.c
   - Loading
   - Error handling
   - `useBrowserStorage` for extension settings and user options management
-- Preconfigured Pinia Store (optional perisitent and non-persistent)
+  -
+- pre-configured Pinia Store (optional persistent and non-persistent)
   - System wide
   - Easily extendable
   - Type safe
@@ -94,6 +95,38 @@ _Please create an issue if you feel some feature is missing or could be improved
 ├── vite.firefox.config.ts       # Firefox specific Vite configuration overrides
 ├── tailwind.config.cjs  # Tailwind CSS configuration
 └── package.json         # Project dependencies and scripts
+```
+
+## Examples
+
+### `useBrowserStorage`
+
+```ts
+
+// Example usage
+const exampleUsage = () => {
+  // Using sync storage
+  const { data: syncSettings } = useBrowserSyncStorage('settings', {
+    theme: 'dark',
+    notifications: true,
+    preferences: {
+      language: 'en',
+      fontSize: 14
+    }
+  })
+
+  // Using local storage
+  const { data: userProfile } = useBrowserLocalStorage('profile', {
+    name: 'John Doe',
+    lastLogin: null,
+    favorites: ['item1', 'item2']
+  })
+
+  // The data ref can be used directly in templates or watched
+  console.log(syncSettings.value.theme) // 'dark'
+  console.log(userProfile.value.name) // 'John Doe'
+}
+
 ```
 
 ## Development tools
@@ -189,8 +222,8 @@ I am a full stack developer. I am open to work. If you are looking for a develop
 
 <!-- readme: collaborators,contributors -start -->
 <table>
-	<tbody>
-		<tr>
+ <tbody>
+  <tr>
             <td align="center">
                 <a href="https://github.com/mubaidr">
                     <img src="https://avatars.githubusercontent.com/u/2222702?v=4" width="100;" alt="mubaidr"/>
@@ -233,8 +266,8 @@ I am a full stack developer. I am open to work. If you are looking for a develop
                     <sub><b>hi2code</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
+  </tr>
+  <tr>
             <td align="center">
                 <a href="https://github.com/justorez">
                     <img src="https://avatars.githubusercontent.com/u/17308328?v=4" width="100;" alt="justorez"/>
@@ -242,7 +275,7 @@ I am a full stack developer. I am open to work. If you are looking for a develop
                     <sub><b>Null</b></sub>
                 </a>
             </td>
-		</tr>
-	<tbody>
+  </tr>
+ <tbody>
 </table>
 <!-- readme: collaborators,contributors -end -->
