@@ -186,6 +186,7 @@ export default defineConfig({
     rollupOptions: {
       // ui or pages that are not specified in manifest file need to be specified here
       input: {
+        contentScript: "src/content-script/index.ts",
         setup: "src/ui/setup/index.html",
         iframe: "src/ui/content-script-iframe/index.html",
         devtoolsPanel: "src/ui/devtools-panel/index.html",
@@ -203,6 +204,9 @@ export default defineConfig({
       port: PORT,
     },
     origin: `http://localhost:${PORT}`,
+    cors: {
+      origin: "*",
+    },
   },
 
   optimizeDeps: {
@@ -211,4 +215,8 @@ export default defineConfig({
   },
 
   define,
+
+  legacy: {
+    skipWebSocketTokenCheck: true,
+  },
 })

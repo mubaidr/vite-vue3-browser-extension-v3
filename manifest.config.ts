@@ -43,7 +43,7 @@ export default {
   devtools_page: "src/devtools/index.html",
   options_page: "src/ui/options-page/index.html",
   offline_enabled: true,
-  host_permissions: [],
+  host_permissions: ["<all_urls>"],
   permissions: ["storage", "tabs", "background", "sidePanel"],
   web_accessible_resources: [],
   icons: {
