@@ -41,7 +41,7 @@
     "eslint-plugin-vue": "^9.32.0",
     "get-installed-browsers": "^0.1.7",
     "globals": "^15.14.0",
-    "postcss": "^8.5.1",
+    "postcss": "^8.5.2",
     "prettier": "^3.5.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "sass": "^1.84.0",
