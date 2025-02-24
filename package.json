@@ -34,7 +34,7 @@
     "commander": "^13.1.0",
     "concurrently": "^9.1.2",
     "cross-env": "^7.0.3",
-    "daisyui": "^5.0.0-beta.7",
+    "daisyui": "^5.0.0-beta.8",
     "dotenv": "^16.4.7",
     "eslint": "^9.21.0",
     "eslint-plugin-vue": "^9.32.0",
