@@ -14,3 +14,5 @@ export const appRouter = createRouter({
 if (import.meta.hot) {
   handleHotUpdate(appRouter)
 }
+
+// TOFIX: vue-router export naming wihtout underscore
