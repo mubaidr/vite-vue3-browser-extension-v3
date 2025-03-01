@@ -16,7 +16,7 @@ import "dotenv/config"
 
 // @ts-expect-error commonjs module
 import { defineViteConfig as define } from "./define.config.mjs"
-import { resolve } from "node:path"
+import { dirname, relative, resolve } from "node:path"
 
 const IS_DEV = process.env.NODE_ENV === "development"
 const PORT = Number(process.env.PORT) || 3303
@@ -28,9 +28,11 @@ const getImmediateDirectories = (path: string) =>
     .map((entry) => entry.name)
 
 export default defineConfig({
-  base: IS_DEV ? "/" : "",
+  base: IS_DEV ? `http://localhost:${PORT}/` : "",
 
   build: {
+    watch: IS_DEV ? {} : undefined,
+    sourcemap: IS_DEV ? "inline" : false,
     rollupOptions: {
       input: {
         setup: resolve(__dirname, "src/ui/setup/index.html"),
@@ -105,7 +107,9 @@ export default defineConfig({
         "@vueuse/core",
         { "vue-router/auto": ["definePage"] },
         { "vue-i18n": ["useI18n", "t"] },
-        { "webextension-polyfill": [["*", "browser"]] },
+        {
+          "webextension-polyfill": [["=", "browser"]],
+        },
         { notivue: ["Notivue", "Notification", ["push", "pushNotification"]] },
       ],
       dts: "src/types/auto-imports.d.ts",
@@ -132,17 +136,18 @@ export default defineConfig({
       scale: 1.5,
     }),
 
-    // {
-    //   name: "assets-rewrite",
-    //   enforce: "post",
-    //   // apply: "build",
-    //   transformIndexHtml(html, { path }) {
-    //     const assetsPath = path
-    //       .replace(/\/[^/]+$/, "/assets")
-    //       .replace(/\\/g, "/")
-    //     return html.replace(/"\/assets\//g, `"${assetsPath}/`)
-    //   },
-    // },
+    // rewrite assets to use relative path
+    {
+      name: "assets-rewrite",
+      enforce: "post",
+      apply: "build",
+      transformIndexHtml(html, { path }) {
+        return html.replace(
+          /"\/assets\//g,
+          `"${relative(dirname(path), "/assets")}/`,
+        )
+      },
+    },
 
     createHtmlPlugin({ inject: { data: define } }),
   ],
@@ -155,8 +160,12 @@ export default defineConfig({
       "@assets": fileURLToPath(new URL("src/assets", import.meta.url)),
     },
   },
-
   server: {
+    port: PORT,
+    hmr: {
+      host: "localhost",
+    },
+    origin: `http://localhost:${PORT}`,
     cors: {
       origin: [
         // ⚠️ SECURITY RISK: Allows any chrome-extension to access the vite server ⚠️

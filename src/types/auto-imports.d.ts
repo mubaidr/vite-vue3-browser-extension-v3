@@ -375,7 +375,7 @@ declare module 'vue' {
     readonly appRouter: UnwrapRef<typeof import('../utils/router/index')['appRouter']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
-    readonly browser: UnwrapRef<typeof import('webextension-polyfill')>
+    readonly browser: UnwrapRef<typeof import('webextension-polyfill')['=']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly computedAsync: UnwrapRef<typeof import('@vueuse/core')['computedAsync']>
     readonly computedEager: UnwrapRef<typeof import('@vueuse/core')['computedEager']>
