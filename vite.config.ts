@@ -53,7 +53,12 @@ export default defineConfig({
 
   define,
 
-  legacy: { skipWebSocketTokenCheck: true },
+  legacy: {
+    // ⚠️ SECURITY RISK: Allows WebSockets to connect to the vite server without a token check ⚠️
+    // See https://github.com/crxjs/chrome-extension-tools/issues/971 for more info
+    // The linked issue gives a potential fix that @crxjs/vite-plugin could implement
+    skipWebSocketTokenCheck: true,
+  },
 
   optimizeDeps: {
     include: ["vue", "@vueuse/core", "webextension-polyfill"],
@@ -148,6 +153,17 @@ export default defineConfig({
       "~": fileURLToPath(new URL("src", import.meta.url)),
       src: fileURLToPath(new URL("src", import.meta.url)),
       "@assets": fileURLToPath(new URL("src/assets", import.meta.url)),
+    },
+  },
+
+  server: {
+    cors: {
+      origin: [
+        // ⚠️ SECURITY RISK: Allows any chrome-extension to access the vite server ⚠️
+        // See https://github.com/crxjs/chrome-extension-tools/issues/971 for more info
+        // I don't believe that the linked issue mentions a potential solution
+        /chrome-extension:\/\//,
+      ],
     },
   },
 })
