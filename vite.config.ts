@@ -8,7 +8,6 @@ import AutoImport from "unplugin-auto-import/vite"
 import Components from "unplugin-vue-components/vite"
 import Icons from "unplugin-icons/vite"
 import IconsResolver from "unplugin-icons/resolver"
-import { createHtmlPlugin } from "vite-plugin-html"
 import TurboConsole from "unplugin-turbo-console/vite"
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite"
 import tailwindcss from "@tailwindcss/vite"
@@ -28,7 +27,7 @@ const getImmediateDirectories = (path: string) =>
     .map((entry) => entry.name)
 
 export default defineConfig({
-  base: IS_DEV ? `http://localhost:${PORT}/` : "",
+  base: IS_DEV ? `/` : "",
 
   build: {
     watch: IS_DEV ? {} : undefined,
@@ -148,8 +147,6 @@ export default defineConfig({
         )
       },
     },
-
-    createHtmlPlugin({ inject: { data: define } }),
   ],
 
   resolve: {
