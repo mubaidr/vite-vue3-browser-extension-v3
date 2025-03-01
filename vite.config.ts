@@ -1,131 +1,115 @@
 import fs from "node:fs"
-import { URL, fileURLToPath } from "node:url"
-import vue from "@vitejs/plugin-vue"
-import AutoImport from "unplugin-auto-import/vite"
-import IconsResolver from "unplugin-icons/resolver"
-import Icons from "unplugin-icons/vite"
-import Components from "unplugin-vue-components/vite"
-import { createHtmlPlugin } from "vite-plugin-html"
-import VueRouter from "unplugin-vue-router/vite"
+import { fileURLToPath } from "node:url"
 import { defineConfig } from "vite"
-// @ts-expect-error commonjs module
-import { defineViteConfig as define } from "./define.config.mjs"
+import vue from "@vitejs/plugin-vue"
 import vueDevTools from "vite-plugin-vue-devtools"
+import VueRouter from "unplugin-vue-router/vite"
+import AutoImport from "unplugin-auto-import/vite"
+import Components from "unplugin-vue-components/vite"
+import Icons from "unplugin-icons/vite"
+import IconsResolver from "unplugin-icons/resolver"
 import TurboConsole from "unplugin-turbo-console/vite"
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite"
-import { dirname, relative, resolve } from "node:path"
-import "dotenv/config"
 import tailwindcss from "@tailwindcss/vite"
+import "dotenv/config"
 
-const PORT = Number(process.env.PORT || "") || 3303
+// @ts-expect-error commonjs module
+import { defineViteConfig as define } from "./define.config.mjs"
+import { dirname, relative, resolve } from "node:path"
 
-function getImmediateDirectories(dirPath: string): string[] {
-  try {
-    // Read the directory contents synchronously
-    const items = fs.readdirSync(dirPath, { withFileTypes: true })
+const IS_DEV = process.env.NODE_ENV === "development"
+const PORT = Number(process.env.PORT) || 3303
 
-    // Filter and map to get only directory names
-    return items
-      .filter((item): item is fs.Dirent => item.isDirectory()) // Type guard
-      .map((item) => item.name)
-  } catch (err) {
-    throw new Error(`Error reading directories: ${(err as Error).message}`)
-  }
-}
+const getImmediateDirectories = (path: string) =>
+  fs
+    .readdirSync(path, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("src", import.meta.url)),
-      "~": fileURLToPath(new URL("src", import.meta.url)),
-      src: fileURLToPath(new URL("src", import.meta.url)),
-      "@assets": fileURLToPath(new URL("src/assets", import.meta.url)),
+  base: IS_DEV ? `/` : "",
+
+  build: {
+    watch: IS_DEV ? {} : undefined,
+    sourcemap: IS_DEV ? "inline" : false,
+    rollupOptions: {
+      input: {
+        setup: resolve(__dirname, "src/ui/setup/index.html"),
+        iframe: resolve(__dirname, "src/ui/content-script-iframe/index.html"),
+        devtoolsPanel: resolve(__dirname, "src/ui/devtools-panel/index.html"),
+      },
     },
   },
 
   css: {
     preprocessorOptions: {
       scss: {
-        api: "modern",
-        // additionalData: `@use "/src/assets/base.scss";`,
-        additionalData: (content, filePath) => {
-          // do not include base.scss (tailwind etc) in content-script iframe as it will be affect main page styles
-          if (filePath.includes("content-script/index.scss")) {
-            return content
-          }
-
-          return `@use "/src/assets/base.scss";\n${content}`
-        },
+        additionalData: (content, filePath) =>
+          filePath.includes("content-script/index.scss")
+            ? content
+            : `@use "/src/assets/base.scss";\n${content}`,
       },
     },
   },
 
-  plugins: [
-    function ensureOutputDir() {
-      return {
-        name: "ensure-output-dir",
-        buildStart() {
-          const outDir = ["dist/chrome", "dist/firefox"]
+  define,
 
-          outDir.forEach((dir) => {
-            if (!fs.existsSync(dir)) {
-              fs.mkdirSync(dir, { recursive: true })
-            }
-          })
-        },
-      }
+  legacy: {
+    // ⚠️ SECURITY RISK: Allows WebSockets to connect to the vite server without a token check ⚠️
+    // See https://github.com/crxjs/chrome-extension-tools/issues/971 for more info
+    // The linked issue gives a potential fix that @crxjs/vite-plugin could implement
+    skipWebSocketTokenCheck: true,
+  },
+
+  optimizeDeps: {
+    include: ["vue", "@vueuse/core", "webextension-polyfill"],
+    exclude: ["vue-demi"],
+  },
+
+  plugins: [
+    {
+      name: "ensure-output-dir",
+      buildStart() {
+        ;["dist/chrome", "dist/firefox"].forEach((dir) => {
+          if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+        })
+      },
     },
 
     tailwindcss(),
 
+    vueDevTools(),
+
     VueI18nPlugin({
-      include: resolve(
-        dirname(fileURLToPath(import.meta.url)),
-        "./src/locales/**",
-      ),
+      include: "src/locales/**",
       globalSFCScope: true,
       compositionOnly: true,
     }),
 
-    vueDevTools(),
-
-    // https://github.com/posva/unplugin-vue-router
     VueRouter({
       dts: "src/types/typed-router.d.ts",
-      routesFolder: getImmediateDirectories("src/ui").map((dir) => {
-        return {
-          src: `src/ui/${dir}/pages`,
-          path: `${dir}/`,
-        }
-      }),
+      routesFolder: getImmediateDirectories("src/ui").map((dir) => ({
+        src: `src/ui/${dir}/pages`,
+        path: `${dir}/`,
+      })),
     }),
 
     vue(),
 
-    // imagemin({}),
-
     TurboConsole(),
 
-    // https://github.com/unplugin/unplugin-auto-import
     AutoImport({
       imports: [
         "vue",
         "vue-router",
-        "@vueuse/core",
         "pinia",
+        "@vueuse/core",
+        { "vue-router/auto": ["definePage"] },
+        { "vue-i18n": ["useI18n", "t"] },
         {
-          "vue-router/auto": ["definePage"],
+          "webextension-polyfill": [["=", "browser"]],
         },
-        {
-          "vue-i18n": ["useI18n", "t"],
-        },
-        {
-          "webextension-polyfill": [["*", "browser"]],
-        },
-        {
-          notivue: ["Notivue", "Notification", ["push", "pushNotification"]],
-        },
+        { notivue: ["Notivue", "Notification", ["push", "pushNotification"]] },
       ],
       dts: "src/types/auto-imports.d.ts",
       dirs: ["src/composables/**", "src/stores/**", "src/utils/**"],
@@ -137,20 +121,14 @@ export default defineConfig({
       },
     }),
 
-    // https://github.com/antfu/unplugin-vue-components
     Components({
       dirs: ["src/components"],
-      // generate `components.d.ts` for ts support with Volar
       dts: "src/types/components.d.ts",
-      resolvers: [
-        // auto import icons
-        IconsResolver(),
-      ],
+      resolvers: [IconsResolver()],
       directoryAsNamespace: true,
       globalNamespaces: ["account", "state"],
     }),
 
-    // https://github.com/antfu/unplugin-icons
     Icons({
       autoInstall: true,
       compiler: "vue3",
@@ -163,61 +141,35 @@ export default defineConfig({
       enforce: "post",
       apply: "build",
       transformIndexHtml(html, { path }) {
-        const assetsPath = relative(dirname(path), "/assets").replace(
-          /\\/g,
-          "/",
+        return html.replace(
+          /"\/assets\//g,
+          `"${relative(dirname(path), "/assets")}/`,
         )
-        return html.replace(/"\/assets\//g, `"${assetsPath}/`)
       },
     },
-
-    createHtmlPlugin({
-      inject: {
-        data: define, // Inject all key-value pairs from defineViteConfig
-      },
-    }),
   ],
 
-  build: {
-    manifest: false,
-    outDir: "dist",
-    sourcemap: false,
-    write: true,
-    rollupOptions: {
-      // ui or pages that are not specified in manifest file need to be specified here
-      input: {
-        contentScript: "src/content-script/index.ts",
-        setup: "src/ui/setup/index.html",
-        iframe: "src/ui/content-script-iframe/index.html",
-        devtoolsPanel: "src/ui/devtools-panel/index.html",
-      },
-      treeshake: true
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("src", import.meta.url)),
+      "~": fileURLToPath(new URL("src", import.meta.url)),
+      src: fileURLToPath(new URL("src", import.meta.url)),
+      "@assets": fileURLToPath(new URL("src/assets", import.meta.url)),
     },
   },
-
   server: {
     port: PORT,
     hmr: {
       host: "localhost",
-      clientPort: PORT,
-      overlay: true,
-      protocol: "ws",
-      port: PORT,
     },
     origin: `http://localhost:${PORT}`,
     cors: {
-      origin: "*",
+      origin: [
+        // ⚠️ SECURITY RISK: Allows any chrome-extension to access the vite server ⚠️
+        // See https://github.com/crxjs/chrome-extension-tools/issues/971 for more info
+        // I don't believe that the linked issue mentions a potential solution
+        /chrome-extension:\/\//,
+      ],
     },
-  },
-
-  optimizeDeps: {
-    include: ["vue", "@vueuse/core", "webextension-polyfill"],
-    exclude: ["vue-demi"],
-  },
-
-  define,
-
-  legacy: {
-    skipWebSocketTokenCheck: true,
   },
 })
