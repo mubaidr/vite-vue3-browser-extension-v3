@@ -127,17 +127,17 @@ export default defineConfig({
       scale: 1.5,
     }),
 
-    {
-      name: "assets-rewrite",
-      enforce: "post",
-      apply: "build",
-      transformIndexHtml(html, { path }) {
-        const assetsPath = path
-          .replace(/\/[^/]+$/, "/assets")
-          .replace(/\\/g, "/")
-        return html.replace(/"\/assets\//g, `"${assetsPath}/`)
-      },
-    },
+    // {
+    //   name: "assets-rewrite",
+    //   enforce: "post",
+    //   // apply: "build",
+    //   transformIndexHtml(html, { path }) {
+    //     const assetsPath = path
+    //       .replace(/\/[^/]+$/, "/assets")
+    //       .replace(/\\/g, "/")
+    //     return html.replace(/"\/assets\//g, `"${assetsPath}/`)
+    //   },
+    // },
 
     createHtmlPlugin({ inject: { data: define } }),
   ],
@@ -149,17 +149,5 @@ export default defineConfig({
       src: fileURLToPath(new URL("src", import.meta.url)),
       "@assets": fileURLToPath(new URL("src/assets", import.meta.url)),
     },
-  },
-
-  server: {
-    port: PORT,
-    hmr: {
-      host: "localhost",
-      clientPort: PORT,
-      overlay: true,
-      protocol: "ws",
-    },
-    origin: `http://localhost:${PORT}`,
-    cors: { origin: "*" },
   },
 })
