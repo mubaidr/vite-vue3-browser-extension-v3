@@ -5,6 +5,7 @@ import vue from "@vitejs/plugin-vue"
 import vueDevTools from "vite-plugin-vue-devtools"
 import VueRouter from "unplugin-vue-router/vite"
 import AutoImport from "unplugin-auto-import/vite"
+import { VueRouterAutoImports } from "unplugin-vue-router"
 import Components from "unplugin-vue-components/vite"
 import Icons from "unplugin-icons/vite"
 import IconsResolver from "unplugin-icons/resolver"
@@ -101,10 +102,11 @@ export default defineConfig({
     AutoImport({
       imports: [
         "vue",
-        "vue-router",
+        // "vue-router",
+        VueRouterAutoImports,
         "pinia",
         "@vueuse/core",
-        { "vue-router/auto": ["definePage"] },
+        // { "vue-router/auto": ["definePage"] },
         { "vue-i18n": ["useI18n", "t"] },
         {
           "webextension-polyfill": [["=", "browser"]],
