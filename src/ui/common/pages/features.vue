@@ -138,7 +138,7 @@ const features = ref([
 
     <div class="flex justify-center">
       <RouterLink
-        to="/common/account/login"
+        to="/common/auth/login"
         class="btn btn-secondary btn-xl w-full md:max-w-96"
       >
         Get Started Now

@@ -128,7 +128,7 @@ export default defineConfig({
       dts: "src/types/components.d.ts",
       resolvers: [IconsResolver()],
       directoryAsNamespace: true,
-      globalNamespaces: ["account", "state"],
+      globalNamespaces: ["auth", "state"],
     }),
 
     Icons({

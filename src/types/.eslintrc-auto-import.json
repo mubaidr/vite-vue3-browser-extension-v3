@@ -362,6 +362,7 @@
     "usePreferredReducedTransparency": true,
     "useSSRWidth": true,
     "onElementRemoval": true,
-    "useCountdown": true
+    "useCountdown": true,
+    "AuthResult": true
   }
 }

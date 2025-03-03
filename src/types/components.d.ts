@@ -31,5 +31,7 @@ declare module 'vue' {
     TailwindEmptyState: typeof import('./../components/state/tailwind-empty-state.vue')['default']
     TestComponent: typeof import('./../components/TestComponent.vue')['default']
     ThemeSwitch: typeof import('./../components/ThemeSwitch.vue')['default']
+    UserProfile: typeof import('./../components/UserProfile.vue')['default']
+    UserSignOut: typeof import('./../components/UserSignOut.vue')['default']
   }
 }

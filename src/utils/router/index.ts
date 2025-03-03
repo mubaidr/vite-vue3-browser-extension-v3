@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router"
 import { handleHotUpdate, routes } from "vue-router/auto-routes"
+import { middleware } from "./middleware"
 
 routes.push({
   path: "/:catchAll(.*)*",
@@ -11,8 +12,10 @@ export const appRouter = createRouter({
   routes,
 })
 
+appRouter.beforeEach(middleware)
+
 if (import.meta.hot) {
   handleHotUpdate(appRouter)
 }
 
-// TOFIX: vue-router export naming wihtout underscore
+// TOFIX: vue-router export naming without underscore

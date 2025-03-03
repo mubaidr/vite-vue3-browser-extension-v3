@@ -30,7 +30,7 @@
           </div>
 
           <RouterLink
-            to="/common/account/login"
+            to="/common/auth/login"
             class="btn btn-secondary btn-lg"
           >
             <i-ph-rocket-launch />
