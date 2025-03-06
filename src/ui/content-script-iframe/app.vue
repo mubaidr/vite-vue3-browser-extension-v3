@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Notivue, Notification } from 'notivue'
+import { Notivue, Notification } from "notivue"
 </script>
 
 <template>
@@ -7,7 +7,8 @@ import { Notivue, Notification } from 'notivue'
     <AppHeader />
 
     <div class="p-4 prose">
-      <RouterView />
+      <h1>Content Script</h1>
+      <p>This is where content script details will be displayed.</p>
     </div>
 
     <AppFooter />

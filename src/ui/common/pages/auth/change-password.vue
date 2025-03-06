@@ -14,6 +14,5 @@ definePage({
 
     <h2>Change Your Password</h2>
     <p>Please enter your current password and your new password.</p>
-    <SupabaseChangePassword />
   </div>
 </template>

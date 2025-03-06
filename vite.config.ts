@@ -44,11 +44,15 @@ export default defineConfig({
 
   css: {
     preprocessorOptions: {
+      // scss: {
+      //   additionalData: (content, filePath) =>
+      //     filePath.includes("content-script/index.scss")
+      //       ? content
+      //       : `@use "/src/assets/base.scss";\n${content}`,
+      // },
       scss: {
-        additionalData: (content, filePath) =>
-          filePath.includes("content-script/index.scss")
-            ? content
-            : `@use "/src/assets/base.scss";\n${content}`,
+        additionalData: (content) =>
+          `@use "/src/assets/base.scss";\n${content}`,
       },
     },
   },
@@ -161,9 +165,6 @@ export default defineConfig({
   },
   server: {
     port: PORT,
-    hmr: {
-      host: "localhost",
-    },
     origin: `http://localhost:${PORT}`,
     cors: {
       origin: [
@@ -171,6 +172,7 @@ export default defineConfig({
         // See https://github.com/crxjs/chrome-extension-tools/issues/971 for more info
         // I don't believe that the linked issue mentions a potential solution
         /chrome-extension:\/\//,
+        /localhost:\/\//,
       ],
     },
   },

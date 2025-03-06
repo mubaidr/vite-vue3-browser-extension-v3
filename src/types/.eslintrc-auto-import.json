@@ -363,6 +363,7 @@
     "useSSRWidth": true,
     "onElementRemoval": true,
     "useCountdown": true,
-    "AuthResult": true
+    "AuthResult": true,
+    "createRef": true
   }
 }
