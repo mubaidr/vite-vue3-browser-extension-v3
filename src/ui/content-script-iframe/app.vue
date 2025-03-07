@@ -7,8 +7,7 @@ import { Notivue, Notification } from "notivue"
     <AppHeader />
 
     <div class="p-4 prose">
-      <h1>Content Script</h1>
-      <p>This is where content script details will be displayed.</p>
+      <RouterView />
     </div>
 
     <AppFooter />

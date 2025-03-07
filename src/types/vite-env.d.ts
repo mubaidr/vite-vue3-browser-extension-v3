@@ -1,6 +1,6 @@
 /// <reference types="vite/client" />
 /// <reference types="unplugin-vue-router/client" />
-
+/// <reference types="vite-plugin-pages/client" />
 // Put your variables here:
 
 declare const __VERSION__: string

@@ -1,11 +1,17 @@
 import { i18n } from "@/utils/i18n"
 import { notivue } from "@/utils/notifications"
 import { pinia } from "@/utils/pinia"
+import { router } from "@/utils/router"
 import { createApp } from "vue"
 import App from "./app.vue"
 import "./index.scss"
 
-const app = createApp(App).use(i18n).use(notivue).use(pinia)
+const app = createApp(App).use(i18n).use(notivue).use(pinia).use(router)
+
+await router.push({
+  path: "/setup",
+  replace: true,
+})
 
 app.mount("#app")
 

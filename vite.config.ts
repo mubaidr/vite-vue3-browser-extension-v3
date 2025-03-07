@@ -3,15 +3,14 @@ import { fileURLToPath } from "node:url"
 import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
 import vueDevTools from "vite-plugin-vue-devtools"
-import VueRouter from "unplugin-vue-router/vite"
 import AutoImport from "unplugin-auto-import/vite"
-import { VueRouterAutoImports } from "unplugin-vue-router"
 import Components from "unplugin-vue-components/vite"
 import Icons from "unplugin-icons/vite"
 import IconsResolver from "unplugin-icons/resolver"
 import TurboConsole from "unplugin-turbo-console/vite"
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite"
 import tailwindcss from "@tailwindcss/vite"
+import Pages from "vite-plugin-pages"
 import "dotenv/config"
 
 // @ts-expect-error commonjs module
@@ -91,11 +90,10 @@ export default defineConfig({
       compositionOnly: true,
     }),
 
-    VueRouter({
-      dts: "src/types/typed-router.d.ts",
-      routesFolder: getImmediateDirectories("src/ui").map((dir) => ({
-        src: `src/ui/${dir}/pages`,
-        path: `${dir}/`,
+    Pages({
+      dirs: getImmediateDirectories("src/ui").map((dir) => ({
+        dir: `src/ui/${dir}/pages`,
+        baseRoute: `${dir}/`,
       })),
     }),
 
@@ -106,11 +104,9 @@ export default defineConfig({
     AutoImport({
       imports: [
         "vue",
-        // "vue-router",
-        VueRouterAutoImports,
+        "vue-router",
         "pinia",
         "@vueuse/core",
-        // { "vue-router/auto": ["definePage"] },
         { "vue-i18n": ["useI18n", "t"] },
         {
           "webextension-polyfill": [["=", "browser"]],
