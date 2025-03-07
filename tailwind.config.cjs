@@ -8,4 +8,9 @@ module.exports = {
     themes: ['light', 'dark'],
     logs: false,
   },
+  safelist: [
+    {
+      pattern: /^.*$/,  // 👈  This includes all Tailwind classes in the bundle
+    },
+  ],
 }

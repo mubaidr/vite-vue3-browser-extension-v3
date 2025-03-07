@@ -1,6 +1,6 @@
 // This import scss file is used to style the shadow DOM container
-import rootStyles from "./index.scss?raw"
-import contentScriptStyles from "src/ui/content-script-iframe/index.scss?raw"
+import rootStyles from "./index.scss?inline"
+import contentScriptStyles from "src/ui/content-script-iframe/index.scss?inline"
 import app from "../ui/content-script-iframe/index"
 
 /**
@@ -31,10 +31,12 @@ const injectShadowDOM = (): void => {
 
     // Create style element for root styles in shadow DOM
     const rootStyleElement = document.createElement("style")
+    rootStyleElement.setAttribute("type", "text/css")
     rootStyleElement.textContent = rootStyles
 
     // Create style element for content script styles
     const contentScriptStyleElement = document.createElement("style")
+    contentScriptStyleElement.setAttribute("type", "text/css")
     contentScriptStyleElement.textContent = contentScriptStyles
 
     // Append style elements before appContainer to ensure styles are loaded first

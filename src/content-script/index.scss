@@ -1,4 +1,12 @@
 // This file is used to style the iframe that is injected into the page
+.crx-host {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: aquamarine;
+}
+
 .crx-iframe {
   border: none;
   border-radius: 8px;

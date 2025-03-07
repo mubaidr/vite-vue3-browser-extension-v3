@@ -2,7 +2,9 @@
 @use '/node_modules/vite-plugin-vue-devtools/src/overlay/devtools-overlay.css';
 @use "tailwindcss";
 @plugin "@tailwindcss/typography";
-@plugin "daisyui";
+@plugin "daisyui" {
+   root: "#app";
+ };
 
 // @plugin "prettier-plugin-tailwindcss";
 body {
