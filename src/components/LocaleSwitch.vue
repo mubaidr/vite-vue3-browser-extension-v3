@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useLocale } from '@/composables/useLocale'
-import { i18n } from '@/utils/i18n'
+import { useLocale } from "src/composables/useLocale"
+import { i18n } from "src/utils/i18n"
 
 const currentLocale = useLocale()
 </script>

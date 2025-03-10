@@ -362,6 +362,8 @@
     "usePreferredReducedTransparency": true,
     "useSSRWidth": true,
     "onElementRemoval": true,
-    "useCountdown": true
+    "useCountdown": true,
+    "applyTheme": true,
+    "createRef": true
   }
 }

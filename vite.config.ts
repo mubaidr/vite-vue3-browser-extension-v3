@@ -76,8 +76,6 @@ export default defineConfig({
       },
     },
 
-    tailwindcss(),
-
     vueDevTools(),
 
     VueI18nPlugin({
@@ -95,6 +93,8 @@ export default defineConfig({
     }),
 
     vue(),
+
+    tailwindcss(),
 
     TurboConsole(),
 
@@ -151,8 +151,8 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("src", import.meta.url)),
-      "~": fileURLToPath(new URL("src", import.meta.url)),
+      "@": fileURLToPath(new URL(".", import.meta.url)),
+      "~": fileURLToPath(new URL(".", import.meta.url)),
       src: fileURLToPath(new URL("src", import.meta.url)),
       "@assets": fileURLToPath(new URL("src/assets", import.meta.url)),
     },

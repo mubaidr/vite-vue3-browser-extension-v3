@@ -1,5 +1,5 @@
 // Sample code if using extensionpay.com
-// import { extPay } from '@/utils/payment/extPay'
+// import { extPay } from 'src/utils/payment/extPay'
 // extPay.startBackground()
 
 chrome.runtime.onInstalled.addListener(async (opt) => {

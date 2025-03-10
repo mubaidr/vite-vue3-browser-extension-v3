@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import RouterLinkUp from '@/components/RouterLinkUp.vue'
+import RouterLinkUp from "src/components/RouterLinkUp.vue"
 </script>
 
 <template>
