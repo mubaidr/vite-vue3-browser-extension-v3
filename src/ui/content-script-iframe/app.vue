@@ -3,7 +3,7 @@ import { Notivue, Notification } from 'notivue'
 </script>
 
 <template>
-  <div>
+  <UApp>
     <AppHeader />
 
     <div class="p-4 prose">
@@ -15,7 +15,7 @@ import { Notivue, Notification } from 'notivue'
     <Notivue v-slot="item">
       <Notification :item="item" />
     </Notivue>
-  </div>
+  </UApp>
 </template>
 
 <style scoped></style>

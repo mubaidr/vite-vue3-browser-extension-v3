@@ -4,7 +4,8 @@ import { pinia } from "src/utils/pinia"
 import { appRouter } from "src/utils/router"
 import { createApp } from "vue"
 import App from "./app.vue"
-import "./index.scss"
+import "./index.css"
+import ui from "@nuxt/ui/vue-plugin"
 
 appRouter.addRoute({
   path: "/",
@@ -12,7 +13,12 @@ appRouter.addRoute({
   redirect: "/setup/install",
 })
 
-const app = createApp(App).use(i18n).use(notivue).use(pinia).use(appRouter)
+const app = createApp(App)
+  .use(i18n)
+  .use(notivue)
+  .use(pinia)
+  .use(appRouter)
+  .use(ui)
 
 app.mount("#app")
 

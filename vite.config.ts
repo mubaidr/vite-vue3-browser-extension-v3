@@ -10,8 +10,8 @@ import Icons from "unplugin-icons/vite"
 import IconsResolver from "unplugin-icons/resolver"
 import TurboConsole from "unplugin-turbo-console/vite"
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite"
-import tailwindcss from "@tailwindcss/vite"
 import "dotenv/config"
+import ui from "@nuxt/ui/vite"
 
 // @ts-expect-error commonjs module
 import { defineViteConfig as define } from "./define.config.mjs"
@@ -42,14 +42,14 @@ export default defineConfig({
   },
 
   css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: (content, filePath) =>
-          filePath.includes("content-script/index.scss")
-            ? content
-            : `@use "/src/assets/base.scss";\n${content}`,
-      },
-    },
+    // preprocessorOptions: {
+    //   scss: {
+    //     additionalData: (content, filePath) =>
+    //       filePath.includes("content-script/index.scss")
+    //         ? content
+    //         : `@use "/src/assets/base.scss";\n${content}`,
+    //   },
+    // },
   },
 
   define,
@@ -94,40 +94,68 @@ export default defineConfig({
 
     vue(),
 
-    tailwindcss(),
-
-    TurboConsole(),
-
-    AutoImport({
-      imports: [
-        "vue",
-        "vue-router",
-        "pinia",
-        "@vueuse/core",
-        { "vue-router/auto": ["definePage"] },
-        { "vue-i18n": ["useI18n", "t"] },
-        {
-          "webextension-polyfill": [["=", "browser"]],
+    ui({
+      autoImport: {
+        imports: [
+          "vue",
+          "vue-router",
+          "pinia",
+          "@vueuse/core",
+          { "vue-router/auto": ["definePage"] },
+          { "vue-i18n": ["useI18n", "t"] },
+          {
+            "webextension-polyfill": [["=", "browser"]],
+          },
+          {
+            notivue: ["Notivue", "Notification", ["push", "pushNotification"]],
+          },
+        ],
+        dts: "src/types/auto-imports.d.ts",
+        dirs: ["src/composables/**", "src/stores/**", "src/utils/**"],
+        vueTemplate: true,
+        viteOptimizeDeps: true,
+        eslintrc: {
+          enabled: true,
+          filepath: "src/types/.eslintrc-auto-import.json",
         },
-        { notivue: ["Notivue", "Notification", ["push", "pushNotification"]] },
-      ],
-      dts: "src/types/auto-imports.d.ts",
-      dirs: ["src/composables/**", "src/stores/**", "src/utils/**"],
-      vueTemplate: true,
-      viteOptimizeDeps: true,
-      eslintrc: {
-        enabled: true,
-        filepath: "src/types/.eslintrc-auto-import.json",
+      },
+      components: {
+        dirs: ["src/components"],
       },
     }),
 
-    Components({
-      dirs: ["src/components"],
-      dts: "src/types/components.d.ts",
-      resolvers: [IconsResolver()],
-      directoryAsNamespace: true,
-      globalNamespaces: ["account", "state"],
-    }),
+    TurboConsole(),
+
+    // AutoImport({
+    //   imports: [
+    //     "vue",
+    //     "vue-router",
+    //     "pinia",
+    //     "@vueuse/core",
+    //     { "vue-router/auto": ["definePage"] },
+    //     { "vue-i18n": ["useI18n", "t"] },
+    //     {
+    //       "webextension-polyfill": [["=", "browser"]],
+    //     },
+    //     { notivue: ["Notivue", "Notification", ["push", "pushNotification"]] },
+    //   ],
+    //   dts: "src/types/auto-imports.d.ts",
+    //   dirs: ["src/composables/**", "src/stores/**", "src/utils/**"],
+    //   vueTemplate: true,
+    //   viteOptimizeDeps: true,
+    //   eslintrc: {
+    //     enabled: true,
+    //     filepath: "src/types/.eslintrc-auto-import.json",
+    //   },
+    // }),
+
+    // Components({
+    //   dirs: ["src/components"],
+    //   dts: "src/types/components.d.ts",
+    //   resolvers: [IconsResolver()],
+    //   directoryAsNamespace: true,
+    //   globalNamespaces: ["account", "state"],
+    // }),
 
     Icons({
       autoInstall: true,

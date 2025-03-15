@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { Notivue, Notification } from 'notivue'
+import { Notivue, Notification } from "notivue"
 </script>
 
 <template>
-  <div>
+  <UApp>
     <AppHeader />
 
     <div class="w-full p-4 prose">
@@ -15,7 +15,7 @@ import { Notivue, Notification } from 'notivue'
     <Notivue v-slot="item">
       <Notification :item="item" />
     </Notivue>
-  </div>
+  </UApp>
 </template>
 
 <style lang="scss"></style>
