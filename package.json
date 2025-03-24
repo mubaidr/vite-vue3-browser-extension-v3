@@ -22,7 +22,7 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/postcss": "^4.0.12",
     "@tailwindcss/typography": "^0.5.16",
-    "@tailwindcss/vite": "^4.0.12",
+    "@tailwindcss/vite": "^4.0.15",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.13.10",
     "@types/webextension-polyfill": "^0.12.3",
