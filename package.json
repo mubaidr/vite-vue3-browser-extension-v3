@@ -61,7 +61,7 @@
     "vite-plugin-zip-pack": "^1.2.4",
     "vue-tsc": "^2.2.8",
     "vuefire": "^3.2.1",
-    "web-ext": "^8.4.0",
+    "web-ext": "^8.5.0",
     "webext-bridge": "^6.0.1"
   },
   "displayName": "Vite Vue 3 Chrome Extension",
