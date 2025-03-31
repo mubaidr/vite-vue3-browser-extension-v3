@@ -48,7 +48,7 @@
     "terser": "^5.39.0",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
-    "typescript-eslint": "^8.26.0",
+    "typescript-eslint": "^8.28.0",
     "unplugin-auto-import": "^19.1.1",
     "unplugin-icons": "^22.1.0",
     "unplugin-imagemin": "^0.6.7",
