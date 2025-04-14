@@ -66,7 +66,7 @@ function useBrowserStorage<T>(
       }
       await nextTick()
       isUpdatingFromStorage = false
-      resolve(true)
+      resolve(data)
     })
   })
 
