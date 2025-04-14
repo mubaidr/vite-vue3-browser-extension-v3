@@ -106,7 +106,7 @@ _Please create an issue if you feel some feature is missing or could be improved
 // Example usage
 const exampleUsage = () => {
   // Using sync storage
-  const { data: syncSettings } = useBrowserSyncStorage('settings', {
+  const { data: syncSettings, promise } = useBrowserSyncStorage('settings', {
     theme: 'dark',
     notifications: true,
     preferences: {
@@ -115,8 +115,10 @@ const exampleUsage = () => {
     }
   })
 
+  // `promise` resolves with the actual data value (not the default one)
+
   // Using local storage
-  const { data: userProfile } = useBrowserLocalStorage('profile', {
+  const { data: userProfile, promise } = useBrowserLocalStorage('profile', {
     name: 'John Doe',
     lastLogin: null,
     favorites: ['item1', 'item2']
