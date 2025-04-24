@@ -20,6 +20,7 @@ declare module 'vue' {
     ThemeSwitch: typeof import('./../components/ThemeSwitch.vue')['default']
     UApp: typeof import('./../../node_modules/.pnpm/@nuxt+ui@3.1.0_@babel+parser@7.26.7_embla-carousel@8.6.0_typescript@5.8.3_vite@6.3.3_@t_ca456f90b47d31e76cfaf344355cf545/node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
     UButton: typeof import('./../../node_modules/.pnpm/@nuxt+ui@3.1.0_@babel+parser@7.26.7_embla-carousel@8.6.0_typescript@5.8.3_vite@6.3.3_@t_ca456f90b47d31e76cfaf344355cf545/node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
+    UCard: typeof import('./../../node_modules/.pnpm/@nuxt+ui@3.1.0_@babel+parser@7.26.7_embla-carousel@8.6.0_typescript@5.8.3_vite@6.3.3_@t_ca456f90b47d31e76cfaf344355cf545/node_modules/@nuxt/ui/dist/runtime/components/Card.vue')['default']
     UForm: typeof import('./../../node_modules/.pnpm/@nuxt+ui@3.1.0_@babel+parser@7.26.7_embla-carousel@8.6.0_typescript@5.8.3_vite@6.3.3_@t_ca456f90b47d31e76cfaf344355cf545/node_modules/@nuxt/ui/dist/runtime/components/Form.vue')['default']
     UFormField: typeof import('./../../node_modules/.pnpm/@nuxt+ui@3.1.0_@babel+parser@7.26.7_embla-carousel@8.6.0_typescript@5.8.3_vite@6.3.3_@t_ca456f90b47d31e76cfaf344355cf545/node_modules/@nuxt/ui/dist/runtime/components/FormField.vue')['default']
     UInput: typeof import('./../../node_modules/.pnpm/@nuxt+ui@3.1.0_@babel+parser@7.26.7_embla-carousel@8.6.0_typescript@5.8.3_vite@6.3.3_@t_ca456f90b47d31e76cfaf344355cf545/node_modules/@nuxt/ui/dist/runtime/components/Input.vue')['default']
