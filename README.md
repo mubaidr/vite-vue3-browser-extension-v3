@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml)
 
-A modern, opinionated starter template for building browser extensions using [Vite](https://vitejs.dev/), [Vue 3](https://vuejs.org/), and Manifest V3. Supports Chrome, Firefox, and more. Includes pre-configured routing, state management, composables, and a rich set of UI components.
+A modern, opinionated starter template for building browser extensions using [Vite](https://vitejs.dev/), [Vue 3](https://vuejs.org/), and Manifest V3. Supports Chrome, Firefox, and more. Includes pre-configured routing, state management, composables, and a rich set of UI components from Nuxt/UI v3.
 
 ---
 
@@ -13,7 +13,7 @@ A modern, opinionated starter template for building browser extensions using [Vi
 - **Composable Architecture**: Prebuilt composables for i18n, theme, notifications, browser storage, and more.
 - **State Management**: Type-safe Pinia stores (persistent & non-persistent).
 - **UI Components**: Header, Footer, Locale & Theme Switch, Loading Spinner, Error Boundary, Empty State, Notifications.
-- **Modern Tooling**: Nuxt/UI 3, Tailwind CSS, ESLint, Prettier, auto-imports, and more.
+- **Modern Tooling**: Nuxt/UI 3, Tailwind CSS 4, ESLint, Prettier, auto-imports, and more.
 - **WebExtension Utilities**: `webext-bridge` for context communication, `webextension-polyfill` for browser API compatibility.
 
 ---
