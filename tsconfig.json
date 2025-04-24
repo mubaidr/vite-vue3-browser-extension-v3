@@ -13,7 +13,6 @@
     "resolveJsonModule": true,
     "types": [
       "chrome-types",
-      "unplugin-icons/types/vue",
       "@intlify/unplugin-vue-i18n/messages"
     ],
     "strict": true,

@@ -20,26 +20,11 @@
     </p>
 
     <div class="flex gap-2">
-      <RouterLink
-        to="/common/about"
-        class="btn btn-primary"
-      >
-        About Us
-      </RouterLink>
+      <RouterLink to="/common/about">About Us</RouterLink>
 
-      <RouterLink
-        to="/common/privacy-policy"
-        class="btn btn-primary"
-      >
-        Privacy Policy
-      </RouterLink>
+      <RouterLink to="/common/privacy-policy">Privacy Policy</RouterLink>
 
-      <RouterLink
-        to="/common/terms-of-service"
-        class="btn btn-primary"
-      >
-        Terms
-      </RouterLink>
+      <RouterLink to="/common/terms-of-service">Terms</RouterLink>
     </div>
   </div>
 </template>

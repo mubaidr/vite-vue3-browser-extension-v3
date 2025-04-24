@@ -1,5 +1,5 @@
-// This import scss file is used to style the iframe that is injected into the page
-import "./index.scss"
+// This import css file is used to style the iframe that is injected into the page
+import "./index.css"
 import { name } from "~/package.json"
 
 const src = chrome.runtime.getURL("src/ui/content-script-iframe/index.html")

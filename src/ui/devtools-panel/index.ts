@@ -1,17 +1,17 @@
 import { i18n } from "src/utils/i18n"
-import { notivue } from "src/utils/notifications"
 import { pinia } from "src/utils/pinia"
 import { appRouter } from "src/utils/router"
 import { createApp } from "vue"
 import App from "./app.vue"
-import "./index.scss"
+import ui from "@nuxt/ui/vue-plugin"
+import "./index.css"
 
 appRouter.addRoute({
   path: "/",
   redirect: "/devtools-panel",
 })
 
-const app = createApp(App).use(i18n).use(notivue).use(pinia).use(appRouter)
+const app = createApp(App).use(i18n).use(ui).use(pinia).use(appRouter)
 
 app.mount("#app")
 

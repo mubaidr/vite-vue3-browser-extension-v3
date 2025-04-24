@@ -16,4 +16,4 @@ const displayName = __DISPLAY_NAME__
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped></style>

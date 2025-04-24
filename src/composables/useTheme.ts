@@ -17,16 +17,16 @@ export function applyTheme(mode: BasicColorSchema) {
 }
 
 export function useTheme() {
-  const { data: colorSchema } = useBrowserLocalStorage<BasicColorSchema>(
+  const { data: mode } = useBrowserLocalStorage<BasicColorSchema>(
     "mode",
-    "light",
+    "dark",
   )
 
   const isDark = computed({
-    get: () => colorSchema.value === "dark",
+    get: () => mode.value === "dark",
     set: (value) => {
-      colorSchema.value = value ? "dark" : "light"
-      applyTheme(colorSchema.value)
+      mode.value = value ? "dark" : "light"
+      applyTheme(mode.value)
     },
   })
 
@@ -39,8 +39,9 @@ export function useTheme() {
   })
 
   return {
-    colorSchema,
+    mode,
     isDark,
     toggleDark,
+    applyTheme,
   }
 }

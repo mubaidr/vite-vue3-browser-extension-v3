@@ -81,18 +81,18 @@ const features = ref([
     <p>All available features</p>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div
+      <UCard
         v-for="{ title, description } in features"
         :key="title"
-        class="card card-compact bg-primary text-primary-content shadow-md"
       >
-        <div class="card-body">
-          <span class="card-title text-sm font-bold">{{ title }}</span>
-          <p>
-            {{ description }}
-          </p>
-        </div>
-      </div>
+        <template #header>
+          <div class="font-semibold text-xl">
+            {{ title }}
+          </div>
+        </template>
+
+        {{ description }}
+      </UCard>
     </div>
 
     <div>

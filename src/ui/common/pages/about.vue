@@ -13,33 +13,13 @@
     <p>Thank you for choosing us. We look forward to serving you!</p>
 
     <div class="flex gap-2">
-      <RouterLink
-        to="/common/change-log"
-        class="btn btn-primary"
-      >
-        Change Log
-      </RouterLink>
+      <RouterLink to="/common/change-log">Change Log</RouterLink>
 
-      <RouterLink
-        to="/common/help"
-        class="btn btn-primary"
-      >
-        Help
-      </RouterLink>
+      <RouterLink to="/common/help">Help</RouterLink>
 
-      <RouterLink
-        to="/common/privacy-policy"
-        class="btn btn-primary"
-      >
-        Privacy Policy
-      </RouterLink>
+      <RouterLink to="/common/privacy-policy">Privacy Policy</RouterLink>
 
-      <RouterLink
-        to="/common/terms-of-service"
-        class="btn btn-primary"
-      >
-        Terms
-      </RouterLink>
+      <RouterLink to="/common/terms-of-service">Terms</RouterLink>
     </div>
   </div>
 </template>

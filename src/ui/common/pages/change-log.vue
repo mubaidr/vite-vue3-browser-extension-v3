@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { marked } from 'marked'
+import { marked } from "marked"
 
 const version = __VERSION__
 const changelog = __CHANGELOG__
@@ -22,13 +22,4 @@ const changelog = __CHANGELOG__
   </div>
 </template>
 
-<style lang="scss" scoped>
-:deep(.changelog) {
-  input[type='checkbox'] {
-    @apply checkbox checkbox-info disabled:opacity-100;
-  }
-  table {
-    @apply table table-zebra;
-  }
-}
-</style>
+<style lang="css" scoped></style>

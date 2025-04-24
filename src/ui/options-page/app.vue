@@ -1,21 +1,15 @@
-<script setup lang="ts">
-import { Notivue, Notification } from 'notivue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>
+  <UApp>
     <AppHeader />
 
-    <div class="p-4 prose">
+    <div class="p-4 prose dark:prose-invert">
       <RouterView />
     </div>
 
     <AppFooter />
-
-    <Notivue v-slot="item">
-      <Notification :item="item" />
-    </Notivue>
-  </div>
+  </UApp>
 </template>
 
 <style scoped></style>

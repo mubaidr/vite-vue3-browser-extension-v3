@@ -20,65 +20,41 @@ const { isDark, profile, others } = storeToRefs(optionsStore)
     <h3>User Interface</h3>
     <p>Change application interface settings.</p>
 
-    <div class="form-control">
-      <label>Enabel Dark Theme</label>
-      <input
-        v-model="isDark"
-        type="checkbox"
-        class="toggle"
-      />
-    </div>
+    <UForm class="space-y-4">
+      <UFormField label="Theme">
+        <USwitch v-model="isDark" />
+      </UFormField>
 
-    <div class="form-control">
-      <label>Change Language</label>
-      <LocaleSwitch />
-    </div>
+      <h3>Profile</h3>
+      <p>Change your name and age.</p>
 
-    <h3>Profile</h3>
-    <p>Change your name and age.</p>
+      <UFormField label="Name">
+        <UInput v-model="profile.name"></UInput>
+      </UFormField>
 
-    <div class="form-control">
-      <label>Name</label>
-      <input
-        v-model="profile.name"
-        type="text"
-      />
-    </div>
+      <UFormField label="Age">
+        <UInput v-model="profile.age"></UInput>
+      </UFormField>
 
-    <div class="form-control">
-      <label>Age</label>
-      <input
-        v-model="profile.age"
-        type="number"
-      />
-    </div>
+      <h3>Others</h3>
+      <p>Some other settings related to extension usage.</p>
 
-    <h3>Others</h3>
-    <p>Some other settings related to extension usage.</p>
+      <UFormField label="Awesome Feature">
+        <USwitch v-model="others.awesome" />
+      </UFormField>
 
-    <div class="form-control">
-      <label>Enable Awesome Feature</label>
-      <input
-        v-model="others.awesome"
-        type="checkbox"
-        class="checkbox"
-      />
-    </div>
+      <UFormField label="Counter">
+        <UInput
+          v-model="others.counter"
+          type="number"
+        ></UInput>
+      </UFormField>
 
-    <div class="form-control">
-      <label>Some Counter</label>
-      <input
-        v-model="others.counter"
-        type="number"
-      />
-    </div>
-
-    <p>
-      * You can also make this a compoenent and then able to use this in any
-      context like Popup, Developer Tools UI etc
-    </p>
-    <p>
-      Feel free to change groups, lsitings or options as per your requirements.
-    </p>
+      <p>
+        * You can also make this a compoenent and then able to use this in any
+        context like Popup, Developer Tools UI etc
+      </p>
+      <p>Feel free to change groups or options as per your requirements.</p>
+    </UForm>
   </div>
 </template>

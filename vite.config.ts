@@ -4,13 +4,9 @@ import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
 import vueDevTools from "vite-plugin-vue-devtools"
 import VueRouter from "unplugin-vue-router/vite"
-import AutoImport from "unplugin-auto-import/vite"
-import Components from "unplugin-vue-components/vite"
-import Icons from "unplugin-icons/vite"
-import IconsResolver from "unplugin-icons/resolver"
 import TurboConsole from "unplugin-turbo-console/vite"
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite"
-import tailwindcss from "@tailwindcss/vite"
+import ui from "@nuxt/ui/vite"
 import "dotenv/config"
 
 // @ts-expect-error commonjs module
@@ -37,17 +33,6 @@ export default defineConfig({
         setup: resolve(__dirname, "src/ui/setup/index.html"),
         iframe: resolve(__dirname, "src/ui/content-script-iframe/index.html"),
         devtoolsPanel: resolve(__dirname, "src/ui/devtools-panel/index.html"),
-      },
-    },
-  },
-
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: (content, filePath) =>
-          filePath.includes("content-script/index.scss")
-            ? content
-            : `@use "/src/assets/base.scss";\n${content}`,
       },
     },
   },
@@ -94,46 +79,37 @@ export default defineConfig({
 
     vue(),
 
-    tailwindcss(),
-
-    TurboConsole(),
-
-    AutoImport({
-      imports: [
-        "vue",
-        "vue-router",
-        "pinia",
-        "@vueuse/core",
-        { "vue-router/auto": ["definePage"] },
-        { "vue-i18n": ["useI18n", "t"] },
-        {
-          "webextension-polyfill": [["=", "browser"]],
+    ui({
+      autoImport: {
+        imports: [
+          "vue",
+          "vue-router",
+          "pinia",
+          "@vueuse/core",
+          { "vue-router/auto": ["definePage"] },
+          { "vue-i18n": ["useI18n", "t"] },
+          {
+            "webextension-polyfill": [["=", "browser"]],
+          },
+        ],
+        dts: "src/types/auto-imports.d.ts",
+        dirs: ["src/composables/**", "src/stores/**", "src/utils/**"],
+        vueTemplate: true,
+        viteOptimizeDeps: true,
+        eslintrc: {
+          enabled: true,
+          filepath: "src/types/.eslintrc-auto-import.json",
         },
-        { notivue: ["Notivue", "Notification", ["push", "pushNotification"]] },
-      ],
-      dts: "src/types/auto-imports.d.ts",
-      dirs: ["src/composables/**", "src/stores/**", "src/utils/**"],
-      vueTemplate: true,
-      viteOptimizeDeps: true,
-      eslintrc: {
-        enabled: true,
-        filepath: "src/types/.eslintrc-auto-import.json",
+      },
+      components: {
+        dirs: ["src/components"],
+        dts: "src/types/components.d.ts",
+        directoryAsNamespace: true,
+        globalNamespaces: ["account", "state"],
       },
     }),
 
-    Components({
-      dirs: ["src/components"],
-      dts: "src/types/components.d.ts",
-      resolvers: [IconsResolver()],
-      directoryAsNamespace: true,
-      globalNamespaces: ["account", "state"],
-    }),
-
-    Icons({
-      autoInstall: true,
-      compiler: "vue3",
-      scale: 1.5,
-    }),
+    TurboConsole(),
 
     // rewrite assets to use relative path
     {

@@ -1,4 +1,3 @@
-// This file is used to style the iframe that is injected into the page
 .crx-iframe {
   border: none;
   border-radius: 8px;
@@ -10,6 +9,6 @@
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 420px;
+  width: 448px;
   min-height: 340px;
 }

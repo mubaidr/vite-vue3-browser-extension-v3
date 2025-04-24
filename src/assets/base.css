@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@plugin "@tailwindcss/typography";
+
+@theme static {
+  --font-sans: "Public Sans", sans-serif;
+}
+
+body {
+  @apply min-w-md !overflow-y-scroll;
+}
+
+.prose {
+  @apply min-w-full prose-sm;
+}
