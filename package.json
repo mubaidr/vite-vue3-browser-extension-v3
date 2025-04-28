@@ -5,7 +5,7 @@
     "pinia": "^3.0.2",
     "vue": "^3.5.13",
     "vue-i18n": "^11.1.3",
-    "vue-router": "^4.5.0",
+    "vue-router": "^4.5.1",
     "webextension-polyfill": "^0.12.0"
   },
   "description": "A Vue 3 + Vite project for building Chrome extensions",
