@@ -10,7 +10,7 @@ import ui from "@nuxt/ui/vite"
 import "dotenv/config"
 
 // @ts-expect-error commonjs module
-import { defineViteConfig as define } from "./define.config.mjs"
+import { define, raw } from "./define.config.mjs"
 import { dirname, relative, resolve } from "node:path"
 
 const IS_DEV = process.env.NODE_ENV === "development"
@@ -34,6 +34,9 @@ export default defineConfig({
         iframe: resolve(__dirname, "src/ui/content-script-iframe/index.html"),
         devtoolsPanel: resolve(__dirname, "src/ui/devtools-panel/index.html"),
       },
+    },
+    terserOptions: {
+      mangle: false,
     },
   },
 
@@ -110,6 +113,17 @@ export default defineConfig({
     }),
 
     TurboConsole(),
+
+    {
+      name: "html-define-plugin",
+      enforce: "post",
+      transformIndexHtml(html) {
+        return html.replace(
+          /%+\s*(\w+)\s*%+/g,
+          (_, key) => raw[key] ?? `%${key}%`,
+        )
+      },
+    },
 
     // rewrite assets to use relative path
     {
