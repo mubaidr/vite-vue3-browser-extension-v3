@@ -6,7 +6,7 @@ import { includeIgnoreFile } from "@eslint/compat"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 import AutoImportGlobals from "./src/types/.eslintrc-auto-import.json" with { type: "json" }
-import define from "./define.config.mjs"
+import { define } from "./define.config.mjs"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
