@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@nuxt/ui": "^3.1.0",
+    "@nuxt/ui": "^3.1.1",
     "marked": "^15.0.11",
     "pinia": "^3.0.2",
     "vue": "^3.5.13",
@@ -11,7 +11,7 @@
   "description": "A Vue 3 + Vite project for building Chrome extensions",
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.32",
-    "@eslint/compat": "^1.2.8",
+    "@eslint/compat": "^1.2.9",
     "@eslint/js": "^9.25.1",
     "@iconify-json/lucide": "^1.2.39",
     "@iconify-json/ph": "^1.2.2",
@@ -35,7 +35,6 @@
     "get-installed-browsers": "^0.1.7",
     "globals": "^16.0.0",
     "prettier": "^3.5.3",
-    "sass": "^1.87.0",
     "terser": "^5.39.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
@@ -47,7 +46,6 @@
     "vite-plugin-vue-devtools": "^7.7.6",
     "vite-plugin-zip-pack": "^1.2.4",
     "vue-tsc": "^2.2.10",
-    "vuefire": "^3.2.1",
     "web-ext": "^8.6.0",
     "webext-bridge": "^6.0.1"
   },

@@ -147,10 +147,12 @@ export default defineConfig({
       "@assets": fileURLToPath(new URL("src/assets", import.meta.url)),
     },
   },
+
   server: {
     port: PORT,
     hmr: {
       host: "localhost",
+      overlay: false,
     },
     origin: `http://localhost:${PORT}`,
     cors: {
@@ -158,7 +160,7 @@ export default defineConfig({
         // ⚠️ SECURITY RISK: Allows any chrome-extension to access the vite server ⚠️
         // See https://github.com/crxjs/chrome-extension-tools/issues/971 for more info
         // I don't believe that the linked issue mentions a potential solution
-        /chrome-extension:\/\//,
+        "chrome-extension://",
       ],
     },
   },

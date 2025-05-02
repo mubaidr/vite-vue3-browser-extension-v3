@@ -396,6 +396,8 @@
     "useKbd": true,
     "useOverlay": true,
     "usePortal": true,
-    "useToast": true
+    "useToast": true,
+    "Slot": true,
+    "Slots": true
   }
 }

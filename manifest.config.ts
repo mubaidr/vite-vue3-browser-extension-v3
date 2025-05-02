@@ -34,6 +34,7 @@ export default {
       all_frames: false,
       js: ["src/content-script/index.ts"],
       matches: ["*://*/*"],
+      run_at: "document_end",
     },
   ],
   side_panel: {
@@ -52,6 +53,7 @@ export default {
         "src/ui/devtools-panel/index.html",
       ],
       matches: ["<all_urls>"],
+      use_dynamic_url: false,
     },
   ],
   icons: {
