@@ -19,7 +19,7 @@
     "@intlify/unplugin-vue-i18n": "^6.0.8",
     "@tailwindcss/typography": "^0.5.16",
     "@types/eslint": "^9.6.1",
-    "@types/node": "^22.15.3",
+    "@types/node": "^22.15.17",
     "@types/webextension-polyfill": "^0.12.3",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/compiler-sfc": "^3.5.13",
