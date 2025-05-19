@@ -12,7 +12,7 @@
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.32",
     "@eslint/compat": "^1.2.9",
-    "@eslint/js": "^9.25.1",
+    "@eslint/js": "^9.27.0",
     "@iconify-json/lucide": "^1.2.39",
     "@iconify-json/ph": "^1.2.2",
     "@iconify-json/svg-spinners": "^1.2.2",
