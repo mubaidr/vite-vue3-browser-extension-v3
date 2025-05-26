@@ -22,7 +22,7 @@
     "@types/node": "^22.15.3",
     "@types/webextension-polyfill": "^0.12.3",
     "@vitejs/plugin-vue": "^5.2.3",
-    "@vue/compiler-sfc": "^3.5.13",
+    "@vue/compiler-sfc": "^3.5.15",
     "@vueuse/core": "^13.1.0",
     "chalk": "^5.4.1",
     "chrome-types": "^0.1.349",
