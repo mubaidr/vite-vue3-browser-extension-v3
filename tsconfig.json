@@ -23,7 +23,7 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@/*": [
-        "./*"
+        "./src/*"
       ],
       "~/*": [
         "./*"

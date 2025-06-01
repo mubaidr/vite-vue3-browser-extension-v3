@@ -31,16 +31,16 @@ A modern, opinionated starter template for building browser extensions using [Vi
 ### Quick Start
 
 ```bash
-pnpx degit mubaidr/vite-vue3-browser-extension-v3 my-webext
+npx degit mubaidr/vite-vue3-browser-extension-v3 my-webext
 cd my-webext
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
-- **Build**: `pnpm build`
-- **Lint**: `pnpm lint`
-- **Dev (Chrome/Firefox)**: `pnpm dev:chrome` / `pnpm dev:firefox`
-- **Build (Chrome/Firefox)**: `pnpm build:chrome` / `pnpm build:firefox`
+- **Build**: `npm run build`
+- **Lint**: `npm run lint`
+- **Dev (Chrome/Firefox)**: `npm run dev:chrome` / `npm run dev:firefox`
+- **Build (Chrome/Firefox)**: `npm run build:chrome` / `npm run build:firefox`
 
 Load the extension from the `dist/chrome` or `dist/firefox` folder in your browser.
 
