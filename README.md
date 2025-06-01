@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml/badge.svg)](https://github.com/mubaidr/vite-vue3-browser-extension-v3/actions/workflows/build.yml)
 
-A modern, opinionated starter template for building browser extensions using [Vite](https://vitejs.dev/), [Vue 3](https://vuejs.org/), and Manifest V3. Supports Chrome, Firefox, and more. Includes pre-configured routing, state management, composables, and a rich set of UI components from Nuxt/UI v3.
+A modern, opinionated starter template for building browser extensions using [Vite](https://vitejs.dev/), [Vue 3](https://vuejs.org/), and Manifest V3. Supports Chrome, Firefox, and more. Includes pre-configured routing, state management, composables, and a rich set of UI components from Nuxt/UI v3. **Now with shadcn-vue support for additional component options!**
 
 ---
 
@@ -12,7 +12,7 @@ A modern, opinionated starter template for building browser extensions using [Vi
 - **File-Based Routing**: Add a file in `src/pages` or relevant UI directory—auto-registered as a route.
 - **Composable Architecture**: Prebuilt composables for i18n, theme, notifications, browser storage, and more.
 - **State Management**: Type-safe Pinia stores (persistent & non-persistent).
-- **UI Components**: Header, Footer, Locale & Theme Switch, Loading Spinner, Error Boundary, Empty State, Notifications.
+- **UI Components**: Header, Footer, Locale & Theme Switch, Loading Spinner, Error Boundary, Empty State, Notifications, plus shadcn-vue components.
 - **Modern Tooling**: Nuxt/UI 3, Tailwind CSS 4, ESLint, Prettier, auto-imports, and more.
 - **WebExtension Utilities**: `webext-bridge` for context communication, `webextension-polyfill` for browser API compatibility.
 
@@ -44,6 +44,19 @@ npm run dev
 
 Load the extension from the `dist/chrome` or `dist/firefox` folder in your browser.
 
+### Adding shadcn-vue Components
+
+To add shadcn-vue components to your extension:
+
+```bash
+npx shadcn-vue@latest init
+npx shadcn-vue@latest add button
+npx shadcn-vue@latest add input
+npx shadcn-vue@latest add card
+```
+
+The components will be automatically configured and ready to use in your Vue files.
+
 ---
 
 ## 🧩 Example: useBrowserStorage
@@ -67,11 +80,44 @@ console.log(userProfile.value.name)   // 'John Doe'
 
 ---
 
+## 🎨 shadcn-vue Integration
+
+This template includes [shadcn-vue](https://www.shadcn-vue.com/) for additional high-quality, accessible components. The project is pre-configured with:
+
+- **Component Installation**: Use `npx shadcn-vue@latest add <component>` to add components
+- **Automatic Integration**: Components work seamlessly with existing Tailwind CSS setup
+- **TypeScript Support**: Full type safety for all shadcn-vue components
+- **Customizable**: Easy theming and customization through CSS variables
+
+### Example: Adding a Button Component
+
+```bash
+npx shadcn-vue@latest add button
+```
+
+```vue
+<template>
+  <Button variant="default" size="sm" @click="handleClick">
+    Click me
+  </Button>
+</template>
+
+<script setup lang="ts">
+import { Button } from '@/components/ui/button'
+
+function handleClick() {
+  console.log('Button clicked!')
+}
+</script>
+```
+
+---
+
 ## 🔌 Plugins & Libraries
 
 - **Vite Plugins**: unplugin-vue-router, unplugin-auto-import, unplugin-vue-components, unplugin-icons, unplugin-turbo-console, @intlify/unplugin-vue-i18n
 - **Vue Plugins**: Pinia, VueUse, Notivue, Vue-i18n
-- **UI**: Nuxt/UI, Tailwind CSS 4
+- **UI**: Nuxt/UI, shadcn-vue, Tailwind CSS 4
 - **WebExtension**: webext-bridge, webextension-polyfill
 - **Utilities**: Marked (for markdown rendering)
 - **Coding Style**: TypeScript, ESLint, Prettier
