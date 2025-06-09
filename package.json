@@ -23,7 +23,7 @@
     "cross-env": "^7.0.3",
     "dotenv": "^16.5.0",
     "eslint": "^9.28.0",
-    "eslint-plugin-vue": "^10.1.0",
+    "eslint-plugin-vue": "^10.2.0",
     "get-installed-browsers": "^0.1.7",
     "globals": "^16.2.0",
     "marked": "^15.0.12",
