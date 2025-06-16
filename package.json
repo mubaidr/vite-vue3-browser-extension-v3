@@ -79,6 +79,6 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.513.0",
-    "tailwind-merge": "^3.3.0"
+    "tailwind-merge": "^3.3.1"
   }
 }
