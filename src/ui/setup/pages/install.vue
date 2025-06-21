@@ -14,6 +14,21 @@ const displayName = __DISPLAY_NAME__
       Now you can close this tab and start using the extension.
     </p>
   </div>
+
+  <hr />
+  <h2>App Routes:</h2>
+  <div class="flex flex-wrap gap-2">
+    <RouterLink
+      v-for="route in appRouter.getRoutes()"
+      :key="route.path"
+      :to="route.path"
+      class="btn"
+    >
+      {{ route.path }}
+    </RouterLink>
+  </div>
+
+  <hr />
 </template>
 
 <style lang="css" scoped></style>

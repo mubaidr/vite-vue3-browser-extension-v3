@@ -9,7 +9,14 @@ import "./index.css"
 appRouter.addRoute({
   path: "/",
   alias: "/setup",
-  redirect: "/setup/install",
+  redirect: (to) => {
+    // If ?type=update, redirect to update page, else to install
+    if (to.query.type === "update") {
+      return "/setup/update"
+    }
+
+    return "/setup/install"
+  },
 })
 
 const app = createApp(App).use(i18n).use(ui).use(pinia).use(appRouter)

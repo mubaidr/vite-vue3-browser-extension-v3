@@ -110,6 +110,12 @@ export default defineConfig({
         directoryAsNamespace: true,
         globalNamespaces: ["account", "state"],
       },
+      ui: {
+        colors: {
+          primary: "green",
+          neutral: "slate",
+        },
+      },
     }),
 
     TurboConsole(),

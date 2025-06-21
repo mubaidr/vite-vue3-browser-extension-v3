@@ -1,4 +1,4 @@
-import { createRouter, createMemoryHistory } from "vue-router"
+import { createRouter, createWebHistory } from "vue-router"
 import { handleHotUpdate, routes } from "vue-router/auto-routes"
 
 routes.push({
@@ -7,7 +7,7 @@ routes.push({
 })
 
 export const appRouter = createRouter({
-  history: createMemoryHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 })
 

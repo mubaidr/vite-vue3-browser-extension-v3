@@ -26,7 +26,7 @@ const version = __VERSION__
     </p>
 
     <hr />
-
+    <h2>App Routes:</h2>
     <div class="flex flex-wrap gap-2">
       <RouterLink
         v-for="route in appRouter.getRoutes()"
@@ -37,5 +37,7 @@ const version = __VERSION__
         {{ route.path }}
       </RouterLink>
     </div>
+
+    <hr />
   </div>
 </template>
