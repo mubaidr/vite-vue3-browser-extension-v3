@@ -19,7 +19,7 @@
     "chalk": "^5.4.1",
     "chrome-types": "^0.1.354",
     "commander": "^14.0.0",
-    "concurrently": "^9.1.2",
+    "concurrently": "^9.2.0",
     "cross-env": "^7.0.3",
     "dotenv": "^16.5.0",
     "eslint": "^9.29.0",
