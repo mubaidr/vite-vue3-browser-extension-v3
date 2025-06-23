@@ -28,7 +28,7 @@
     "globals": "^16.2.0",
     "marked": "^15.0.12",
     "pinia": "^3.0.3",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.0",
     "tailwindcss": "^4.1.10",
     "terser": "^5.43.1",
     "tsx": "^4.20.3",
